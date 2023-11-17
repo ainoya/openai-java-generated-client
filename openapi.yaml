@@ -6443,7 +6443,6 @@ components:
         model:
           anyOf:
             - type: string
-            - type: string
               enum: ["dall-e-2", "dall-e-3"]
           x-oaiTypeLabel: string
           default: '"dall-e-2"'
@@ -6461,20 +6460,20 @@ components:
         quality:
           type: string
           enum: ["standard", "hd"]
-          default: '"standard"'
+          default: "standard"
           example: "standard"
           description: The quality of the image that will be generated. `hd` creates images with finer details and greater consistency across the image. This param is only supported for `dall-e-3`.
         response_format: &images_response_format
           type: string
           enum: ["url", "b64_json"]
-          default: '"url"'
+          default: "url"
           example: "url"
           nullable: true
           description: The format in which the generated images are returned. Must be one of `url` or `b64_json`.
         size: &images_size
           type: string
           enum: ["256x256", "512x512", "1024x1024", "1792x1024", "1024x1792"]
-          default: '"1024x1024"'
+          default: "1024x1024"
           example: "1024x1024"
           nullable: true
           description: The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024` for `dall-e-2`. Must be one of `1024x1024`, `1792x1024`, or `1024x1792` for `dall-e-3` models.
@@ -6558,7 +6557,7 @@ components:
         size: &dalle2_images_size
           type: string
           enum: ["256x256", "512x512", "1024x1024"]
-          default: '"1024x1024"'
+          default: "1024x1024"
           example: "1024x1024"
           nullable: true
           description: The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024`.
@@ -6577,7 +6576,6 @@ components:
           format: binary
         model:
           anyOf:
-            - type: string
             - type: string
               enum: ["dall-e-2"]
           x-oaiTypeLabel: string
@@ -6615,7 +6613,6 @@ components:
           default: '"text-moderation-latest"'
           example: "text-moderation-stable"
           anyOf:
-            - type: string
             - type: string
               enum: ["text-moderation-latest", "text-moderation-stable"]
           x-oaiTypeLabel: string
@@ -6810,7 +6807,6 @@ components:
           example: "gpt-3.5-turbo"
           anyOf:
             - type: string
-            - type: string
               enum: ["babbage-002", "davinci-002", "gpt-3.5-turbo"]
           x-oaiTypeLabel: string
         training_file:
@@ -6834,7 +6830,7 @@ components:
                 are updated less frequently, but with lower variance.
               oneOf:
                 - type: string
-                  enum: [auto]
+                  enum: ["auto"]
                 - type: integer
                   minimum: 1
                   maximum: 256
