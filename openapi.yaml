@@ -5289,24 +5289,24 @@ components:
             - type: string
               default: ""
               example: "This is a test."
-            - type: array
-              items:
-                type: string
-                default: ""
-                example: "This is a test."
-            - type: array
-              minItems: 1
-              items:
-                type: integer
-              example: "[1212, 318, 257, 1332, 13]"
-            - type: array
-              minItems: 1
-              items:
-                type: array
-                minItems: 1
-                items:
-                  type: integer
-              example: "[[1212, 318, 257, 1332, 13]]"
+            # - type: array
+            #   items:
+            #     type: string
+            #     default: ""
+            #     example: "This is a test."
+            # - type: array
+            #   minItems: 1
+            #   items:
+            #     type: integer
+            #   example: "[1212, 318, 257, 1332, 13]"
+            # - type: array
+            #   minItems: 1
+            #   items:
+            #     type: array
+            #     minItems: 1
+            #     items:
+            #       type: integer
+            #   example: "[[1212, 318, 257, 1332, 13]]"
         best_of:
           type: integer
           default: 1
@@ -6600,11 +6600,11 @@ components:
             - type: string
               default: ""
               example: "I want to kill them."
-            - type: array
-              items:
-                type: string
-                default: ""
-                example: "I want to kill them."
+            # - type: array
+            #   items:
+            #     type: string
+            #     default: ""
+            #     example: "I want to kill them."
         model:
           description: |
             Two content moderations models are available: `text-moderation-stable` and `text-moderation-latest`.

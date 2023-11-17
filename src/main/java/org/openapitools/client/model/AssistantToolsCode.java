@@ -49,7 +49,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * AssistantToolsCode
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T02:02:15.250875Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:22:39.518974Z[Etc/UTC]")
 public class AssistantToolsCode implements AssistantObjectToolsInner, CreateThreadAndRunRequestToolsInner {
   /**
    * The type of tool being defined: &#x60;code_interpreter&#x60;

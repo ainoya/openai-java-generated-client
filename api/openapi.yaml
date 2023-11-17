@@ -10786,11 +10786,6 @@ components:
       - default: ""
         example: I want to kill them.
         type: string
-      - items:
-          default: ""
-          example: I want to kill them.
-          type: string
-        type: array
       x-one-of-name: CreateModerationRequestInput
     CreateModerationRequest_model:
       anyOf:
