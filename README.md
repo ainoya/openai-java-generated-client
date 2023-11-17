@@ -2,7 +2,7 @@
 
 OpenAI API
 - API version: 2.0.0
-  - Build date: 2023-11-17T05:22:39.518974Z[Etc/UTC]
+  - Build date: 2023-11-17T05:37:26.789366Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
@@ -223,7 +223,6 @@ Class | Method | HTTP request | Description
  - [CreateChatCompletionRequestFunctionCall](docs/CreateChatCompletionRequestFunctionCall.md)
  - [CreateChatCompletionRequestModel](docs/CreateChatCompletionRequestModel.md)
  - [CreateChatCompletionRequestResponseFormat](docs/CreateChatCompletionRequestResponseFormat.md)
- - [CreateChatCompletionRequestStop](docs/CreateChatCompletionRequestStop.md)
  - [CreateChatCompletionResponse](docs/CreateChatCompletionResponse.md)
  - [CreateChatCompletionResponseChoicesInner](docs/CreateChatCompletionResponseChoicesInner.md)
  - [CreateChatCompletionStreamResponse](docs/CreateChatCompletionStreamResponse.md)

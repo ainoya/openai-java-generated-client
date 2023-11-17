@@ -56,7 +56,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * CreateCompletionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:22:39.518974Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:37:26.789366Z[Etc/UTC]")
 public class CreateCompletionRequest {
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
@@ -64,7 +64,7 @@ public class CreateCompletionRequest {
 
   public static final String SERIALIZED_NAME_PROMPT = "prompt";
   @SerializedName(SERIALIZED_NAME_PROMPT)
-  private CreateCompletionRequestPrompt prompt = <|endoftext|>;
+  private CreateCompletionRequestPrompt prompt = "<|endoftext|>";
 
   public static final String SERIALIZED_NAME_BEST_OF = "best_of";
   @SerializedName(SERIALIZED_NAME_BEST_OF)

@@ -63,7 +63,7 @@ import com.google.gson.JsonParseException;
 
 import tokyo.ainoya.openapi.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:22:39.518974Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:37:26.789366Z[Etc/UTC]")
 public class RunStepDetailsToolCallsCodeObjectCodeInterpreterOutputsInner extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(RunStepDetailsToolCallsCodeObjectCodeInterpreterOutputsInner.class.getName());
 

@@ -49,7 +49,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * Text output from the Code Interpreter tool call as part of a run step.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:22:39.518974Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:37:26.789366Z[Etc/UTC]")
 public class RunStepDetailsToolCallsCodeOutputLogsObject implements RunStepDetailsToolCallsCodeObjectCodeInterpreterOutputsInner {
   /**
    * Always &#x60;logs&#x60;.

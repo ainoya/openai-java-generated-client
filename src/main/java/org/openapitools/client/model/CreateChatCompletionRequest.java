@@ -33,7 +33,6 @@ import org.openapitools.client.model.ChatCompletionToolChoiceOption;
 import org.openapitools.client.model.CreateChatCompletionRequestFunctionCall;
 import org.openapitools.client.model.CreateChatCompletionRequestModel;
 import org.openapitools.client.model.CreateChatCompletionRequestResponseFormat;
-import org.openapitools.client.model.CreateChatCompletionRequestStop;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -63,7 +62,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * CreateChatCompletionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:22:39.518974Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:37:26.789366Z[Etc/UTC]")
 public class CreateChatCompletionRequest {
   public static final String SERIALIZED_NAME_MESSAGES = "messages";
   @SerializedName(SERIALIZED_NAME_MESSAGES)
@@ -103,7 +102,7 @@ public class CreateChatCompletionRequest {
 
   public static final String SERIALIZED_NAME_STOP = "stop";
   @SerializedName(SERIALIZED_NAME_STOP)
-  private CreateChatCompletionRequestStop stop = null;
+  private String stop;
 
   public static final String SERIALIZED_NAME_STREAM = "stream";
   @SerializedName(SERIALIZED_NAME_STREAM)
@@ -355,23 +354,23 @@ public class CreateChatCompletionRequest {
   }
 
 
-  public CreateChatCompletionRequest stop(CreateChatCompletionRequestStop stop) {
+  public CreateChatCompletionRequest stop(String stop) {
     
     this.stop = stop;
     return this;
   }
 
    /**
-   * Get stop
+   * Up to 4 sequences where the API will stop generating further tokens. 
    * @return stop
   **/
   @javax.annotation.Nullable
-  public CreateChatCompletionRequestStop getStop() {
+  public String getStop() {
     return stop;
   }
 
 
-  public void setStop(CreateChatCompletionRequestStop stop) {
+  public void setStop(String stop) {
     this.stop = stop;
   }
 
@@ -731,9 +730,8 @@ public class CreateChatCompletionRequest {
       if (jsonObj.get("response_format") != null && !jsonObj.get("response_format").isJsonNull()) {
         CreateChatCompletionRequestResponseFormat.validateJsonElement(jsonObj.get("response_format"));
       }
-      // validate the optional field `stop`
-      if (jsonObj.get("stop") != null && !jsonObj.get("stop").isJsonNull()) {
-        CreateChatCompletionRequestStop.validateJsonElement(jsonObj.get("stop"));
+      if ((jsonObj.get("stop") != null && !jsonObj.get("stop").isJsonNull()) && !jsonObj.get("stop").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `stop` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stop").toString()));
       }
       if (jsonObj.get("tools") != null && !jsonObj.get("tools").isJsonNull()) {
         JsonArray jsonArraytools = jsonObj.getAsJsonArray("tools");
