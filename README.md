@@ -2,7 +2,7 @@
 
 OpenAI API
 - API version: 2.0.0
-  - Build date: 2023-11-17T05:37:26.789366Z[Etc/UTC]
+  - Build date: 2023-11-17T05:48:03.618184Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
@@ -240,13 +240,11 @@ Class | Method | HTTP request | Description
  - [CreateEditResponseChoicesInner](docs/CreateEditResponseChoicesInner.md)
  - [CreateEmbeddingRequest](docs/CreateEmbeddingRequest.md)
  - [CreateEmbeddingRequestInput](docs/CreateEmbeddingRequestInput.md)
- - [CreateEmbeddingRequestModel](docs/CreateEmbeddingRequestModel.md)
  - [CreateEmbeddingResponse](docs/CreateEmbeddingResponse.md)
  - [CreateEmbeddingResponseUsage](docs/CreateEmbeddingResponseUsage.md)
  - [CreateFineTuneRequest](docs/CreateFineTuneRequest.md)
  - [CreateFineTuneRequestHyperparameters](docs/CreateFineTuneRequestHyperparameters.md)
  - [CreateFineTuneRequestHyperparametersNEpochs](docs/CreateFineTuneRequestHyperparametersNEpochs.md)
- - [CreateFineTuneRequestModel](docs/CreateFineTuneRequestModel.md)
  - [CreateFineTuningJobRequest](docs/CreateFineTuningJobRequest.md)
  - [CreateFineTuningJobRequestHyperparameters](docs/CreateFineTuningJobRequestHyperparameters.md)
  - [CreateFineTuningJobRequestHyperparametersBatchSize](docs/CreateFineTuningJobRequestHyperparametersBatchSize.md)
@@ -266,7 +264,6 @@ Class | Method | HTTP request | Description
  - [CreateModerationResponseResultsInnerCategoryScores](docs/CreateModerationResponseResultsInnerCategoryScores.md)
  - [CreateRunRequest](docs/CreateRunRequest.md)
  - [CreateSpeechRequest](docs/CreateSpeechRequest.md)
- - [CreateSpeechRequestModel](docs/CreateSpeechRequestModel.md)
  - [CreateThreadAndRunRequest](docs/CreateThreadAndRunRequest.md)
  - [CreateThreadAndRunRequestToolsInner](docs/CreateThreadAndRunRequestToolsInner.md)
  - [CreateThreadRequest](docs/CreateThreadRequest.md)

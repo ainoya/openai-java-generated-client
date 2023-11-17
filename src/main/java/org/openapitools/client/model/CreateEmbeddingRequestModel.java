@@ -50,7 +50,7 @@ import com.google.gson.JsonParseException;
 
 import tokyo.ainoya.openapi.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:37:26.789366Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:46:19.500703Z[Etc/UTC]")
 public class CreateEmbeddingRequestModel extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(CreateEmbeddingRequestModel.class.getName());
 

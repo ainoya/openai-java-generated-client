@@ -52,7 +52,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * ListRunStepsResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:37:26.789366Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:48:03.618184Z[Etc/UTC]")
 public class ListRunStepsResponse {
   public static final String SERIALIZED_NAME_OBJECT = "object";
   @SerializedName(SERIALIZED_NAME_OBJECT)

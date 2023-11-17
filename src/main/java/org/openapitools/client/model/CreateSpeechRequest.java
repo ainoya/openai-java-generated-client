@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Arrays;
-import org.openapitools.client.model.CreateSpeechRequestModel;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,11 +50,63 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * CreateSpeechRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:37:26.789366Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:48:03.618184Z[Etc/UTC]")
 public class CreateSpeechRequest {
+  /**
+   * Gets or Sets model
+   */
+  @JsonAdapter(ModelEnum.Adapter.class)
+  public enum ModelEnum {
+    _1("tts-1"),
+    
+    _1_HD("tts-1-hd");
+
+    private String value;
+
+    ModelEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ModelEnum fromValue(String value) {
+      for (ModelEnum b : ModelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<ModelEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ModelEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ModelEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return ModelEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ModelEnum.fromValue(value);
+    }
+  }
+
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
-  private CreateSpeechRequestModel model;
+  private ModelEnum model;
 
   public static final String SERIALIZED_NAME_INPUT = "input";
   @SerializedName(SERIALIZED_NAME_INPUT)
@@ -192,7 +243,7 @@ public class CreateSpeechRequest {
   public CreateSpeechRequest() {
   }
 
-  public CreateSpeechRequest model(CreateSpeechRequestModel model) {
+  public CreateSpeechRequest model(ModelEnum model) {
     
     this.model = model;
     return this;
@@ -203,12 +254,12 @@ public class CreateSpeechRequest {
    * @return model
   **/
   @javax.annotation.Nonnull
-  public CreateSpeechRequestModel getModel() {
+  public ModelEnum getModel() {
     return model;
   }
 
 
-  public void setModel(CreateSpeechRequestModel model) {
+  public void setModel(ModelEnum model) {
     this.model = model;
   }
 
@@ -393,8 +444,11 @@ public class CreateSpeechRequest {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("model").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
+      }
       // validate the required field `model`
-      CreateSpeechRequestModel.validateJsonElement(jsonObj.get("model"));
+      ModelEnum.validateJsonElement(jsonObj.get("model"));
       if (!jsonObj.get("input").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `input` to be a primitive type in the JSON string but got `%s`", jsonObj.get("input").toString()));
       }

@@ -5404,7 +5404,7 @@ components:
           nullable: true
           oneOf:
             - type: string
-              default: "<|endoftext|>"
+              default: '"<|endoftext|>"'
               example: "\n"
               nullable: true
             # - type: array
@@ -5582,7 +5582,7 @@ components:
               type: string
               description: Specifies the detail level of the image.
               enum: ["auto", "low", "high"]
-              default: "auto"
+              default: '"auto"'
           required:
             - url
       required:
@@ -6039,7 +6039,7 @@ components:
               type: string
               enum: ["text", "json_object"]
               example: "json_object"
-              default: "text"
+              default: '"text"'
               description: Must be one of `text` or `json_object`.
         seed:
           type: integer
@@ -6446,7 +6446,7 @@ components:
             - type: string
               enum: ["dall-e-2", "dall-e-3"]
           x-oaiTypeLabel: string
-          default: "dall-e-2"
+          default: '"dall-e-2"'
           example: "dall-e-3"
           nullable: true
           description: The model to use for image generation.
@@ -6461,27 +6461,27 @@ components:
         quality:
           type: string
           enum: ["standard", "hd"]
-          default: "standard"
+          default: '"standard"'
           example: "standard"
           description: The quality of the image that will be generated. `hd` creates images with finer details and greater consistency across the image. This param is only supported for `dall-e-3`.
         response_format: &images_response_format
           type: string
           enum: ["url", "b64_json"]
-          default: "url"
+          default: '"url"'
           example: "url"
           nullable: true
           description: The format in which the generated images are returned. Must be one of `url` or `b64_json`.
         size: &images_size
           type: string
           enum: ["256x256", "512x512", "1024x1024", "1792x1024", "1024x1792"]
-          default: "1024x1024"
+          default: '"1024x1024"'
           example: "1024x1024"
           nullable: true
           description: The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024` for `dall-e-2`. Must be one of `1024x1024`, `1792x1024`, or `1024x1792` for `dall-e-3` models.
         style:
           type: string
           enum: ["vivid", "natural"]
-          default: "vivid"
+          default: '"vivid"'
           example: "vivid"
           nullable: true
           description: The style of the generated images. Must be one of `vivid` or `natural`. Vivid causes the model to lean towards generating hyper-real and dramatic images. Natural causes the model to produce more natural, less hyper-real looking images. This param is only supported for `dall-e-3`.
@@ -6543,7 +6543,7 @@ components:
             - type: string
               enum: ["dall-e-2"]
           x-oaiTypeLabel: string
-          default: "dall-e-2"
+          default: '"dall-e-2"'
           example: "dall-e-2"
           nullable: true
           description: The model to use for image generation. Only `dall-e-2` is supported at this time.
@@ -6558,7 +6558,7 @@ components:
         size: &dalle2_images_size
           type: string
           enum: ["256x256", "512x512", "1024x1024"]
-          default: "1024x1024"
+          default: '"1024x1024"'
           example: "1024x1024"
           nullable: true
           description: The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024`.
@@ -6581,7 +6581,7 @@ components:
             - type: string
               enum: ["dall-e-2"]
           x-oaiTypeLabel: string
-          default: "dall-e-2"
+          default: '"dall-e-2"'
           example: "dall-e-2"
           nullable: true
           description: The model to use for image generation. Only `dall-e-2` is supported at this time.
@@ -7015,10 +7015,8 @@ components:
           default: "curie"
           example: "curie"
           nullable: true
-          anyOf:
-            - type: string
-            - type: string
-              enum: ["ada", "babbage", "curie", "davinci"]
+          type: string
+          enum: ["ada", "babbage", "curie", "davinci"]
           x-oaiTypeLabel: string
         prompt_loss_weight:
           description: |
@@ -7103,30 +7101,10 @@ components:
             - type: string
               default: ""
               example: "This is a test."
-            # - type: array
-            #   minItems: 1
-            #   items:
-            #     type: string
-            #     default: ""
-            #     example: "This is a test."
-            # - type: array
-            #   minItems: 1
-            #   items:
-            #     type: integer
-            #   example: "[1212, 318, 257, 1332, 13]"
-            # - type: array
-            #   minItems: 1
-            #   items:
-            #     type: array
-            #     minItems: 1
-            #     items:
-            #       type: integer
-            #   example: "[[1212, 318, 257, 1332, 13]]"
         model:
           description: *model_description
           example: "text-embedding-ada-002"
           anyOf:
-            - type: string
             - type: string
               enum: ["text-embedding-ada-002"]
           x-oaiTypeLabel: string
@@ -7285,7 +7263,6 @@ components:
           description: |
             One of the available [TTS models](/docs/models/tts): `tts-1` or `tts-1-hd`
           anyOf:
-            - type: string
             - type: string
               enum: ["tts-1", "tts-1-hd"]
           x-oaiTypeLabel: string

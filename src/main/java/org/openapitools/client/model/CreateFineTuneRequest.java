@@ -25,7 +25,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.openapitools.client.model.CreateFineTuneRequestHyperparameters;
-import org.openapitools.client.model.CreateFineTuneRequestModel;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -55,7 +54,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * CreateFineTuneRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:37:26.789366Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:48:03.618184Z[Etc/UTC]")
 public class CreateFineTuneRequest {
   public static final String SERIALIZED_NAME_TRAINING_FILE = "training_file";
   @SerializedName(SERIALIZED_NAME_TRAINING_FILE)
@@ -89,9 +88,65 @@ public class CreateFineTuneRequest {
   @SerializedName(SERIALIZED_NAME_LEARNING_RATE_MULTIPLIER)
   private BigDecimal learningRateMultiplier;
 
+  /**
+   * The name of the base model to fine-tune. You can select one of \&quot;ada\&quot;, \&quot;babbage\&quot;, \&quot;curie\&quot;, \&quot;davinci\&quot;, or a fine-tuned model created after 2022-04-21 and before 2023-08-22. To learn more about these models, see the [Models](/docs/models) documentation. 
+   */
+  @JsonAdapter(ModelEnum.Adapter.class)
+  public enum ModelEnum {
+    ADA("ada"),
+    
+    BABBAGE("babbage"),
+    
+    CURIE("curie"),
+    
+    DAVINCI("davinci");
+
+    private String value;
+
+    ModelEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ModelEnum fromValue(String value) {
+      for (ModelEnum b : ModelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<ModelEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ModelEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ModelEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return ModelEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ModelEnum.fromValue(value);
+    }
+  }
+
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
-  private CreateFineTuneRequestModel model = curie;
+  private ModelEnum model = ModelEnum.CURIE;
 
   public static final String SERIALIZED_NAME_PROMPT_LOSS_WEIGHT = "prompt_loss_weight";
   @SerializedName(SERIALIZED_NAME_PROMPT_LOSS_WEIGHT)
@@ -284,23 +339,23 @@ public class CreateFineTuneRequest {
   }
 
 
-  public CreateFineTuneRequest model(CreateFineTuneRequestModel model) {
+  public CreateFineTuneRequest model(ModelEnum model) {
     
     this.model = model;
     return this;
   }
 
    /**
-   * Get model
+   * The name of the base model to fine-tune. You can select one of \&quot;ada\&quot;, \&quot;babbage\&quot;, \&quot;curie\&quot;, \&quot;davinci\&quot;, or a fine-tuned model created after 2022-04-21 and before 2023-08-22. To learn more about these models, see the [Models](/docs/models) documentation. 
    * @return model
   **/
   @javax.annotation.Nullable
-  public CreateFineTuneRequestModel getModel() {
+  public ModelEnum getModel() {
     return model;
   }
 
 
-  public void setModel(CreateFineTuneRequestModel model) {
+  public void setModel(ModelEnum model) {
     this.model = model;
   }
 
@@ -506,9 +561,12 @@ public class CreateFineTuneRequest {
       if (jsonObj.get("hyperparameters") != null && !jsonObj.get("hyperparameters").isJsonNull()) {
         CreateFineTuneRequestHyperparameters.validateJsonElement(jsonObj.get("hyperparameters"));
       }
+      if ((jsonObj.get("model") != null && !jsonObj.get("model").isJsonNull()) && !jsonObj.get("model").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
+      }
       // validate the optional field `model`
       if (jsonObj.get("model") != null && !jsonObj.get("model").isJsonNull()) {
-        CreateFineTuneRequestModel.validateJsonElement(jsonObj.get("model"));
+        ModelEnum.validateJsonElement(jsonObj.get("model"));
       }
       if ((jsonObj.get("suffix") != null && !jsonObj.get("suffix").isJsonNull()) && !jsonObj.get("suffix").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `suffix` to be a primitive type in the JSON string but got `%s`", jsonObj.get("suffix").toString()));

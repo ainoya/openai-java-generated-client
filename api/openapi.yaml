@@ -6806,7 +6806,7 @@ components:
           nullable: true
           type: integer
         quality:
-          default: standard
+          default: '"standard"'
           description: The quality of the image that will be generated. `hd` creates
             images with finer details and greater consistency across the image. This
             param is only supported for `dall-e-3`.
@@ -6816,7 +6816,7 @@ components:
           example: standard
           type: string
         response_format:
-          default: url
+          default: '"url"'
           description: The format in which the generated images are returned. Must
             be one of `url` or `b64_json`.
           enum:
@@ -6826,7 +6826,7 @@ components:
           nullable: true
           type: string
         size:
-          default: 1024x1024
+          default: '"1024x1024"'
           description: "The size of the generated images. Must be one of `256x256`,\
             \ `512x512`, or `1024x1024` for `dall-e-2`. Must be one of `1024x1024`,\
             \ `1792x1024`, or `1024x1792` for `dall-e-3` models."
@@ -6840,7 +6840,7 @@ components:
           nullable: true
           type: string
         style:
-          default: vivid
+          default: '"vivid"'
           description: "The style of the generated images. Must be one of `vivid`\
             \ or `natural`. Vivid causes the model to lean towards generating hyper-real\
             \ and dramatic images. Natural causes the model to produce more natural,\
@@ -6937,7 +6937,7 @@ components:
           nullable: true
           type: integer
         size:
-          default: 1024x1024
+          default: '"1024x1024"'
           description: "The size of the generated images. Must be one of `256x256`,\
             \ `512x512`, or `1024x1024`."
           enum:
@@ -6948,7 +6948,7 @@ components:
           nullable: true
           type: string
         response_format:
-          default: url
+          default: '"url"'
           description: The format in which the generated images are returned. Must
             be one of `url` or `b64_json`.
           enum:
@@ -6985,7 +6985,7 @@ components:
           nullable: true
           type: integer
         response_format:
-          default: url
+          default: '"url"'
           description: The format in which the generated images are returned. Must
             be one of `url` or `b64_json`.
           enum:
@@ -6995,7 +6995,7 @@ components:
           nullable: true
           type: string
         size:
-          default: 1024x1024
+          default: '"1024x1024"'
           description: "The size of the generated images. Must be one of `256x256`,\
             \ `512x512`, or `1024x1024`."
           enum:
@@ -7398,7 +7398,21 @@ components:
           nullable: true
           type: number
         model:
-          $ref: '#/components/schemas/CreateFineTuneRequest_model'
+          default: curie
+          description: |
+            The name of the base model to fine-tune. You can select one of "ada",
+            "babbage", "curie", "davinci", or a fine-tuned model created after 2022-04-21 and before 2023-08-22.
+            To learn more about these models, see the
+            [Models](/docs/models) documentation.
+          enum:
+          - ada
+          - babbage
+          - curie
+          - davinci
+          example: curie
+          nullable: true
+          type: string
+          x-oaiTypeLabel: string
         prompt_loss_weight:
           default: 0.01
           description: |
@@ -7646,7 +7660,9 @@ components:
         input:
           $ref: '#/components/schemas/CreateEmbeddingRequest_input'
         model:
-          $ref: '#/components/schemas/CreateEmbeddingRequest_model'
+          enum:
+          - text-embedding-ada-002
+          type: string
         encoding_format:
           default: float
           description: "The format to return the embeddings in. Can be either `float`\
@@ -7797,11 +7813,14 @@ components:
         voice: alloy
         input: input
         response_format: mp3
-        model: null
+        model: tts-1
         speed: 0.5503105714228793
       properties:
         model:
-          $ref: '#/components/schemas/CreateSpeechRequest_model'
+          enum:
+          - tts-1
+          - tts-1-hd
+          type: string
         input:
           description: The text to generate audio for. The maximum length is 4096
             characters.
@@ -10334,7 +10353,7 @@ components:
         Up to 4 sequences where the API will stop generating further tokens. The returned text will not contain the stop sequence.
       nullable: true
       oneOf:
-      - default: <|endoftext|>
+      - default: '"<|endoftext|>"'
         example: |2+
 
         nullable: true
@@ -10423,7 +10442,7 @@ components:
           format: uri
           type: string
         detail:
-          default: auto
+          default: '"auto"'
           description: Specifies the detail level of the image.
           enum:
           - auto
@@ -10564,7 +10583,7 @@ components:
         type: json_object
       properties:
         type:
-          default: text
+          default: '"text"'
           description: Must be one of `text` or `json_object`.
           enum:
           - text
@@ -10729,7 +10748,7 @@ components:
         - dall-e-2
         - dall-e-3
         type: string
-      default: dall-e-2
+      default: '"dall-e-2"'
       description: The model to use for image generation.
       example: dall-e-3
       nullable: true
@@ -10740,7 +10759,7 @@ components:
       - enum:
         - dall-e-2
         type: string
-      default: dall-e-2
+      default: '"dall-e-2"'
       description: The model to use for image generation. Only `dall-e-2` is supported
         at this time.
       example: dall-e-2
@@ -11033,24 +11052,6 @@ components:
         n_epochs:
           $ref: '#/components/schemas/CreateFineTuneRequest_hyperparameters_n_epochs'
       type: object
-    CreateFineTuneRequest_model:
-      anyOf:
-      - type: string
-      - enum:
-        - ada
-        - babbage
-        - curie
-        - davinci
-        type: string
-      default: curie
-      description: |
-        The name of the base model to fine-tune. You can select one of "ada",
-        "babbage", "curie", "davinci", or a fine-tuned model created after 2022-04-21 and before 2023-08-22.
-        To learn more about these models, see the
-        [Models](/docs/models) documentation.
-      example: curie
-      nullable: true
-      x-oaiTypeLabel: string
     CreateEmbeddingRequest_input:
       description: |
         Input text to embed, encoded as a string or array of tokens. To embed multiple inputs in a single request, pass an array of strings or array of token arrays. The input must not exceed the max input tokens for the model (8192 tokens for `text-embedding-ada-002`) and cannot be an empty string. [Example Python code](https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken) for counting tokens.
@@ -11060,16 +11061,6 @@ components:
         example: This is a test.
         type: string
       x-one-of-name: CreateEmbeddingRequestInput
-    CreateEmbeddingRequest_model:
-      anyOf:
-      - type: string
-      - enum:
-        - text-embedding-ada-002
-        type: string
-      description: |
-        ID of the model to use. You can use the [List models](/docs/api-reference/models/list) API to see all of your available models, or see our [Model overview](/docs/models/overview) for descriptions of them.
-      example: text-embedding-ada-002
-      x-oaiTypeLabel: string
     CreateEmbeddingResponse_usage:
       description: The usage information for the request.
       example:
@@ -11095,16 +11086,6 @@ components:
       description: |
         ID of the model to use. Only `whisper-1` is currently available.
       example: whisper-1
-      x-oaiTypeLabel: string
-    CreateSpeechRequest_model:
-      anyOf:
-      - type: string
-      - enum:
-        - tts-1
-        - tts-1-hd
-        type: string
-      description: |
-        One of the available [TTS models](/docs/models/tts): `tts-1` or `tts-1-hd`
       x-oaiTypeLabel: string
     FineTuningJob_error:
       description: "For fine-tuning jobs that have `failed`, this will contain more\

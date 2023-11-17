@@ -68,13 +68,11 @@ docs/CreateEditResponse.md
 docs/CreateEditResponseChoicesInner.md
 docs/CreateEmbeddingRequest.md
 docs/CreateEmbeddingRequestInput.md
-docs/CreateEmbeddingRequestModel.md
 docs/CreateEmbeddingResponse.md
 docs/CreateEmbeddingResponseUsage.md
 docs/CreateFineTuneRequest.md
 docs/CreateFineTuneRequestHyperparameters.md
 docs/CreateFineTuneRequestHyperparametersNEpochs.md
-docs/CreateFineTuneRequestModel.md
 docs/CreateFineTuningJobRequest.md
 docs/CreateFineTuningJobRequestHyperparameters.md
 docs/CreateFineTuningJobRequestHyperparametersBatchSize.md
@@ -94,7 +92,6 @@ docs/CreateModerationResponseResultsInnerCategories.md
 docs/CreateModerationResponseResultsInnerCategoryScores.md
 docs/CreateRunRequest.md
 docs/CreateSpeechRequest.md
-docs/CreateSpeechRequestModel.md
 docs/CreateThreadAndRunRequest.md
 docs/CreateThreadAndRunRequestToolsInner.md
 docs/CreateThreadRequest.md
@@ -253,13 +250,11 @@ src/main/java/org/openapitools/client/model/CreateEditResponse.java
 src/main/java/org/openapitools/client/model/CreateEditResponseChoicesInner.java
 src/main/java/org/openapitools/client/model/CreateEmbeddingRequest.java
 src/main/java/org/openapitools/client/model/CreateEmbeddingRequestInput.java
-src/main/java/org/openapitools/client/model/CreateEmbeddingRequestModel.java
 src/main/java/org/openapitools/client/model/CreateEmbeddingResponse.java
 src/main/java/org/openapitools/client/model/CreateEmbeddingResponseUsage.java
 src/main/java/org/openapitools/client/model/CreateFineTuneRequest.java
 src/main/java/org/openapitools/client/model/CreateFineTuneRequestHyperparameters.java
 src/main/java/org/openapitools/client/model/CreateFineTuneRequestHyperparametersNEpochs.java
-src/main/java/org/openapitools/client/model/CreateFineTuneRequestModel.java
 src/main/java/org/openapitools/client/model/CreateFineTuningJobRequest.java
 src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestHyperparameters.java
 src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestHyperparametersBatchSize.java
@@ -279,7 +274,6 @@ src/main/java/org/openapitools/client/model/CreateModerationResponseResultsInner
 src/main/java/org/openapitools/client/model/CreateModerationResponseResultsInnerCategoryScores.java
 src/main/java/org/openapitools/client/model/CreateRunRequest.java
 src/main/java/org/openapitools/client/model/CreateSpeechRequest.java
-src/main/java/org/openapitools/client/model/CreateSpeechRequestModel.java
 src/main/java/org/openapitools/client/model/CreateThreadAndRunRequest.java
 src/main/java/org/openapitools/client/model/CreateThreadAndRunRequestToolsInner.java
 src/main/java/org/openapitools/client/model/CreateThreadRequest.java

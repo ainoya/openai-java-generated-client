@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import org.openapitools.client.model.CreateEmbeddingRequestInput;
-import org.openapitools.client.model.CreateEmbeddingRequestModel;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,15 +50,65 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * CreateEmbeddingRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:37:26.789366Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:48:03.618184Z[Etc/UTC]")
 public class CreateEmbeddingRequest {
   public static final String SERIALIZED_NAME_INPUT = "input";
   @SerializedName(SERIALIZED_NAME_INPUT)
   private CreateEmbeddingRequestInput input;
 
+  /**
+   * Gets or Sets model
+   */
+  @JsonAdapter(ModelEnum.Adapter.class)
+  public enum ModelEnum {
+    TEXT_EMBEDDING_ADA_002("text-embedding-ada-002");
+
+    private String value;
+
+    ModelEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ModelEnum fromValue(String value) {
+      for (ModelEnum b : ModelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<ModelEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ModelEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ModelEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return ModelEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ModelEnum.fromValue(value);
+    }
+  }
+
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
-  private CreateEmbeddingRequestModel model;
+  private ModelEnum model;
 
   /**
    * The format to return the embeddings in. Can be either &#x60;float&#x60; or [&#x60;base64&#x60;](https://pypi.org/project/pybase64/).
@@ -145,7 +194,7 @@ public class CreateEmbeddingRequest {
   }
 
 
-  public CreateEmbeddingRequest model(CreateEmbeddingRequestModel model) {
+  public CreateEmbeddingRequest model(ModelEnum model) {
     
     this.model = model;
     return this;
@@ -156,12 +205,12 @@ public class CreateEmbeddingRequest {
    * @return model
   **/
   @javax.annotation.Nonnull
-  public CreateEmbeddingRequestModel getModel() {
+  public ModelEnum getModel() {
     return model;
   }
 
 
-  public void setModel(CreateEmbeddingRequestModel model) {
+  public void setModel(ModelEnum model) {
     this.model = model;
   }
 
@@ -300,8 +349,11 @@ public class CreateEmbeddingRequest {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `input`
       CreateEmbeddingRequestInput.validateJsonElement(jsonObj.get("input"));
+      if (!jsonObj.get("model").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
+      }
       // validate the required field `model`
-      CreateEmbeddingRequestModel.validateJsonElement(jsonObj.get("model"));
+      ModelEnum.validateJsonElement(jsonObj.get("model"));
       if ((jsonObj.get("encoding_format") != null && !jsonObj.get("encoding_format").isJsonNull()) && !jsonObj.get("encoding_format").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `encoding_format` to be a primitive type in the JSON string but got `%s`", jsonObj.get("encoding_format").toString()));
       }

@@ -52,7 +52,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * Details on the tool outputs needed for this run to continue.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:37:26.789366Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:48:03.618184Z[Etc/UTC]")
 public class RunObjectRequiredActionSubmitToolOutputs {
   public static final String SERIALIZED_NAME_TOOL_CALLS = "tool_calls";
   @SerializedName(SERIALIZED_NAME_TOOL_CALLS)

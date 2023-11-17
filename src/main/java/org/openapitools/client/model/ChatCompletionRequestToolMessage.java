@@ -51,7 +51,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * ChatCompletionRequestToolMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:37:26.789366Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:48:03.618184Z[Etc/UTC]")
 public class ChatCompletionRequestToolMessage implements ChatCompletionRequestMessage {
   /**
    * The role of the messages author, in this case &#x60;tool&#x60;.

@@ -15,10 +15,21 @@
 |**computeClassificationMetrics** | **Boolean** | If set, we calculate classification-specific metrics such as accuracy and F-1 score using the validation set at the end of every epoch. These metrics can be viewed in the [results file](/docs/guides/legacy-fine-tuning/analyzing-your-fine-tuned-model).  In order to compute classification metrics, you must provide a &#x60;validation_file&#x60;. Additionally, you must specify &#x60;classification_n_classes&#x60; for multiclass classification or &#x60;classification_positive_class&#x60; for binary classification.  |  [optional] |
 |**hyperparameters** | [**CreateFineTuneRequestHyperparameters**](CreateFineTuneRequestHyperparameters.md) |  |  [optional] |
 |**learningRateMultiplier** | **BigDecimal** | The learning rate multiplier to use for training. The fine-tuning learning rate is the original learning rate used for pretraining multiplied by this value.  By default, the learning rate multiplier is the 0.05, 0.1, or 0.2 depending on final &#x60;batch_size&#x60; (larger learning rates tend to perform better with larger batch sizes). We recommend experimenting with values in the range 0.02 to 0.2 to see what produces the best results.  |  [optional] |
-|**model** | [**CreateFineTuneRequestModel**](CreateFineTuneRequestModel.md) |  |  [optional] |
+|**model** | [**ModelEnum**](#ModelEnum) | The name of the base model to fine-tune. You can select one of \&quot;ada\&quot;, \&quot;babbage\&quot;, \&quot;curie\&quot;, \&quot;davinci\&quot;, or a fine-tuned model created after 2022-04-21 and before 2023-08-22. To learn more about these models, see the [Models](/docs/models) documentation.  |  [optional] |
 |**promptLossWeight** | **BigDecimal** | The weight to use for loss on the prompt tokens. This controls how much the model tries to learn to generate the prompt (as compared to the completion which always has a weight of 1.0), and can add a stabilizing effect to training when completions are short.  If prompts are extremely long (relative to completions), it may make sense to reduce this weight so as to avoid over-prioritizing learning the prompt.  |  [optional] |
 |**suffix** | **String** | A string of up to 40 characters that will be added to your fine-tuned model name.  For example, a &#x60;suffix&#x60; of \&quot;custom-model-name\&quot; would produce a model name like &#x60;ada:ft-your-org:custom-model-name-2022-02-15-04-21-04&#x60;.  |  [optional] |
 |**validationFile** | **String** | The ID of an uploaded file that contains validation data.  If you provide this file, the data is used to generate validation metrics periodically during fine-tuning. These metrics can be viewed in the [fine-tuning results file](/docs/guides/legacy-fine-tuning/analyzing-your-fine-tuned-model). Your train and validation data should be mutually exclusive.  Your dataset must be formatted as a JSONL file, where each validation example is a JSON object with the keys \&quot;prompt\&quot; and \&quot;completion\&quot;. Additionally, you must upload your file with the purpose &#x60;fine-tune&#x60;.  See the [fine-tuning guide](/docs/guides/legacy-fine-tuning/creating-training-data) for more details.  |  [optional] |
+
+
+
+## Enum: ModelEnum
+
+| Name | Value |
+|---- | -----|
+| ADA | &quot;ada&quot; |
+| BABBAGE | &quot;babbage&quot; |
+| CURIE | &quot;curie&quot; |
+| DAVINCI | &quot;davinci&quot; |
 
 
 

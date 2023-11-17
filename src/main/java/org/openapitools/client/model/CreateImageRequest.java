@@ -51,7 +51,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * CreateImageRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:37:26.789366Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:48:03.618184Z[Etc/UTC]")
 public class CreateImageRequest {
   public static final String SERIALIZED_NAME_PROMPT = "prompt";
   @SerializedName(SERIALIZED_NAME_PROMPT)
@@ -59,7 +59,7 @@ public class CreateImageRequest {
 
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
-  private CreateImageRequestModel model = dall-e-2;
+  private CreateImageRequestModel model = "dall-e-2";
 
   public static final String SERIALIZED_NAME_N = "n";
   @SerializedName(SERIALIZED_NAME_N)
@@ -119,7 +119,7 @@ public class CreateImageRequest {
 
   public static final String SERIALIZED_NAME_QUALITY = "quality";
   @SerializedName(SERIALIZED_NAME_QUALITY)
-  private QualityEnum quality = QualityEnum.STANDARD;
+  private QualityEnum quality = "standard";
 
   /**
    * The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;.
@@ -175,7 +175,7 @@ public class CreateImageRequest {
 
   public static final String SERIALIZED_NAME_RESPONSE_FORMAT = "response_format";
   @SerializedName(SERIALIZED_NAME_RESPONSE_FORMAT)
-  private ResponseFormatEnum responseFormat = ResponseFormatEnum.URL;
+  private ResponseFormatEnum responseFormat = "url";
 
   /**
    * The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60; for &#x60;dall-e-2&#x60;. Must be one of &#x60;1024x1024&#x60;, &#x60;1792x1024&#x60;, or &#x60;1024x1792&#x60; for &#x60;dall-e-3&#x60; models.
@@ -237,7 +237,7 @@ public class CreateImageRequest {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private SizeEnum size = SizeEnum._1024X1024;
+  private SizeEnum size = "1024x1024";
 
   /**
    * The style of the generated images. Must be one of &#x60;vivid&#x60; or &#x60;natural&#x60;. Vivid causes the model to lean towards generating hyper-real and dramatic images. Natural causes the model to produce more natural, less hyper-real looking images. This param is only supported for &#x60;dall-e-3&#x60;.
@@ -293,7 +293,7 @@ public class CreateImageRequest {
 
   public static final String SERIALIZED_NAME_STYLE = "style";
   @SerializedName(SERIALIZED_NAME_STYLE)
-  private StyleEnum style = StyleEnum.VIVID;
+  private StyleEnum style = "vivid";
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
