@@ -24,7 +24,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import org.openapitools.client.model.CreateCompletionRequestModel;
-import org.openapitools.client.model.CreateCompletionRequestPrompt;
 import org.openapitools.client.model.CreateCompletionRequestStop;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;

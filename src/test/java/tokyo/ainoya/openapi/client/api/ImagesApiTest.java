@@ -73,7 +73,7 @@ public class ImagesApiTest {
     @Test
     public void createImageVariationTest() throws ApiException {
         File image = null;
-        CreateImageEditRequestModel model = null;
+        String model = null;
         Integer n = null;
         String responseFormat = null;
         String size = null;
