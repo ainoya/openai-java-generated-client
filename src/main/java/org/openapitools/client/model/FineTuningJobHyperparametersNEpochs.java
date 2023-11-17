@@ -53,7 +53,7 @@ import com.google.gson.JsonParseException;
 
 import tokyo.ainoya.openapi.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:53:00.096330Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
 public class FineTuningJobHyperparametersNEpochs extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(FineTuningJobHyperparametersNEpochs.class.getName());
 
@@ -66,7 +66,6 @@ public class FineTuningJobHyperparametersNEpochs extends AbstractOpenApiSchema {
             }
             final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
             final TypeAdapter<String> adapterString = gson.getDelegateAdapter(this, TypeToken.get(String.class));
-            final TypeAdapter<Integer> adapterInteger = gson.getDelegateAdapter(this, TypeToken.get(Integer.class));
 
             return (TypeAdapter<T>) new TypeAdapter<FineTuningJobHyperparametersNEpochs>() {
                 @Override
@@ -82,13 +81,7 @@ public class FineTuningJobHyperparametersNEpochs extends AbstractOpenApiSchema {
                       elementAdapter.write(out, primitive);
                       return;
                     }
-                    // check if the actual instance is of the type `Integer`
-                    if (value.getActualInstance() instanceof Integer) {
-                      JsonPrimitive primitive = adapterInteger.toJsonTree((Integer)value.getActualInstance()).getAsJsonPrimitive();
-                      elementAdapter.write(out, primitive);
-                      return;
-                    }
-                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: Integer, String");
+                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: String");
                 }
 
                 @Override
@@ -114,20 +107,6 @@ public class FineTuningJobHyperparametersNEpochs extends AbstractOpenApiSchema {
                       errorMessages.add(String.format("Deserialization for String failed with `%s`.", e.getMessage()));
                       log.log(Level.FINER, "Input data does not match schema 'String'", e);
                     }
-                    // deserialize Integer
-                    try {
-                      // validate the JSON object to see if any exception is thrown
-                      if(!jsonElement.getAsJsonPrimitive().isNumber()) {
-                        throw new IllegalArgumentException(String.format("Expected json element to be of type Number in the JSON string but got `%s`", jsonElement.toString()));
-                      }
-                      actualAdapter = adapterInteger;
-                      match++;
-                      log.log(Level.FINER, "Input data matches schema 'Integer'");
-                    } catch (Exception e) {
-                      // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for Integer failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'Integer'", e);
-                    }
 
                     if (match == 1) {
                         FineTuningJobHyperparametersNEpochs ret = new FineTuningJobHyperparametersNEpochs();
@@ -148,11 +127,6 @@ public class FineTuningJobHyperparametersNEpochs extends AbstractOpenApiSchema {
         super("oneOf", Boolean.FALSE);
     }
 
-    public FineTuningJobHyperparametersNEpochs(Integer o) {
-        super("oneOf", Boolean.FALSE);
-        setActualInstance(o);
-    }
-
     public FineTuningJobHyperparametersNEpochs(String o) {
         super("oneOf", Boolean.FALSE);
         setActualInstance(o);
@@ -160,7 +134,6 @@ public class FineTuningJobHyperparametersNEpochs extends AbstractOpenApiSchema {
 
     static {
         schemas.put("String", String.class);
-        schemas.put("Integer", Integer.class);
     }
 
     @Override
@@ -171,7 +144,7 @@ public class FineTuningJobHyperparametersNEpochs extends AbstractOpenApiSchema {
     /**
      * Set the instance that matches the oneOf child schema, check
      * the instance parameter is valid against the oneOf child schemas:
-     * Integer, String
+     * String
      *
      * It could be an instance of the 'oneOf' schemas.
      */
@@ -182,19 +155,14 @@ public class FineTuningJobHyperparametersNEpochs extends AbstractOpenApiSchema {
             return;
         }
 
-        if (instance instanceof Integer) {
-            super.setActualInstance(instance);
-            return;
-        }
-
-        throw new RuntimeException("Invalid instance type. Must be Integer, String");
+        throw new RuntimeException("Invalid instance type. Must be String");
     }
 
     /**
      * Get the actual instance, which can be the following:
-     * Integer, String
+     * String
      *
-     * @return The actual instance (Integer, String)
+     * @return The actual instance (String)
      */
     @Override
     public Object getActualInstance() {
@@ -210,16 +178,6 @@ public class FineTuningJobHyperparametersNEpochs extends AbstractOpenApiSchema {
      */
     public String getString() throws ClassCastException {
         return (String)super.getActualInstance();
-    }
-    /**
-     * Get the actual instance of `Integer`. If the actual instance is not `Integer`,
-     * the ClassCastException will be thrown.
-     *
-     * @return The actual instance of `Integer`
-     * @throws ClassCastException if the instance is not `Integer`
-     */
-    public Integer getInteger() throws ClassCastException {
-        return (Integer)super.getActualInstance();
     }
 
  /**
@@ -242,18 +200,8 @@ public class FineTuningJobHyperparametersNEpochs extends AbstractOpenApiSchema {
       errorMessages.add(String.format("Deserialization for String failed with `%s`.", e.getMessage()));
       // continue to the next one
     }
-    // validate the json string with Integer
-    try {
-      if(!jsonElement.getAsJsonPrimitive().isNumber()) {
-        throw new IllegalArgumentException(String.format("Expected json element to be of type Number in the JSON string but got `%s`", jsonElement.toString()));
-      }
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for Integer failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
     if (validCount != 1) {
-      throw new IOException(String.format("The JSON string is invalid for FineTuningJobHyperparametersNEpochs with oneOf schemas: Integer, String. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
+      throw new IOException(String.format("The JSON string is invalid for FineTuningJobHyperparametersNEpochs with oneOf schemas: String. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
     }
   }
 

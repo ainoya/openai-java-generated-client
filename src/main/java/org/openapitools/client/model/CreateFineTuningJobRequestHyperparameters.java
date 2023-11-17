@@ -22,8 +22,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import org.openapitools.client.model.CreateFineTuningJobRequestHyperparametersBatchSize;
-import org.openapitools.client.model.CreateFineTuningJobRequestHyperparametersLearningRateMultiplier;
-import org.openapitools.client.model.CreateFineTuningJobRequestHyperparametersNEpochs;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,19 +50,119 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * The hyperparameters used for the fine-tuning job.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:53:00.096330Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
 public class CreateFineTuningJobRequestHyperparameters {
   public static final String SERIALIZED_NAME_BATCH_SIZE = "batch_size";
   @SerializedName(SERIALIZED_NAME_BATCH_SIZE)
   private CreateFineTuningJobRequestHyperparametersBatchSize batchSize = auto;
 
+  /**
+   * Scaling factor for the learning rate. A smaller learning rate may be useful to avoid overfitting. 
+   */
+  @JsonAdapter(LearningRateMultiplierEnum.Adapter.class)
+  public enum LearningRateMultiplierEnum {
+    AUTO("auto");
+
+    private String value;
+
+    LearningRateMultiplierEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static LearningRateMultiplierEnum fromValue(String value) {
+      for (LearningRateMultiplierEnum b : LearningRateMultiplierEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<LearningRateMultiplierEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final LearningRateMultiplierEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public LearningRateMultiplierEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return LearningRateMultiplierEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      LearningRateMultiplierEnum.fromValue(value);
+    }
+  }
+
   public static final String SERIALIZED_NAME_LEARNING_RATE_MULTIPLIER = "learning_rate_multiplier";
   @SerializedName(SERIALIZED_NAME_LEARNING_RATE_MULTIPLIER)
-  private CreateFineTuningJobRequestHyperparametersLearningRateMultiplier learningRateMultiplier = auto;
+  private LearningRateMultiplierEnum learningRateMultiplier = LearningRateMultiplierEnum.AUTO;
+
+  /**
+   * The number of epochs to train the model for. An epoch refers to one full cycle  through the training dataset. 
+   */
+  @JsonAdapter(NEpochsEnum.Adapter.class)
+  public enum NEpochsEnum {
+    AUTO("auto");
+
+    private String value;
+
+    NEpochsEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static NEpochsEnum fromValue(String value) {
+      for (NEpochsEnum b : NEpochsEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<NEpochsEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final NEpochsEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public NEpochsEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return NEpochsEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      NEpochsEnum.fromValue(value);
+    }
+  }
 
   public static final String SERIALIZED_NAME_N_EPOCHS = "n_epochs";
   @SerializedName(SERIALIZED_NAME_N_EPOCHS)
-  private CreateFineTuningJobRequestHyperparametersNEpochs nEpochs = auto;
+  private NEpochsEnum nEpochs = NEpochsEnum.AUTO;
 
   public CreateFineTuningJobRequestHyperparameters() {
   }
@@ -90,44 +188,44 @@ public class CreateFineTuningJobRequestHyperparameters {
   }
 
 
-  public CreateFineTuningJobRequestHyperparameters learningRateMultiplier(CreateFineTuningJobRequestHyperparametersLearningRateMultiplier learningRateMultiplier) {
+  public CreateFineTuningJobRequestHyperparameters learningRateMultiplier(LearningRateMultiplierEnum learningRateMultiplier) {
     
     this.learningRateMultiplier = learningRateMultiplier;
     return this;
   }
 
    /**
-   * Get learningRateMultiplier
+   * Scaling factor for the learning rate. A smaller learning rate may be useful to avoid overfitting. 
    * @return learningRateMultiplier
   **/
   @javax.annotation.Nullable
-  public CreateFineTuningJobRequestHyperparametersLearningRateMultiplier getLearningRateMultiplier() {
+  public LearningRateMultiplierEnum getLearningRateMultiplier() {
     return learningRateMultiplier;
   }
 
 
-  public void setLearningRateMultiplier(CreateFineTuningJobRequestHyperparametersLearningRateMultiplier learningRateMultiplier) {
+  public void setLearningRateMultiplier(LearningRateMultiplierEnum learningRateMultiplier) {
     this.learningRateMultiplier = learningRateMultiplier;
   }
 
 
-  public CreateFineTuningJobRequestHyperparameters nEpochs(CreateFineTuningJobRequestHyperparametersNEpochs nEpochs) {
+  public CreateFineTuningJobRequestHyperparameters nEpochs(NEpochsEnum nEpochs) {
     
     this.nEpochs = nEpochs;
     return this;
   }
 
    /**
-   * Get nEpochs
+   * The number of epochs to train the model for. An epoch refers to one full cycle  through the training dataset. 
    * @return nEpochs
   **/
   @javax.annotation.Nullable
-  public CreateFineTuningJobRequestHyperparametersNEpochs getnEpochs() {
+  public NEpochsEnum getnEpochs() {
     return nEpochs;
   }
 
 
-  public void setnEpochs(CreateFineTuningJobRequestHyperparametersNEpochs nEpochs) {
+  public void setnEpochs(NEpochsEnum nEpochs) {
     this.nEpochs = nEpochs;
   }
 
@@ -214,13 +312,19 @@ public class CreateFineTuningJobRequestHyperparameters {
       if (jsonObj.get("batch_size") != null && !jsonObj.get("batch_size").isJsonNull()) {
         CreateFineTuningJobRequestHyperparametersBatchSize.validateJsonElement(jsonObj.get("batch_size"));
       }
+      if ((jsonObj.get("learning_rate_multiplier") != null && !jsonObj.get("learning_rate_multiplier").isJsonNull()) && !jsonObj.get("learning_rate_multiplier").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `learning_rate_multiplier` to be a primitive type in the JSON string but got `%s`", jsonObj.get("learning_rate_multiplier").toString()));
+      }
       // validate the optional field `learning_rate_multiplier`
       if (jsonObj.get("learning_rate_multiplier") != null && !jsonObj.get("learning_rate_multiplier").isJsonNull()) {
-        CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.validateJsonElement(jsonObj.get("learning_rate_multiplier"));
+        LearningRateMultiplierEnum.validateJsonElement(jsonObj.get("learning_rate_multiplier"));
+      }
+      if ((jsonObj.get("n_epochs") != null && !jsonObj.get("n_epochs").isJsonNull()) && !jsonObj.get("n_epochs").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `n_epochs` to be a primitive type in the JSON string but got `%s`", jsonObj.get("n_epochs").toString()));
       }
       // validate the optional field `n_epochs`
       if (jsonObj.get("n_epochs") != null && !jsonObj.get("n_epochs").isJsonNull()) {
-        CreateFineTuningJobRequestHyperparametersNEpochs.validateJsonElement(jsonObj.get("n_epochs"));
+        NEpochsEnum.validateJsonElement(jsonObj.get("n_epochs"));
       }
   }
 

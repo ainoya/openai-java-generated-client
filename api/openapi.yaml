@@ -7233,8 +7233,8 @@ components:
         validation_file: file-abc123
         hyperparameters:
           batch_size: null
-          n_epochs: null
-          learning_rate_multiplier: null
+          n_epochs: auto
+          learning_rate_multiplier: auto
         model: babbage-002
         suffix: suffix
       properties:
@@ -10961,44 +10961,30 @@ components:
         minimum: 1
         type: integer
       x-one-of-name: CreateFineTuningJobRequestHyperparametersBatchSize
-    CreateFineTuningJobRequest_hyperparameters_learning_rate_multiplier:
-      default: auto
-      description: |
-        Scaling factor for the learning rate. A smaller learning rate may be useful to avoid
-        overfitting.
-      oneOf:
-      - enum:
-        - auto
-        type: string
-      - exclusiveMinimum: true
-        minimum: 0
-        type: number
-      x-one-of-name: CreateFineTuningJobRequestHyperparametersLearningRateMultiplier
-    CreateFineTuningJobRequest_hyperparameters_n_epochs:
-      default: auto
-      description: "The number of epochs to train the model for. An epoch refers to\
-        \ one full cycle \nthrough the training dataset.\n"
-      oneOf:
-      - enum:
-        - auto
-        type: string
-      - maximum: 50
-        minimum: 1
-        type: integer
-      x-one-of-name: CreateFineTuningJobRequestHyperparametersNEpochs
     CreateFineTuningJobRequest_hyperparameters:
       description: The hyperparameters used for the fine-tuning job.
       example:
         batch_size: null
-        n_epochs: null
-        learning_rate_multiplier: null
+        n_epochs: auto
+        learning_rate_multiplier: auto
       properties:
         batch_size:
           $ref: '#/components/schemas/CreateFineTuningJobRequest_hyperparameters_batch_size'
         learning_rate_multiplier:
-          $ref: '#/components/schemas/CreateFineTuningJobRequest_hyperparameters_learning_rate_multiplier'
+          default: auto
+          description: |
+            Scaling factor for the learning rate. A smaller learning rate may be useful to avoid
+            overfitting.
+          enum:
+          - auto
+          type: string
         n_epochs:
-          $ref: '#/components/schemas/CreateFineTuningJobRequest_hyperparameters_n_epochs'
+          default: auto
+          description: "The number of epochs to train the model for. An epoch refers\
+            \ to one full cycle \nthrough the training dataset.\n"
+          enum:
+          - auto
+          type: string
       type: object
     CreateFineTuneRequest_hyperparameters_n_epochs:
       default: auto
@@ -11009,9 +10995,6 @@ components:
       - enum:
         - auto
         type: string
-      - maximum: 50
-        minimum: 1
-        type: integer
       x-one-of-name: CreateFineTuneRequestHyperparametersNEpochs
     CreateFineTuneRequest_hyperparameters:
       description: The hyperparameters used for the fine-tuning job.
@@ -11090,9 +11073,6 @@ components:
       - enum:
         - auto
         type: string
-      - maximum: 50
-        minimum: 1
-        type: integer
       x-one-of-name: FineTuningJobHyperparametersNEpochs
     FineTuningJob_hyperparameters:
       description: "The hyperparameters used for the fine-tuning job. See the [fine-tuning\

@@ -50,7 +50,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * RunStepDetailsToolCallsCodeOutputImageObject
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:53:00.096330Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
 public class RunStepDetailsToolCallsCodeOutputImageObject implements RunStepDetailsToolCallsCodeObjectCodeInterpreterOutputsInner {
   /**
    * Always &#x60;image&#x60;.

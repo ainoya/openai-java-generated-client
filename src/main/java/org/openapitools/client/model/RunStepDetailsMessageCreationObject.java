@@ -52,7 +52,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * Details of the message creation by the run step.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:53:00.096330Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
 public class RunStepDetailsMessageCreationObject implements RunStepObjectStepDetails {
   /**
    * Always &#x60;message_creation&#x60;&#x60;.

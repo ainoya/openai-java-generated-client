@@ -2,7 +2,7 @@
 
 OpenAI API
 - API version: 2.0.0
-  - Build date: 2023-11-17T05:53:00.096330Z[Etc/UTC]
+  - Build date: 2023-11-17T06:14:01.849420Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
@@ -247,8 +247,6 @@ Class | Method | HTTP request | Description
  - [CreateFineTuningJobRequest](docs/CreateFineTuningJobRequest.md)
  - [CreateFineTuningJobRequestHyperparameters](docs/CreateFineTuningJobRequestHyperparameters.md)
  - [CreateFineTuningJobRequestHyperparametersBatchSize](docs/CreateFineTuningJobRequestHyperparametersBatchSize.md)
- - [CreateFineTuningJobRequestHyperparametersLearningRateMultiplier](docs/CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.md)
- - [CreateFineTuningJobRequestHyperparametersNEpochs](docs/CreateFineTuningJobRequestHyperparametersNEpochs.md)
  - [CreateImageEditRequestModel](docs/CreateImageEditRequestModel.md)
  - [CreateImageRequest](docs/CreateImageRequest.md)
  - [CreateMessageRequest](docs/CreateMessageRequest.md)

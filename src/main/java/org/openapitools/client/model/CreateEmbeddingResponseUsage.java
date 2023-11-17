@@ -49,7 +49,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * The usage information for the request.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:53:00.096330Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
 public class CreateEmbeddingResponseUsage {
   public static final String SERIALIZED_NAME_PROMPT_TOKENS = "prompt_tokens";
   @SerializedName(SERIALIZED_NAME_PROMPT_TOKENS)

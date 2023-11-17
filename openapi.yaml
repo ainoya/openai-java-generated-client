@@ -6837,23 +6837,15 @@ components:
               description: |
                 Scaling factor for the learning rate. A smaller learning rate may be useful to avoid
                 overfitting.
-              oneOf:
-                - type: string
-                  enum: ["auto"]
-                - type: number
-                  minimum: 0
-                  exclusiveMinimum: true
+              type: string
+              enum: ["auto"]
               default: auto
             n_epochs:
               description: |
                 The number of epochs to train the model for. An epoch refers to one full cycle 
                 through the training dataset.
-              oneOf:
-                - type: string
-                  enum: ["auto"]
-                - type: integer
-                  minimum: 1
-                  maximum: 50
+              type: string
+              enum: ["auto"]
               default: auto
         suffix:
           description: |
@@ -6981,11 +6973,11 @@ components:
                 full cycle through the training dataset.
               oneOf:
                 - type: string
-                  enum: [auto]
-                - type: integer
-                  minimum: 1
-                  maximum: 50
-              default: auto
+                  enum: ["auto"]
+                # - type: integer
+                #   minimum: 1
+                #   maximum: 50
+              default: "auto"
         learning_rate_multiplier:
           description: |
             The learning rate multiplier to use for training.
@@ -7450,10 +7442,10 @@ components:
             n_epochs:
               oneOf:
                 - type: string
-                  enum: [auto]
-                - type: integer
-                  minimum: 1
-                  maximum: 50
+                  enum: ["auto"]
+                # - type: integer
+                #   minimum: 1
+                #   maximum: 50
               default: auto
               description:
                 The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset.

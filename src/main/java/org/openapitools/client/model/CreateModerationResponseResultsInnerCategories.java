@@ -49,7 +49,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * A list of the categories, and whether they are flagged or not.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:53:00.096330Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
 public class CreateModerationResponseResultsInnerCategories {
   public static final String SERIALIZED_NAME_HATE = "hate";
   @SerializedName(SERIALIZED_NAME_HATE)

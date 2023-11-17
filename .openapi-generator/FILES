@@ -75,8 +75,6 @@ docs/CreateFineTuneRequestHyperparametersNEpochs.md
 docs/CreateFineTuningJobRequest.md
 docs/CreateFineTuningJobRequestHyperparameters.md
 docs/CreateFineTuningJobRequestHyperparametersBatchSize.md
-docs/CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.md
-docs/CreateFineTuningJobRequestHyperparametersNEpochs.md
 docs/CreateImageEditRequestModel.md
 docs/CreateImageRequest.md
 docs/CreateMessageRequest.md
@@ -253,8 +251,6 @@ src/main/java/org/openapitools/client/model/CreateFineTuneRequestHyperparameters
 src/main/java/org/openapitools/client/model/CreateFineTuningJobRequest.java
 src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestHyperparameters.java
 src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestHyperparametersBatchSize.java
-src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.java
-src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestHyperparametersNEpochs.java
 src/main/java/org/openapitools/client/model/CreateImageEditRequestModel.java
 src/main/java/org/openapitools/client/model/CreateImageRequest.java
 src/main/java/org/openapitools/client/model/CreateMessageRequest.java
