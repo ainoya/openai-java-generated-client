@@ -50,7 +50,7 @@ import tokyo.ainoya.openai.client.JSON;
 /**
  * A URL for the file that&#39;s generated when the assistant used the &#x60;code_interpreter&#x60; tool to generate a file.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T07:41:33.457679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T09:06:46.484286Z[Etc/UTC]")
 public class MessageContentTextAnnotationsFilePathObject {
   /**
    * Always &#x60;file_path&#x60;.

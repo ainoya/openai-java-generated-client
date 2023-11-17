@@ -50,7 +50,7 @@ import tokyo.ainoya.openai.client.JSON;
 /**
  * Details of the message creation by the run step.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T07:41:33.457679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T09:06:46.484286Z[Etc/UTC]")
 public class RunStepDetailsMessageCreationObject {
   /**
    * Always &#x60;message_creation&#x60;&#x60;.

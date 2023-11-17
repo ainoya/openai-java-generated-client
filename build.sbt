@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).
   settings(
     organization := "org.openapitools",
-    name := "openapi-java-client",
+    name := "openai-java-generated-client",
     version := "2.0.0",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),

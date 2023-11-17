@@ -50,7 +50,7 @@ import tokyo.ainoya.openai.client.JSON;
 /**
  * Details on the action required to continue the run. Will be &#x60;null&#x60; if no action is required.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T07:41:33.457679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T09:06:46.484286Z[Etc/UTC]")
 public class RunObjectRequiredAction {
   /**
    * For now, this is always &#x60;submit_tool_outputs&#x60;.
