@@ -1,7 +1,6 @@
 # OpenAI API Java Client generated from OpenAPI specification with openapi-generator
 
-[![Release](https://jitpack.io/v/ainoya/openai-java-generated-client.svg)]
-(https://jitpack.io/#ainoya/openai-java-generated-client)
+[![Release](https://jitpack.io/v/ainoya/openai-java-generated-client.svg)](https://jitpack.io/#ainoya/openai-java-generated-client)
 
 ## Overview
 
