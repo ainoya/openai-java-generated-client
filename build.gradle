@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
 
 group = 'dev.ainoya'
-version = '2.0.0'
+version = '0.0.1'
 
 buildscript {
     repositories {
@@ -91,6 +91,17 @@ if(hasProperty('target') && target == 'android') {
             maven(MavenPublication) {
                artifactId = 'openai-java-generated-client'
                from components.java
+            }
+        }
+
+        repositories {
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/ainoya/openai-java-generated-client")
+                credentials {
+                    username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME")
+                    password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+                }
             }
         }
     }
