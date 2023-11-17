@@ -18,10 +18,8 @@ All URIs are relative to *https://api.openai.com/v1*
 Immediately cancel a fine-tune job. 
 
 ### Example
-
 ```java
 // Import classes:
-
 import tokyo.ainoya.openai.client.ApiClient;
 import tokyo.ainoya.openai.client.ApiException;
 import tokyo.ainoya.openai.client.Configuration;
@@ -30,27 +28,27 @@ import tokyo.ainoya.openai.client.models.*;
 import tokyo.ainoya.openai.client.api.FineTuningApi;
 
 public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.openai.com/v1");
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.openai.com/v1");
+    
+    // Configure HTTP bearer authorization: ApiKeyAuth
+    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setBearerToken("BEARER TOKEN");
 
-        // Configure HTTP bearer authorization: ApiKeyAuth
-        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-        ApiKeyAuth.setBearerToken("BEARER TOKEN");
-
-        FineTuningApi apiInstance = new FineTuningApi(defaultClient);
-        String fineTuningJobId = "ft-AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the fine-tuning job to cancel. 
-        try {
-            FineTuningJob result = apiInstance.cancelFineTuningJob(fineTuningJobId);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling FineTuningApi#cancelFineTuningJob");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
+    FineTuningApi apiInstance = new FineTuningApi(defaultClient);
+    String fineTuningJobId = "ft-AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the fine-tuning job to cancel. 
+    try {
+      FineTuningJob result = apiInstance.cancelFineTuningJob(fineTuningJobId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FineTuningApi#cancelFineTuningJob");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
+  }
 }
 ```
 
@@ -85,10 +83,8 @@ public class Example {
 Creates a job that fine-tunes a specified model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
 
 ### Example
-
 ```java
 // Import classes:
-
 import tokyo.ainoya.openai.client.ApiClient;
 import tokyo.ainoya.openai.client.ApiException;
 import tokyo.ainoya.openai.client.Configuration;
@@ -97,27 +93,27 @@ import tokyo.ainoya.openai.client.models.*;
 import tokyo.ainoya.openai.client.api.FineTuningApi;
 
 public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.openai.com/v1");
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.openai.com/v1");
+    
+    // Configure HTTP bearer authorization: ApiKeyAuth
+    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setBearerToken("BEARER TOKEN");
 
-        // Configure HTTP bearer authorization: ApiKeyAuth
-        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-        ApiKeyAuth.setBearerToken("BEARER TOKEN");
-
-        FineTuningApi apiInstance = new FineTuningApi(defaultClient);
-        CreateFineTuningJobRequest createFineTuningJobRequest = new CreateFineTuningJobRequest(); // CreateFineTuningJobRequest | 
-        try {
-            FineTuningJob result = apiInstance.createFineTuningJob(createFineTuningJobRequest);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling FineTuningApi#createFineTuningJob");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
+    FineTuningApi apiInstance = new FineTuningApi(defaultClient);
+    CreateFineTuningJobRequest createFineTuningJobRequest = new CreateFineTuningJobRequest(); // CreateFineTuningJobRequest | 
+    try {
+      FineTuningJob result = apiInstance.createFineTuningJob(createFineTuningJobRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FineTuningApi#createFineTuningJob");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
+  }
 }
 ```
 
@@ -152,10 +148,8 @@ public class Example {
 Get status updates for a fine-tuning job. 
 
 ### Example
-
 ```java
 // Import classes:
-
 import tokyo.ainoya.openai.client.ApiClient;
 import tokyo.ainoya.openai.client.ApiException;
 import tokyo.ainoya.openai.client.Configuration;
@@ -164,29 +158,29 @@ import tokyo.ainoya.openai.client.models.*;
 import tokyo.ainoya.openai.client.api.FineTuningApi;
 
 public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.openai.com/v1");
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.openai.com/v1");
+    
+    // Configure HTTP bearer authorization: ApiKeyAuth
+    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setBearerToken("BEARER TOKEN");
 
-        // Configure HTTP bearer authorization: ApiKeyAuth
-        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-        ApiKeyAuth.setBearerToken("BEARER TOKEN");
-
-        FineTuningApi apiInstance = new FineTuningApi(defaultClient);
-        String fineTuningJobId = "ft-AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the fine-tuning job to get events for. 
-        String after = "after_example"; // String | Identifier for the last event from the previous pagination request.
-        Integer limit = 20; // Integer | Number of events to retrieve.
-        try {
-            ListFineTuningJobEventsResponse result = apiInstance.listFineTuningEvents(fineTuningJobId, after, limit);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling FineTuningApi#listFineTuningEvents");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
+    FineTuningApi apiInstance = new FineTuningApi(defaultClient);
+    String fineTuningJobId = "ft-AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the fine-tuning job to get events for. 
+    String after = "after_example"; // String | Identifier for the last event from the previous pagination request.
+    Integer limit = 20; // Integer | Number of events to retrieve.
+    try {
+      ListFineTuningJobEventsResponse result = apiInstance.listFineTuningEvents(fineTuningJobId, after, limit);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FineTuningApi#listFineTuningEvents");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
+  }
 }
 ```
 
@@ -223,10 +217,8 @@ public class Example {
 List your organization&#39;s fine-tuning jobs 
 
 ### Example
-
 ```java
 // Import classes:
-
 import tokyo.ainoya.openai.client.ApiClient;
 import tokyo.ainoya.openai.client.ApiException;
 import tokyo.ainoya.openai.client.Configuration;
@@ -235,28 +227,28 @@ import tokyo.ainoya.openai.client.models.*;
 import tokyo.ainoya.openai.client.api.FineTuningApi;
 
 public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.openai.com/v1");
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.openai.com/v1");
+    
+    // Configure HTTP bearer authorization: ApiKeyAuth
+    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setBearerToken("BEARER TOKEN");
 
-        // Configure HTTP bearer authorization: ApiKeyAuth
-        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-        ApiKeyAuth.setBearerToken("BEARER TOKEN");
-
-        FineTuningApi apiInstance = new FineTuningApi(defaultClient);
-        String after = "after_example"; // String | Identifier for the last job from the previous pagination request.
-        Integer limit = 20; // Integer | Number of fine-tuning jobs to retrieve.
-        try {
-            ListPaginatedFineTuningJobsResponse result = apiInstance.listPaginatedFineTuningJobs(after, limit);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling FineTuningApi#listPaginatedFineTuningJobs");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
+    FineTuningApi apiInstance = new FineTuningApi(defaultClient);
+    String after = "after_example"; // String | Identifier for the last job from the previous pagination request.
+    Integer limit = 20; // Integer | Number of fine-tuning jobs to retrieve.
+    try {
+      ListPaginatedFineTuningJobsResponse result = apiInstance.listPaginatedFineTuningJobs(after, limit);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FineTuningApi#listPaginatedFineTuningJobs");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
+  }
 }
 ```
 
@@ -292,10 +284,8 @@ public class Example {
 Get info about a fine-tuning job.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
 
 ### Example
-
 ```java
 // Import classes:
-
 import tokyo.ainoya.openai.client.ApiClient;
 import tokyo.ainoya.openai.client.ApiException;
 import tokyo.ainoya.openai.client.Configuration;
@@ -304,27 +294,27 @@ import tokyo.ainoya.openai.client.models.*;
 import tokyo.ainoya.openai.client.api.FineTuningApi;
 
 public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.openai.com/v1");
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.openai.com/v1");
+    
+    // Configure HTTP bearer authorization: ApiKeyAuth
+    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setBearerToken("BEARER TOKEN");
 
-        // Configure HTTP bearer authorization: ApiKeyAuth
-        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-        ApiKeyAuth.setBearerToken("BEARER TOKEN");
-
-        FineTuningApi apiInstance = new FineTuningApi(defaultClient);
-        String fineTuningJobId = "ft-AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the fine-tuning job. 
-        try {
-            FineTuningJob result = apiInstance.retrieveFineTuningJob(fineTuningJobId);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling FineTuningApi#retrieveFineTuningJob");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
+    FineTuningApi apiInstance = new FineTuningApi(defaultClient);
+    String fineTuningJobId = "ft-AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the fine-tuning job. 
+    try {
+      FineTuningJob result = apiInstance.retrieveFineTuningJob(fineTuningJobId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FineTuningApi#retrieveFineTuningJob");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
+  }
 }
 ```
 

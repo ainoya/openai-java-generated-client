@@ -13,7 +13,9 @@
 
 package org.openapitools.client.model;
 
+import tokyo.ainoya.openai.client.ApiException;
 import java.util.Objects;
+import java.lang.reflect.Type;
 import java.util.Map;
 
 //import com.fasterxml.jackson.annotation.JsonValue;
@@ -21,7 +23,7 @@ import java.util.Map;
 /**
  * Abstract class for oneOf,anyOf schemas defined in OpenAPI spec
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:35:52.646593Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T07:41:33.457679Z[Etc/UTC]")
 public abstract class AbstractOpenApiSchema {
 
     // store the actual instance of the schema/object

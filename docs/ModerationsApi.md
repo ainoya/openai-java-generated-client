@@ -14,10 +14,8 @@ All URIs are relative to *https://api.openai.com/v1*
 Classifies if text violates OpenAI&#39;s Content Policy
 
 ### Example
-
 ```java
 // Import classes:
-
 import tokyo.ainoya.openai.client.ApiClient;
 import tokyo.ainoya.openai.client.ApiException;
 import tokyo.ainoya.openai.client.Configuration;
@@ -26,27 +24,27 @@ import tokyo.ainoya.openai.client.models.*;
 import tokyo.ainoya.openai.client.api.ModerationsApi;
 
 public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.openai.com/v1");
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.openai.com/v1");
+    
+    // Configure HTTP bearer authorization: ApiKeyAuth
+    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setBearerToken("BEARER TOKEN");
 
-        // Configure HTTP bearer authorization: ApiKeyAuth
-        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-        ApiKeyAuth.setBearerToken("BEARER TOKEN");
-
-        ModerationsApi apiInstance = new ModerationsApi(defaultClient);
-        CreateModerationRequest createModerationRequest = new CreateModerationRequest(); // CreateModerationRequest | 
-        try {
-            CreateModerationResponse result = apiInstance.createModeration(createModerationRequest);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ModerationsApi#createModeration");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
+    ModerationsApi apiInstance = new ModerationsApi(defaultClient);
+    CreateModerationRequest createModerationRequest = new CreateModerationRequest(); // CreateModerationRequest | 
+    try {
+      CreateModerationResponse result = apiInstance.createModeration(createModerationRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ModerationsApi#createModeration");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
+  }
 }
 ```
 

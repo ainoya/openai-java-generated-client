@@ -13,7 +13,7 @@
 
 package tokyo.ainoya.openai.client;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:35:52.646593Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T07:41:33.457679Z[Etc/UTC]")
 public class Pair {
     private String name = "";
     private String value = "";

@@ -14,10 +14,8 @@ All URIs are relative to *https://api.openai.com/v1*
 Creates a model response for the given chat conversation.
 
 ### Example
-
 ```java
 // Import classes:
-
 import tokyo.ainoya.openai.client.ApiClient;
 import tokyo.ainoya.openai.client.ApiException;
 import tokyo.ainoya.openai.client.Configuration;
@@ -26,27 +24,27 @@ import tokyo.ainoya.openai.client.models.*;
 import tokyo.ainoya.openai.client.api.ChatApi;
 
 public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.openai.com/v1");
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.openai.com/v1");
+    
+    // Configure HTTP bearer authorization: ApiKeyAuth
+    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setBearerToken("BEARER TOKEN");
 
-        // Configure HTTP bearer authorization: ApiKeyAuth
-        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-        ApiKeyAuth.setBearerToken("BEARER TOKEN");
-
-        ChatApi apiInstance = new ChatApi(defaultClient);
-        CreateChatCompletionRequest createChatCompletionRequest = new CreateChatCompletionRequest(); // CreateChatCompletionRequest | 
-        try {
-            CreateChatCompletionResponse result = apiInstance.createChatCompletion(createChatCompletionRequest);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ChatApi#createChatCompletion");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
+    ChatApi apiInstance = new ChatApi(defaultClient);
+    CreateChatCompletionRequest createChatCompletionRequest = new CreateChatCompletionRequest(); // CreateChatCompletionRequest | 
+    try {
+      CreateChatCompletionResponse result = apiInstance.createChatCompletion(createChatCompletionRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ChatApi#createChatCompletion");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
+  }
 }
 ```
 

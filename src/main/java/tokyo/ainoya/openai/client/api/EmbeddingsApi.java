@@ -19,8 +19,12 @@ import tokyo.ainoya.openai.client.ApiException;
 import tokyo.ainoya.openai.client.ApiResponse;
 import tokyo.ainoya.openai.client.Configuration;
 import tokyo.ainoya.openai.client.Pair;
+import tokyo.ainoya.openai.client.ProgressRequestBody;
+import tokyo.ainoya.openai.client.ProgressResponseBody;
 
 import com.google.gson.reflect.TypeToken;
+
+import java.io.IOException;
 
 
 import org.openapitools.client.model.CreateEmbeddingRequest;
