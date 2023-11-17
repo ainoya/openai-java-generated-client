@@ -50,7 +50,7 @@ import tokyo.ainoya.openai.client.JSON;
 /**
  * A list of the categories along with their scores as predicted by model.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T09:06:46.484286Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T09:29:35.418072Z[Etc/UTC]")
 public class CreateModerationResponseResultsInnerCategoryScores {
   public static final String SERIALIZED_NAME_HATE = "hate";
   @SerializedName(SERIALIZED_NAME_HATE)

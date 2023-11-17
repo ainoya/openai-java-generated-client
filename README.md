@@ -1,5 +1,33 @@
 # OpenAI API Java Client generated from OpenAPI specification with openapi-generator
 
+## Overview
+
+This repository contains a Java client library for the OpenAI API, generated using the OpenAPI Generator tool. The library is based on the official OpenAPI specification provided by OpenAI, which can be found at [openai/openai-openapi](https://github.com/openai/openai-openapi).
+
+## Motivation
+
+While attempting to generate the client library directly from the official OpenAPI spec file, several issues were encountered, primarily due to certain syntax elements like `oneOf` that led to generation errors. To overcome these challenges, modifications were made to the original spec file to ensure successful client generation and functional integrity of the resulting Java client.
+
+## Modifications and Testing
+
+Several definitions in the spec file that caused errors during generation were identified and rectified. This included, but was not limited to, addressing issues with `oneOf` syntax. It is important to note that these modifications might have led to some original parameters becoming unavailable. For transparency and comparison, the original API spec has been saved as `openapi.orig.yaml`, and the modified file used for generation is `openapi.yaml`.
+
+To view the specific changes made, you can use the command: `diff -Nru openapi.yaml openapi.orig.yaml`.
+
+All automatically generated tests have been run and passed, ensuring the reliability of the modified spec.
+
+## Ongoing Verification
+
+It is acknowledged that with a better understanding of the `openapi-generator` options, it might be possible to generate the client from the original spec without modifications. This aspect is currently under continuous review and exploration.
+
+## Usage and Contribution
+
+We encourage users and developers to contribute to this repository, especially in improving the generation process and enhancing the library. Any updates or fixes that enable the use of the original spec file without modifications would be particularly valuable.
+
+## Disclaimer
+
+This client library is an independent effort and is not officially affiliated with OpenAI. Users should exercise due diligence and refer to OpenAI's official documentation and API guidelines for accurate information.
+
 ---
 
 
@@ -9,7 +37,7 @@ OpenAI API
 
 - API version: 2.0.0
 
-    - Build date: 2023-11-17T09:06:46.484286Z[Etc/UTC]
+    - Build date: 2023-11-17T09:29:35.418072Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
