@@ -21,4 +21,8 @@ Details of the Code Interpreter tool call the run step was involved in.
 | CODE_INTERPRETER | &quot;code_interpreter&quot; |
 
 
+## Implemented Interfaces
+
+* RunStepDetailsToolCallsObjectToolCallsInner
+
 

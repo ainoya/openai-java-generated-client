@@ -18,4 +18,9 @@
 | CODE_INTERPRETER | &quot;code_interpreter&quot; |
 
 
+## Implemented Interfaces
+
+* AssistantObjectToolsInner
+* CreateThreadAndRunRequestToolsInner
+
 

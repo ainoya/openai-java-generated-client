@@ -20,4 +20,8 @@
 | TOOL | &quot;tool&quot; |
 
 
+## Implemented Interfaces
+
+* ChatCompletionRequestMessage
+
 

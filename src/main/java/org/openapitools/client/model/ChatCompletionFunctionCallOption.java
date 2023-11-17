@@ -49,8 +49,8 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * Specifying a particular function via &#x60;{\&quot;name\&quot;: \&quot;my_function\&quot;}&#x60; forces the model to call that function. 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T01:36:25.848624Z[Etc/UTC]")
-public class ChatCompletionFunctionCallOption {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T02:02:15.250875Z[Etc/UTC]")
+public class ChatCompletionFunctionCallOption implements CreateChatCompletionRequestFunctionCall {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;

@@ -11,4 +11,8 @@ Specifying a particular function via `{\"name\": \"my_function\"}` forces the mo
 |**name** | **String** | The name of the function to call. |  |
 
 
+## Implemented Interfaces
+
+* CreateChatCompletionRequestFunctionCall
+
 

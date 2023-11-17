@@ -20,4 +20,8 @@ Text output from the Code Interpreter tool call as part of a run step.
 | LOGS | &quot;logs&quot; |
 
 
+## Implemented Interfaces
+
+* RunStepDetailsToolCallsCodeObjectCodeInterpreterOutputsInner
+
 

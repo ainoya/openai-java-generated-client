@@ -1,13 +1,11 @@
 
 
-# CreateModerationRequestInput
+# Interface CreateModerationRequestInput
 
 The input text to classify
+## Implementing Classes
 
-## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-
+* List<String>
+* String
 
 

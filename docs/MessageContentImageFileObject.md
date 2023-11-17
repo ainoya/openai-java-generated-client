@@ -20,4 +20,8 @@ References an image [File](/docs/api-reference/files) in the content of a messag
 | IMAGE_FILE | &quot;image_file&quot; |
 
 
+## Implemented Interfaces
+
+* MessageObjectContentInner
+
 

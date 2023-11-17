@@ -23,4 +23,8 @@ A citation within the message that points to a specific quote from a specific Fi
 | FILE_CITATION | &quot;file_citation&quot; |
 
 
+## Implemented Interfaces
+
+* MessageContentTextObjectTextAnnotationsInner
+
 

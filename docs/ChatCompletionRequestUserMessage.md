@@ -19,4 +19,8 @@
 | USER | &quot;user&quot; |
 
 
+## Implemented Interfaces
+
+* ChatCompletionRequestMessage
+
 

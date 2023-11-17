@@ -50,7 +50,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * ChatCompletionTool
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T01:36:25.848624Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T02:02:15.250875Z[Etc/UTC]")
 public class ChatCompletionTool {
   /**
    * The type of the tool. Currently, only &#x60;function&#x60; is supported.

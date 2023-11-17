@@ -18,4 +18,9 @@
 | RETRIEVAL | &quot;retrieval&quot; |
 
 
+## Implemented Interfaces
+
+* AssistantObjectToolsInner
+* CreateThreadAndRunRequestToolsInner
+
 

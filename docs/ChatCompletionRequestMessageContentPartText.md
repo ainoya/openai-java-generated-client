@@ -19,4 +19,8 @@
 | TEXT | &quot;text&quot; |
 
 
+## Implemented Interfaces
+
+* ChatCompletionRequestMessageContentPart
+
 

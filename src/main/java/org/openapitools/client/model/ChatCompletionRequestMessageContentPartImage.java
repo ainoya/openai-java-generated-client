@@ -50,8 +50,8 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * ChatCompletionRequestMessageContentPartImage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T01:36:25.848624Z[Etc/UTC]")
-public class ChatCompletionRequestMessageContentPartImage {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T02:02:15.250875Z[Etc/UTC]")
+public class ChatCompletionRequestMessageContentPartImage implements ChatCompletionRequestMessageContentPart {
   /**
    * The type of the content part.
    */

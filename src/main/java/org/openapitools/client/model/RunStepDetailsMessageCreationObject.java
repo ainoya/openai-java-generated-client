@@ -22,6 +22,8 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import org.openapitools.client.model.RunStepDetailsMessageCreationObjectMessageCreation;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,8 +52,8 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * Details of the message creation by the run step.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T01:36:25.848624Z[Etc/UTC]")
-public class RunStepDetailsMessageCreationObject {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T02:02:15.250875Z[Etc/UTC]")
+public class RunStepDetailsMessageCreationObject implements RunStepObjectStepDetails {
   /**
    * Always &#x60;message_creation&#x60;&#x60;.
    */

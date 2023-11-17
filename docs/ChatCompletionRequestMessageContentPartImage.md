@@ -19,4 +19,8 @@
 | IMAGE_URL | &quot;image_url&quot; |
 
 
+## Implemented Interfaces
+
+* ChatCompletionRequestMessageContentPart
+
 

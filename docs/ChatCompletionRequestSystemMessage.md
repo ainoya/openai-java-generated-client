@@ -19,4 +19,8 @@
 | SYSTEM | &quot;system&quot; |
 
 
+## Implemented Interfaces
+
+* ChatCompletionRequestMessage
+
 

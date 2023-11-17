@@ -20,4 +20,8 @@
 | RETRIEVAL | &quot;retrieval&quot; |
 
 
+## Implemented Interfaces
+
+* RunStepDetailsToolCallsObjectToolCallsInner
+
 
