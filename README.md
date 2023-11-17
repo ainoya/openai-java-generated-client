@@ -37,7 +37,7 @@ OpenAI API
 
 - API version: 2.0.0
 
-    - Build date: 2023-11-17T09:48:42.629078Z[Etc/UTC]
+    - Build date: 2023-11-17T09:52:05.185996Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
@@ -118,7 +118,7 @@ Please follow the [installation](#installation) instruction and execute the foll
     import dev.ainoya.client.*;
     import dev.ainoya.client.auth.*;
     import dev.ainoya.client.model.*;
-    import tokyo.ainoya.openai.client.api.AssistantApi;
+    import dev.ainoya.openai.client.api.AssistantApi;
 
     public class AssistantApiExample {
 

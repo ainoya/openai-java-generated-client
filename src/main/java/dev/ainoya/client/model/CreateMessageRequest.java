@@ -52,7 +52,7 @@ import dev.ainoya.client.JSON;
 /**
  * CreateMessageRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T09:48:42.629078Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T09:52:05.185996Z[Etc/UTC]")
 public class CreateMessageRequest {
   /**
    * The role of the entity that is creating the message. Currently only &#x60;user&#x60; is supported.

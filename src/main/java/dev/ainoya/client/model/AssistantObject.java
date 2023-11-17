@@ -52,7 +52,7 @@ import dev.ainoya.client.JSON;
 /**
  * Represents an &#x60;assistant&#x60; that can call the model and use tools.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T09:48:42.629078Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T09:52:05.185996Z[Etc/UTC]")
 public class AssistantObject {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

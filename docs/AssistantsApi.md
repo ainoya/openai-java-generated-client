@@ -47,7 +47,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -114,7 +114,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -179,7 +179,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -246,7 +246,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -313,7 +313,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -380,7 +380,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -445,7 +445,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -510,7 +510,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -575,7 +575,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -642,7 +642,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -707,7 +707,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -772,7 +772,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -839,7 +839,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -906,7 +906,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -975,7 +975,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1042,7 +1042,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1111,7 +1111,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1176,7 +1176,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1249,7 +1249,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1320,7 +1320,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1395,7 +1395,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1468,7 +1468,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1543,7 +1543,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1616,7 +1616,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1685,7 +1685,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1754,7 +1754,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1821,7 +1821,7 @@ import dev.ainoya.client.ApiException;
 import dev.ainoya.client.Configuration;
 import dev.ainoya.client.auth.*;
 import dev.ainoya.client.models.*;
-import tokyo.ainoya.openai.client.api.AssistantsApi;
+import dev.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
