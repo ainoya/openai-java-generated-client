@@ -6839,7 +6839,7 @@ components:
                 overfitting.
               oneOf:
                 - type: string
-                  enum: [auto]
+                  enum: ["auto"]
                 - type: number
                   minimum: 0
                   exclusiveMinimum: true
@@ -6850,7 +6850,7 @@ components:
                 through the training dataset.
               oneOf:
                 - type: string
-                  enum: [auto]
+                  enum: ["auto"]
                 - type: integer
                   minimum: 1
                   maximum: 50
