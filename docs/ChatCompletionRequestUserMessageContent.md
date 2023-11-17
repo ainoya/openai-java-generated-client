@@ -1,11 +1,13 @@
 
 
-# Interface ChatCompletionRequestUserMessageContent
+# ChatCompletionRequestUserMessageContent
 
 The contents of the user message. 
-## Implementing Classes
 
-* List<ChatCompletionRequestMessageContentPart>
-* String
+## Properties
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+
 
 

@@ -22,8 +22,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import org.openapitools.client.model.ChatCompletionRequestUserMessageContent;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,8 +50,8 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * ChatCompletionRequestUserMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
-public class ChatCompletionRequestUserMessage implements ChatCompletionRequestMessage {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:29:56.349541Z[Etc/UTC]")
+public class ChatCompletionRequestUserMessage {
   public static final String SERIALIZED_NAME_CONTENT = "content";
   @SerializedName(SERIALIZED_NAME_CONTENT)
   private ChatCompletionRequestUserMessageContent content;

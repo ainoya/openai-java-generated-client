@@ -53,7 +53,7 @@ import com.google.gson.JsonParseException;
 
 import tokyo.ainoya.openapi.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:15:09.646686Z[Etc/UTC]")
 public class CreateFineTuneRequestHyperparametersNEpochs extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(CreateFineTuneRequestHyperparametersNEpochs.class.getName());
 

@@ -50,8 +50,8 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * References an image [File](/docs/api-reference/files) in the content of a message.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
-public class MessageContentImageFileObject implements MessageObjectContentInner {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:29:56.349541Z[Etc/UTC]")
+public class MessageContentImageFileObject {
   /**
    * Always &#x60;image_file&#x60;.
    */

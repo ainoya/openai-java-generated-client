@@ -20,8 +20,4 @@ Specifies a tool the model should use. Use to force the model to call a specific
 | FUNCTION | &quot;function&quot; |
 
 
-## Implemented Interfaces
-
-* ChatCompletionToolChoiceOption
-
 

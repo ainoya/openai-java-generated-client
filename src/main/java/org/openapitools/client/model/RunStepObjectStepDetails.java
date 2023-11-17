@@ -27,9 +27,6 @@ import org.openapitools.client.model.RunStepDetailsMessageCreationObject;
 import org.openapitools.client.model.RunStepDetailsMessageCreationObjectMessageCreation;
 import org.openapitools.client.model.RunStepDetailsToolCallsObject;
 import org.openapitools.client.model.RunStepDetailsToolCallsObjectToolCallsInner;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
 
@@ -66,7 +63,7 @@ import com.google.gson.JsonParseException;
 
 import tokyo.ainoya.openapi.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:29:56.349541Z[Etc/UTC]")
 public class RunStepObjectStepDetails extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(RunStepObjectStepDetails.class.getName());
 

@@ -21,7 +21,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import org.openapitools.client.model.CreateFineTuneRequestHyperparametersNEpochs;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,32 +49,82 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * The hyperparameters used for the fine-tuning job.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:29:56.349541Z[Etc/UTC]")
 public class CreateFineTuneRequestHyperparameters {
+  /**
+   * The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset. 
+   */
+  @JsonAdapter(NEpochsEnum.Adapter.class)
+  public enum NEpochsEnum {
+    AUTO("auto");
+
+    private String value;
+
+    NEpochsEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static NEpochsEnum fromValue(String value) {
+      for (NEpochsEnum b : NEpochsEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<NEpochsEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final NEpochsEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public NEpochsEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return NEpochsEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      NEpochsEnum.fromValue(value);
+    }
+  }
+
   public static final String SERIALIZED_NAME_N_EPOCHS = "n_epochs";
   @SerializedName(SERIALIZED_NAME_N_EPOCHS)
-  private CreateFineTuneRequestHyperparametersNEpochs nEpochs = auto;
+  private NEpochsEnum nEpochs = NEpochsEnum.AUTO;
 
   public CreateFineTuneRequestHyperparameters() {
   }
 
-  public CreateFineTuneRequestHyperparameters nEpochs(CreateFineTuneRequestHyperparametersNEpochs nEpochs) {
+  public CreateFineTuneRequestHyperparameters nEpochs(NEpochsEnum nEpochs) {
     
     this.nEpochs = nEpochs;
     return this;
   }
 
    /**
-   * Get nEpochs
+   * The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset. 
    * @return nEpochs
   **/
   @javax.annotation.Nullable
-  public CreateFineTuneRequestHyperparametersNEpochs getnEpochs() {
+  public NEpochsEnum getnEpochs() {
     return nEpochs;
   }
 
 
-  public void setnEpochs(CreateFineTuneRequestHyperparametersNEpochs nEpochs) {
+  public void setnEpochs(NEpochsEnum nEpochs) {
     this.nEpochs = nEpochs;
   }
 
@@ -152,9 +201,12 @@ public class CreateFineTuneRequestHyperparameters {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("n_epochs") != null && !jsonObj.get("n_epochs").isJsonNull()) && !jsonObj.get("n_epochs").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `n_epochs` to be a primitive type in the JSON string but got `%s`", jsonObj.get("n_epochs").toString()));
+      }
       // validate the optional field `n_epochs`
       if (jsonObj.get("n_epochs") != null && !jsonObj.get("n_epochs").isJsonNull()) {
-        CreateFineTuneRequestHyperparametersNEpochs.validateJsonElement(jsonObj.get("n_epochs"));
+        NEpochsEnum.validateJsonElement(jsonObj.get("n_epochs"));
       }
   }
 

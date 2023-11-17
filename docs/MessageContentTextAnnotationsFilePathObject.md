@@ -23,8 +23,4 @@ A URL for the file that's generated when the assistant used the `code_interprete
 | FILE_PATH | &quot;file_path&quot; |
 
 
-## Implemented Interfaces
-
-* MessageContentTextObjectTextAnnotationsInner
-
 

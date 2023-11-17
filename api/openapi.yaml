@@ -5786,7 +5786,6 @@ components:
       - $ref: '#/components/schemas/ChatCompletionRequestMessageContentPartText'
       - $ref: '#/components/schemas/ChatCompletionRequestMessageContentPartImage'
       x-oaiExpandable: true
-      x-one-of-name: ChatCompletionRequestMessageContentPart
     ChatCompletionRequestMessageContentPartImage:
       properties:
         type:
@@ -5824,7 +5823,6 @@ components:
       - $ref: '#/components/schemas/ChatCompletionRequestToolMessage'
       - $ref: '#/components/schemas/ChatCompletionRequestFunctionMessage'
       x-oaiExpandable: true
-      x-one-of-name: ChatCompletionRequestMessage
     ChatCompletionRequestSystemMessage:
       properties:
         content:
@@ -6028,7 +6026,6 @@ components:
         type: string
       - $ref: '#/components/schemas/ChatCompletionNamedToolChoice'
       x-oaiExpandable: true
-      x-one-of-name: ChatCompletionToolChoiceOption
     ChatCompletionNamedToolChoice:
       description: Specifies a tool the model should use. Use to force the model to
         call a specific function.
@@ -6211,7 +6208,7 @@ components:
         - null
         - null
         tool_choice: null
-        model: gpt-3.5-turbo
+        model: gpt-4-1106-preview
         user: user-1234
       properties:
         messages:
@@ -6222,7 +6219,25 @@ components:
           minItems: 1
           type: array
         model:
-          $ref: '#/components/schemas/CreateChatCompletionRequest_model'
+          description: "ID of the model to use. See the [model endpoint compatibility](/docs/models/model-endpoint-compatibility)\
+            \ table for details on which models work with the Chat API."
+          enum:
+          - gpt-4-1106-preview
+          - gpt-4-vision-preview
+          - gpt-4
+          - gpt-4-0314
+          - gpt-4-0613
+          - gpt-4-32k
+          - gpt-4-32k-0314
+          - gpt-4-32k-0613
+          - gpt-3.5-turbo-1106
+          - gpt-3.5-turbo
+          - gpt-3.5-turbo-16k
+          - gpt-3.5-turbo-0301
+          - gpt-3.5-turbo-0613
+          - gpt-3.5-turbo-16k-0613
+          type: string
+          x-oaiTypeLabel: string
         frequency_penalty:
           default: 0
           description: |
@@ -6545,7 +6560,7 @@ components:
             message: message
           organization_id: organization_id
           hyperparameters:
-            n_epochs: null
+            n_epochs: auto
           model: model
           id: id
           trained_tokens: 1
@@ -6565,7 +6580,7 @@ components:
             message: message
           organization_id: organization_id
           hyperparameters:
-            n_epochs: null
+            n_epochs: auto
           model: model
           id: id
           trained_tokens: 1
@@ -7232,7 +7247,7 @@ components:
         training_file: file-abc123
         validation_file: file-abc123
         hyperparameters:
-          batch_size: null
+          batch_size: auto
           n_epochs: auto
           learning_rate_multiplier: auto
         model: babbage-002
@@ -7324,7 +7339,7 @@ components:
         - 2
         validation_file: file-abc123
         hyperparameters:
-          n_epochs: null
+          n_epochs: auto
         prompt_loss_weight: 5.962133916683182
         compute_classification_metrics: false
         model: curie
@@ -8050,7 +8065,7 @@ components:
           message: message
         organization_id: organization_id
         hyperparameters:
-          n_epochs: null
+          n_epochs: auto
         model: model
         id: id
         trained_tokens: 1
@@ -10367,7 +10382,6 @@ components:
 
         nullable: true
         type: string
-      x-one-of-name: CreateCompletionRequestStop
     CreateCompletionResponse_choices_inner_logprobs:
       example:
         top_logprobs:
@@ -10478,7 +10492,6 @@ components:
         minItems: 1
         title: Array of content parts
         type: array
-      x-one-of-name: ChatCompletionRequestUserMessageContent
     ChatCompletionRequestAssistantMessage_function_call:
       deprecated: true
       description: "Deprecated and replaced by `tool_calls`. The name and arguments\
@@ -10554,29 +10567,6 @@ components:
           description: The name of the function to call.
           type: string
       type: object
-    CreateChatCompletionRequest_model:
-      anyOf:
-      - type: string
-      - enum:
-        - gpt-4-1106-preview
-        - gpt-4-vision-preview
-        - gpt-4
-        - gpt-4-0314
-        - gpt-4-0613
-        - gpt-4-32k
-        - gpt-4-32k-0314
-        - gpt-4-32k-0613
-        - gpt-3.5-turbo-1106
-        - gpt-3.5-turbo
-        - gpt-3.5-turbo-16k
-        - gpt-3.5-turbo-0301
-        - gpt-3.5-turbo-0613
-        - gpt-3.5-turbo-16k-0613
-        type: string
-      description: "ID of the model to use. See the [model endpoint compatibility](/docs/models/model-endpoint-compatibility)\
-        \ table for details on which models work with the Chat API."
-      example: gpt-3.5-turbo
-      x-oaiTypeLabel: string
     CreateChatCompletionRequest_response_format:
       description: "An object specifying the format that the model must output. \n\
         \nSetting to `{ \"type\": \"json_object\" }` enables JSON mode, which guarantees\
@@ -10592,7 +10582,7 @@ components:
         type: json_object
       properties:
         type:
-          default: '"text"'
+          default: text
           description: Must be one of `text` or `json_object`.
           enum:
           - text
@@ -10620,7 +10610,6 @@ components:
         type: string
       - $ref: '#/components/schemas/ChatCompletionFunctionCallOption'
       x-oaiExpandable: true
-      x-one-of-name: CreateChatCompletionRequestFunctionCall
     CreateChatCompletionResponse_choices_inner:
       example:
         finish_reason: stop
@@ -10768,7 +10757,6 @@ components:
       - default: ""
         example: I want to kill them.
         type: string
-      x-one-of-name: CreateModerationRequestInput
     CreateModerationResponse_results_inner_categories:
       description: "A list of the categories, and whether they are flagged or not."
       example:
@@ -10948,28 +10936,21 @@ components:
       - category_scores
       - flagged
       type: object
-    CreateFineTuningJobRequest_hyperparameters_batch_size:
-      default: auto
-      description: |
-        Number of examples in each batch. A larger batch size means that model parameters
-        are updated less frequently, but with lower variance.
-      oneOf:
-      - enum:
-        - auto
-        type: string
-      - maximum: 256
-        minimum: 1
-        type: integer
-      x-one-of-name: CreateFineTuningJobRequestHyperparametersBatchSize
     CreateFineTuningJobRequest_hyperparameters:
       description: The hyperparameters used for the fine-tuning job.
       example:
-        batch_size: null
+        batch_size: auto
         n_epochs: auto
         learning_rate_multiplier: auto
       properties:
         batch_size:
-          $ref: '#/components/schemas/CreateFineTuningJobRequest_hyperparameters_batch_size'
+          default: auto
+          description: |
+            Number of examples in each batch. A larger batch size means that model parameters
+            are updated less frequently, but with lower variance.
+          enum:
+          - auto
+          type: string
         learning_rate_multiplier:
           default: auto
           description: |
@@ -10986,23 +10967,19 @@ components:
           - auto
           type: string
       type: object
-    CreateFineTuneRequest_hyperparameters_n_epochs:
-      default: auto
-      description: |
-        The number of epochs to train the model for. An epoch refers to one
-        full cycle through the training dataset.
-      oneOf:
-      - enum:
-        - auto
-        type: string
-      x-one-of-name: CreateFineTuneRequestHyperparametersNEpochs
     CreateFineTuneRequest_hyperparameters:
       description: The hyperparameters used for the fine-tuning job.
       example:
-        n_epochs: null
+        n_epochs: auto
       properties:
         n_epochs:
-          $ref: '#/components/schemas/CreateFineTuneRequest_hyperparameters_n_epochs'
+          default: auto
+          description: |
+            The number of epochs to train the model for. An epoch refers to one
+            full cycle through the training dataset.
+          enum:
+          - auto
+          type: string
       type: object
     CreateEmbeddingRequest_input:
       description: |
@@ -11012,7 +10989,6 @@ components:
       - default: ""
         example: This is a test.
         type: string
-      x-one-of-name: CreateEmbeddingRequestInput
     CreateEmbeddingResponse_usage:
       description: The usage information for the request.
       example:
@@ -11064,24 +11040,20 @@ components:
       - message
       - param
       type: object
-    FineTuningJob_hyperparameters_n_epochs:
-      default: auto
-      description: |-
-        The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset.
-        "auto" decides the optimal number of epochs based on the size of the dataset. If setting the number manually, we support any number between 1 and 50 epochs.
-      oneOf:
-      - enum:
-        - auto
-        type: string
-      x-one-of-name: FineTuningJobHyperparametersNEpochs
     FineTuningJob_hyperparameters:
       description: "The hyperparameters used for the fine-tuning job. See the [fine-tuning\
         \ guide](/docs/guides/fine-tuning) for more details."
       example:
-        n_epochs: null
+        n_epochs: auto
       properties:
         n_epochs:
-          $ref: '#/components/schemas/FineTuningJob_hyperparameters_n_epochs'
+          default: auto
+          description: |-
+            The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset.
+            "auto" decides the optimal number of epochs based on the size of the dataset. If setting the number manually, we support any number between 1 and 50 epochs.
+          enum:
+          - auto
+          type: string
       required:
       - n_epochs
       type: object
@@ -11139,7 +11111,6 @@ components:
       - $ref: '#/components/schemas/AssistantToolsRetrieval'
       - $ref: '#/components/schemas/AssistantToolsFunction'
       x-oaiExpandable: true
-      x-one-of-name: AssistantObjectToolsInner
     RunObject_required_action_submit_tool_outputs:
       description: Details on the tool outputs needed for this run to continue.
       example:
@@ -11249,13 +11220,11 @@ components:
       - $ref: '#/components/schemas/AssistantToolsCode'
       - $ref: '#/components/schemas/AssistantToolsRetrieval'
       - $ref: '#/components/schemas/AssistantToolsFunction'
-      x-one-of-name: CreateThreadAndRunRequestToolsInner
     MessageObject_content_inner:
       oneOf:
       - $ref: '#/components/schemas/MessageContentImageFileObject'
       - $ref: '#/components/schemas/MessageContentTextObject'
       x-oaiExpandable: true
-      x-one-of-name: MessageObjectContentInner
     MessageContentImageFileObject_image_file:
       properties:
         file_id:
@@ -11270,7 +11239,6 @@ components:
       - $ref: '#/components/schemas/MessageContentTextAnnotationsFileCitationObject'
       - $ref: '#/components/schemas/MessageContentTextAnnotationsFilePathObject'
       x-oaiExpandable: true
-      x-one-of-name: MessageContentTextObjectTextAnnotationsInner
     MessageContentTextObject_text:
       properties:
         value:
@@ -11311,7 +11279,6 @@ components:
       - $ref: '#/components/schemas/RunStepDetailsToolCallsObject'
       type: object
       x-oaiExpandable: true
-      x-one-of-name: RunStepObjectStepDetails
     RunStepObject_last_error:
       description: The last error associated with this run step. Will be `null` if
         there are no errors.
@@ -11348,14 +11315,12 @@ components:
       - $ref: '#/components/schemas/RunStepDetailsToolCallsFunctionObject'
       type: object
       x-oaiExpandable: true
-      x-one-of-name: RunStepDetailsToolCallsObjectToolCallsInner
     RunStepDetailsToolCallsCodeObject_code_interpreter_outputs_inner:
       oneOf:
       - $ref: '#/components/schemas/RunStepDetailsToolCallsCodeOutputLogsObject'
       - $ref: '#/components/schemas/RunStepDetailsToolCallsCodeOutputImageObject'
       type: object
       x-oaiExpandable: true
-      x-one-of-name: RunStepDetailsToolCallsCodeObjectCodeInterpreterOutputsInner
     RunStepDetailsToolCallsCodeObject_code_interpreter:
       description: The Code Interpreter tool call definition.
       properties:

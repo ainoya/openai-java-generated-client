@@ -21,8 +21,4 @@
 | ASSISTANT | &quot;assistant&quot; |
 
 
-## Implemented Interfaces
-
-* ChatCompletionRequestMessage
-
 

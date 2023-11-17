@@ -31,7 +31,6 @@ import org.openapitools.client.model.ChatCompletionRequestMessage;
 import org.openapitools.client.model.ChatCompletionTool;
 import org.openapitools.client.model.ChatCompletionToolChoiceOption;
 import org.openapitools.client.model.CreateChatCompletionRequestFunctionCall;
-import org.openapitools.client.model.CreateChatCompletionRequestModel;
 import org.openapitools.client.model.CreateChatCompletionRequestResponseFormat;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -62,15 +61,91 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * CreateChatCompletionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:29:56.349541Z[Etc/UTC]")
 public class CreateChatCompletionRequest {
   public static final String SERIALIZED_NAME_MESSAGES = "messages";
   @SerializedName(SERIALIZED_NAME_MESSAGES)
   private List<ChatCompletionRequestMessage> messages = new ArrayList<>();
 
+  /**
+   * ID of the model to use. See the [model endpoint compatibility](/docs/models/model-endpoint-compatibility) table for details on which models work with the Chat API.
+   */
+  @JsonAdapter(ModelEnum.Adapter.class)
+  public enum ModelEnum {
+    _4_1106_PREVIEW("gpt-4-1106-preview"),
+    
+    _4_VISION_PREVIEW("gpt-4-vision-preview"),
+    
+    _4("gpt-4"),
+    
+    _4_0314("gpt-4-0314"),
+    
+    _4_0613("gpt-4-0613"),
+    
+    _4_32K("gpt-4-32k"),
+    
+    _4_32K_0314("gpt-4-32k-0314"),
+    
+    _4_32K_0613("gpt-4-32k-0613"),
+    
+    _3_5_TURBO_1106("gpt-3.5-turbo-1106"),
+    
+    _3_5_TURBO("gpt-3.5-turbo"),
+    
+    _3_5_TURBO_16K("gpt-3.5-turbo-16k"),
+    
+    _3_5_TURBO_0301("gpt-3.5-turbo-0301"),
+    
+    _3_5_TURBO_0613("gpt-3.5-turbo-0613"),
+    
+    _3_5_TURBO_16K_0613("gpt-3.5-turbo-16k-0613");
+
+    private String value;
+
+    ModelEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ModelEnum fromValue(String value) {
+      for (ModelEnum b : ModelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<ModelEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ModelEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ModelEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return ModelEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ModelEnum.fromValue(value);
+    }
+  }
+
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
-  private CreateChatCompletionRequestModel model;
+  private ModelEnum model;
 
   public static final String SERIALIZED_NAME_FREQUENCY_PENALTY = "frequency_penalty";
   @SerializedName(SERIALIZED_NAME_FREQUENCY_PENALTY)
@@ -170,23 +245,23 @@ public class CreateChatCompletionRequest {
   }
 
 
-  public CreateChatCompletionRequest model(CreateChatCompletionRequestModel model) {
+  public CreateChatCompletionRequest model(ModelEnum model) {
     
     this.model = model;
     return this;
   }
 
    /**
-   * Get model
+   * ID of the model to use. See the [model endpoint compatibility](/docs/models/model-endpoint-compatibility) table for details on which models work with the Chat API.
    * @return model
   **/
   @javax.annotation.Nonnull
-  public CreateChatCompletionRequestModel getModel() {
+  public ModelEnum getModel() {
     return model;
   }
 
 
-  public void setModel(CreateChatCompletionRequestModel model) {
+  public void setModel(ModelEnum model) {
     this.model = model;
   }
 
@@ -724,8 +799,11 @@ public class CreateChatCompletionRequest {
       for (int i = 0; i < jsonArraymessages.size(); i++) {
         ChatCompletionRequestMessage.validateJsonElement(jsonArraymessages.get(i));
       };
+      if (!jsonObj.get("model").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
+      }
       // validate the required field `model`
-      CreateChatCompletionRequestModel.validateJsonElement(jsonObj.get("model"));
+      ModelEnum.validateJsonElement(jsonObj.get("model"));
       // validate the optional field `response_format`
       if (jsonObj.get("response_format") != null && !jsonObj.get("response_format").isJsonNull()) {
         CreateChatCompletionRequestResponseFormat.validateJsonElement(jsonObj.get("response_format"));

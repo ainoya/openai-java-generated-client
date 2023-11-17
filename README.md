@@ -2,7 +2,7 @@
 
 OpenAI API
 - API version: 2.0.0
-  - Build date: 2023-11-17T06:14:01.849420Z[Etc/UTC]
+  - Build date: 2023-11-17T06:29:56.349541Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
@@ -221,7 +221,6 @@ Class | Method | HTTP request | Description
  - [CreateChatCompletionFunctionResponseChoicesInner](docs/CreateChatCompletionFunctionResponseChoicesInner.md)
  - [CreateChatCompletionRequest](docs/CreateChatCompletionRequest.md)
  - [CreateChatCompletionRequestFunctionCall](docs/CreateChatCompletionRequestFunctionCall.md)
- - [CreateChatCompletionRequestModel](docs/CreateChatCompletionRequestModel.md)
  - [CreateChatCompletionRequestResponseFormat](docs/CreateChatCompletionRequestResponseFormat.md)
  - [CreateChatCompletionResponse](docs/CreateChatCompletionResponse.md)
  - [CreateChatCompletionResponseChoicesInner](docs/CreateChatCompletionResponseChoicesInner.md)
@@ -243,10 +242,8 @@ Class | Method | HTTP request | Description
  - [CreateEmbeddingResponseUsage](docs/CreateEmbeddingResponseUsage.md)
  - [CreateFineTuneRequest](docs/CreateFineTuneRequest.md)
  - [CreateFineTuneRequestHyperparameters](docs/CreateFineTuneRequestHyperparameters.md)
- - [CreateFineTuneRequestHyperparametersNEpochs](docs/CreateFineTuneRequestHyperparametersNEpochs.md)
  - [CreateFineTuningJobRequest](docs/CreateFineTuningJobRequest.md)
  - [CreateFineTuningJobRequestHyperparameters](docs/CreateFineTuningJobRequestHyperparameters.md)
- - [CreateFineTuningJobRequestHyperparametersBatchSize](docs/CreateFineTuningJobRequestHyperparametersBatchSize.md)
  - [CreateImageEditRequestModel](docs/CreateImageEditRequestModel.md)
  - [CreateImageRequest](docs/CreateImageRequest.md)
  - [CreateMessageRequest](docs/CreateMessageRequest.md)
@@ -280,7 +277,6 @@ Class | Method | HTTP request | Description
  - [FineTuningJobError](docs/FineTuningJobError.md)
  - [FineTuningJobEvent](docs/FineTuningJobEvent.md)
  - [FineTuningJobHyperparameters](docs/FineTuningJobHyperparameters.md)
- - [FineTuningJobHyperparametersNEpochs](docs/FineTuningJobHyperparametersNEpochs.md)
  - [FunctionObject](docs/FunctionObject.md)
  - [Image](docs/Image.md)
  - [ImagesResponse](docs/ImagesResponse.md)

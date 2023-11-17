@@ -50,7 +50,7 @@ import com.google.gson.JsonParseException;
 
 import tokyo.ainoya.openapi.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:25:24.731822Z[Etc/UTC]")
 public class CreateChatCompletionRequestModel extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(CreateChatCompletionRequestModel.class.getName());
 

@@ -19,9 +19,4 @@
 | FUNCTION | &quot;function&quot; |
 
 
-## Implemented Interfaces
-
-* AssistantObjectToolsInner
-* CreateThreadAndRunRequestToolsInner
-
 

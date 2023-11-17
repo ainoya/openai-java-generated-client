@@ -50,8 +50,8 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * AssistantToolsFunction
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
-public class AssistantToolsFunction implements AssistantObjectToolsInner, CreateThreadAndRunRequestToolsInner {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:29:56.349541Z[Etc/UTC]")
+public class AssistantToolsFunction {
   /**
    * The type of tool being defined: &#x60;function&#x60;
    */

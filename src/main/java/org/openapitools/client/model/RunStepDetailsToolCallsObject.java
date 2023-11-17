@@ -52,8 +52,8 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * Details of the tool call.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
-public class RunStepDetailsToolCallsObject implements RunStepObjectStepDetails {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:29:56.349541Z[Etc/UTC]")
+public class RunStepDetailsToolCallsObject {
   /**
    * Always &#x60;tool_calls&#x60;.
    */

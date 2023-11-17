@@ -20,8 +20,4 @@ The text content that is part of a message.
 | TEXT | &quot;text&quot; |
 
 
-## Implemented Interfaces
-
-* MessageObjectContentInner
-
 

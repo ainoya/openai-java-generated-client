@@ -49,7 +49,6 @@ docs/CreateChatCompletionFunctionResponse.md
 docs/CreateChatCompletionFunctionResponseChoicesInner.md
 docs/CreateChatCompletionRequest.md
 docs/CreateChatCompletionRequestFunctionCall.md
-docs/CreateChatCompletionRequestModel.md
 docs/CreateChatCompletionRequestResponseFormat.md
 docs/CreateChatCompletionResponse.md
 docs/CreateChatCompletionResponseChoicesInner.md
@@ -71,10 +70,8 @@ docs/CreateEmbeddingResponse.md
 docs/CreateEmbeddingResponseUsage.md
 docs/CreateFineTuneRequest.md
 docs/CreateFineTuneRequestHyperparameters.md
-docs/CreateFineTuneRequestHyperparametersNEpochs.md
 docs/CreateFineTuningJobRequest.md
 docs/CreateFineTuningJobRequestHyperparameters.md
-docs/CreateFineTuningJobRequestHyperparametersBatchSize.md
 docs/CreateImageEditRequestModel.md
 docs/CreateImageRequest.md
 docs/CreateMessageRequest.md
@@ -113,7 +110,6 @@ docs/FineTuningJob.md
 docs/FineTuningJobError.md
 docs/FineTuningJobEvent.md
 docs/FineTuningJobHyperparameters.md
-docs/FineTuningJobHyperparametersNEpochs.md
 docs/FunctionObject.md
 docs/Image.md
 docs/ImagesApi.md
@@ -225,7 +221,6 @@ src/main/java/org/openapitools/client/model/CreateChatCompletionFunctionResponse
 src/main/java/org/openapitools/client/model/CreateChatCompletionFunctionResponseChoicesInner.java
 src/main/java/org/openapitools/client/model/CreateChatCompletionRequest.java
 src/main/java/org/openapitools/client/model/CreateChatCompletionRequestFunctionCall.java
-src/main/java/org/openapitools/client/model/CreateChatCompletionRequestModel.java
 src/main/java/org/openapitools/client/model/CreateChatCompletionRequestResponseFormat.java
 src/main/java/org/openapitools/client/model/CreateChatCompletionResponse.java
 src/main/java/org/openapitools/client/model/CreateChatCompletionResponseChoicesInner.java
@@ -247,10 +242,8 @@ src/main/java/org/openapitools/client/model/CreateEmbeddingResponse.java
 src/main/java/org/openapitools/client/model/CreateEmbeddingResponseUsage.java
 src/main/java/org/openapitools/client/model/CreateFineTuneRequest.java
 src/main/java/org/openapitools/client/model/CreateFineTuneRequestHyperparameters.java
-src/main/java/org/openapitools/client/model/CreateFineTuneRequestHyperparametersNEpochs.java
 src/main/java/org/openapitools/client/model/CreateFineTuningJobRequest.java
 src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestHyperparameters.java
-src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestHyperparametersBatchSize.java
 src/main/java/org/openapitools/client/model/CreateImageEditRequestModel.java
 src/main/java/org/openapitools/client/model/CreateImageRequest.java
 src/main/java/org/openapitools/client/model/CreateMessageRequest.java
@@ -284,7 +277,6 @@ src/main/java/org/openapitools/client/model/FineTuningJob.java
 src/main/java/org/openapitools/client/model/FineTuningJobError.java
 src/main/java/org/openapitools/client/model/FineTuningJobEvent.java
 src/main/java/org/openapitools/client/model/FineTuningJobHyperparameters.java
-src/main/java/org/openapitools/client/model/FineTuningJobHyperparametersNEpochs.java
 src/main/java/org/openapitools/client/model/FunctionObject.java
 src/main/java/org/openapitools/client/model/Image.java
 src/main/java/org/openapitools/client/model/ImagesResponse.java

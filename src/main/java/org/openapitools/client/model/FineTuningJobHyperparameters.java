@@ -21,7 +21,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import org.openapitools.client.model.FineTuningJobHyperparametersNEpochs;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,32 +49,82 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * The hyperparameters used for the fine-tuning job. See the [fine-tuning guide](/docs/guides/fine-tuning) for more details.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:29:56.349541Z[Etc/UTC]")
 public class FineTuningJobHyperparameters {
+  /**
+   * The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset. \&quot;auto\&quot; decides the optimal number of epochs based on the size of the dataset. If setting the number manually, we support any number between 1 and 50 epochs.
+   */
+  @JsonAdapter(NEpochsEnum.Adapter.class)
+  public enum NEpochsEnum {
+    AUTO("auto");
+
+    private String value;
+
+    NEpochsEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static NEpochsEnum fromValue(String value) {
+      for (NEpochsEnum b : NEpochsEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<NEpochsEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final NEpochsEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public NEpochsEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return NEpochsEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      NEpochsEnum.fromValue(value);
+    }
+  }
+
   public static final String SERIALIZED_NAME_N_EPOCHS = "n_epochs";
   @SerializedName(SERIALIZED_NAME_N_EPOCHS)
-  private FineTuningJobHyperparametersNEpochs nEpochs = auto;
+  private NEpochsEnum nEpochs = NEpochsEnum.AUTO;
 
   public FineTuningJobHyperparameters() {
   }
 
-  public FineTuningJobHyperparameters nEpochs(FineTuningJobHyperparametersNEpochs nEpochs) {
+  public FineTuningJobHyperparameters nEpochs(NEpochsEnum nEpochs) {
     
     this.nEpochs = nEpochs;
     return this;
   }
 
    /**
-   * Get nEpochs
+   * The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset. \&quot;auto\&quot; decides the optimal number of epochs based on the size of the dataset. If setting the number manually, we support any number between 1 and 50 epochs.
    * @return nEpochs
   **/
   @javax.annotation.Nonnull
-  public FineTuningJobHyperparametersNEpochs getnEpochs() {
+  public NEpochsEnum getnEpochs() {
     return nEpochs;
   }
 
 
-  public void setnEpochs(FineTuningJobHyperparametersNEpochs nEpochs) {
+  public void setnEpochs(NEpochsEnum nEpochs) {
     this.nEpochs = nEpochs;
   }
 
@@ -160,8 +209,11 @@ public class FineTuningJobHyperparameters {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("n_epochs").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `n_epochs` to be a primitive type in the JSON string but got `%s`", jsonObj.get("n_epochs").toString()));
+      }
       // validate the required field `n_epochs`
-      FineTuningJobHyperparametersNEpochs.validateJsonElement(jsonObj.get("n_epochs"));
+      NEpochsEnum.validateJsonElement(jsonObj.get("n_epochs"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

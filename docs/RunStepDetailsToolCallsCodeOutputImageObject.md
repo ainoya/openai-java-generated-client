@@ -19,8 +19,4 @@
 | IMAGE | &quot;image&quot; |
 
 
-## Implemented Interfaces
-
-* RunStepDetailsToolCallsCodeObjectCodeInterpreterOutputsInner
-
 

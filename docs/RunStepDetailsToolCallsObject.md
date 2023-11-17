@@ -20,8 +20,4 @@ Details of the tool call.
 | TOOL_CALLS | &quot;tool_calls&quot; |
 
 
-## Implemented Interfaces
-
-* RunStepObjectStepDetails
-
 

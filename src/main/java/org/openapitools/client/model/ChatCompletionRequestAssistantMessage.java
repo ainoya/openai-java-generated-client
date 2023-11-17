@@ -53,8 +53,8 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * ChatCompletionRequestAssistantMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
-public class ChatCompletionRequestAssistantMessage implements ChatCompletionRequestMessage {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:29:56.349541Z[Etc/UTC]")
+public class ChatCompletionRequestAssistantMessage {
   public static final String SERIALIZED_NAME_CONTENT = "content";
   @SerializedName(SERIALIZED_NAME_CONTENT)
   private String content;

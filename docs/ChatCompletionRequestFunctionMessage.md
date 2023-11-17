@@ -20,8 +20,4 @@
 | FUNCTION | &quot;function&quot; |
 
 
-## Implemented Interfaces
-
-* ChatCompletionRequestMessage
-
 

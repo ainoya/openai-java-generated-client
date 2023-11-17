@@ -21,7 +21,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import org.openapitools.client.model.CreateFineTuningJobRequestHyperparametersBatchSize;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,11 +49,61 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * The hyperparameters used for the fine-tuning job.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:14:01.849420Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T06:29:56.349541Z[Etc/UTC]")
 public class CreateFineTuningJobRequestHyperparameters {
+  /**
+   * Number of examples in each batch. A larger batch size means that model parameters are updated less frequently, but with lower variance. 
+   */
+  @JsonAdapter(BatchSizeEnum.Adapter.class)
+  public enum BatchSizeEnum {
+    AUTO("auto");
+
+    private String value;
+
+    BatchSizeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static BatchSizeEnum fromValue(String value) {
+      for (BatchSizeEnum b : BatchSizeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<BatchSizeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final BatchSizeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public BatchSizeEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return BatchSizeEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      BatchSizeEnum.fromValue(value);
+    }
+  }
+
   public static final String SERIALIZED_NAME_BATCH_SIZE = "batch_size";
   @SerializedName(SERIALIZED_NAME_BATCH_SIZE)
-  private CreateFineTuningJobRequestHyperparametersBatchSize batchSize = auto;
+  private BatchSizeEnum batchSize = BatchSizeEnum.AUTO;
 
   /**
    * Scaling factor for the learning rate. A smaller learning rate may be useful to avoid overfitting. 
@@ -167,23 +216,23 @@ public class CreateFineTuningJobRequestHyperparameters {
   public CreateFineTuningJobRequestHyperparameters() {
   }
 
-  public CreateFineTuningJobRequestHyperparameters batchSize(CreateFineTuningJobRequestHyperparametersBatchSize batchSize) {
+  public CreateFineTuningJobRequestHyperparameters batchSize(BatchSizeEnum batchSize) {
     
     this.batchSize = batchSize;
     return this;
   }
 
    /**
-   * Get batchSize
+   * Number of examples in each batch. A larger batch size means that model parameters are updated less frequently, but with lower variance. 
    * @return batchSize
   **/
   @javax.annotation.Nullable
-  public CreateFineTuningJobRequestHyperparametersBatchSize getBatchSize() {
+  public BatchSizeEnum getBatchSize() {
     return batchSize;
   }
 
 
-  public void setBatchSize(CreateFineTuningJobRequestHyperparametersBatchSize batchSize) {
+  public void setBatchSize(BatchSizeEnum batchSize) {
     this.batchSize = batchSize;
   }
 
@@ -308,9 +357,12 @@ public class CreateFineTuningJobRequestHyperparameters {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("batch_size") != null && !jsonObj.get("batch_size").isJsonNull()) && !jsonObj.get("batch_size").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `batch_size` to be a primitive type in the JSON string but got `%s`", jsonObj.get("batch_size").toString()));
+      }
       // validate the optional field `batch_size`
       if (jsonObj.get("batch_size") != null && !jsonObj.get("batch_size").isJsonNull()) {
-        CreateFineTuningJobRequestHyperparametersBatchSize.validateJsonElement(jsonObj.get("batch_size"));
+        BatchSizeEnum.validateJsonElement(jsonObj.get("batch_size"));
       }
       if ((jsonObj.get("learning_rate_multiplier") != null && !jsonObj.get("learning_rate_multiplier").isJsonNull()) && !jsonObj.get("learning_rate_multiplier").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `learning_rate_multiplier` to be a primitive type in the JSON string but got `%s`", jsonObj.get("learning_rate_multiplier").toString()));
