@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import org.openapitools.client.model.CreateFineTuningJobRequestHyperparameters;
-import org.openapitools.client.model.CreateFineTuningJobRequestModel;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -52,11 +51,65 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * CreateFineTuningJobRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:48:03.618184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:53:00.096330Z[Etc/UTC]")
 public class CreateFineTuningJobRequest {
+  /**
+   * Gets or Sets model
+   */
+  @JsonAdapter(ModelEnum.Adapter.class)
+  public enum ModelEnum {
+    BABBAGE_002("babbage-002"),
+    
+    DAVINCI_002("davinci-002"),
+    
+    GPT_3_5_TURBO("gpt-3.5-turbo");
+
+    private String value;
+
+    ModelEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ModelEnum fromValue(String value) {
+      for (ModelEnum b : ModelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<ModelEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ModelEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ModelEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return ModelEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ModelEnum.fromValue(value);
+    }
+  }
+
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
-  private CreateFineTuningJobRequestModel model;
+  private ModelEnum model;
 
   public static final String SERIALIZED_NAME_TRAINING_FILE = "training_file";
   @SerializedName(SERIALIZED_NAME_TRAINING_FILE)
@@ -77,7 +130,7 @@ public class CreateFineTuningJobRequest {
   public CreateFineTuningJobRequest() {
   }
 
-  public CreateFineTuningJobRequest model(CreateFineTuningJobRequestModel model) {
+  public CreateFineTuningJobRequest model(ModelEnum model) {
     
     this.model = model;
     return this;
@@ -88,12 +141,12 @@ public class CreateFineTuningJobRequest {
    * @return model
   **/
   @javax.annotation.Nonnull
-  public CreateFineTuningJobRequestModel getModel() {
+  public ModelEnum getModel() {
     return model;
   }
 
 
-  public void setModel(CreateFineTuningJobRequestModel model) {
+  public void setModel(ModelEnum model) {
     this.model = model;
   }
 
@@ -286,8 +339,11 @@ public class CreateFineTuningJobRequest {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("model").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
+      }
       // validate the required field `model`
-      CreateFineTuningJobRequestModel.validateJsonElement(jsonObj.get("model"));
+      ModelEnum.validateJsonElement(jsonObj.get("model"));
       if (!jsonObj.get("training_file").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `training_file` to be a primitive type in the JSON string but got `%s`", jsonObj.get("training_file").toString()));
       }

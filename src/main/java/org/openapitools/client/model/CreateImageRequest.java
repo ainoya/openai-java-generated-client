@@ -21,7 +21,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import org.openapitools.client.model.CreateImageRequestModel;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -51,15 +50,67 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * CreateImageRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:48:03.618184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:53:00.096330Z[Etc/UTC]")
 public class CreateImageRequest {
   public static final String SERIALIZED_NAME_PROMPT = "prompt";
   @SerializedName(SERIALIZED_NAME_PROMPT)
   private String prompt;
 
+  /**
+   * Gets or Sets model
+   */
+  @JsonAdapter(ModelEnum.Adapter.class)
+  public enum ModelEnum {
+    _2("dall-e-2"),
+    
+    _3("dall-e-3");
+
+    private String value;
+
+    ModelEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ModelEnum fromValue(String value) {
+      for (ModelEnum b : ModelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<ModelEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ModelEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ModelEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return ModelEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ModelEnum.fromValue(value);
+    }
+  }
+
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
-  private CreateImageRequestModel model = "dall-e-2";
+  private ModelEnum model;
 
   public static final String SERIALIZED_NAME_N = "n";
   @SerializedName(SERIALIZED_NAME_N)
@@ -119,7 +170,7 @@ public class CreateImageRequest {
 
   public static final String SERIALIZED_NAME_QUALITY = "quality";
   @SerializedName(SERIALIZED_NAME_QUALITY)
-  private QualityEnum quality = "standard";
+  private QualityEnum quality = QualityEnum.STANDARD;
 
   /**
    * The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;.
@@ -175,7 +226,7 @@ public class CreateImageRequest {
 
   public static final String SERIALIZED_NAME_RESPONSE_FORMAT = "response_format";
   @SerializedName(SERIALIZED_NAME_RESPONSE_FORMAT)
-  private ResponseFormatEnum responseFormat = "url";
+  private ResponseFormatEnum responseFormat = ResponseFormatEnum.URL;
 
   /**
    * The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60; for &#x60;dall-e-2&#x60;. Must be one of &#x60;1024x1024&#x60;, &#x60;1792x1024&#x60;, or &#x60;1024x1792&#x60; for &#x60;dall-e-3&#x60; models.
@@ -237,7 +288,7 @@ public class CreateImageRequest {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private SizeEnum size = "1024x1024";
+  private SizeEnum size = SizeEnum._1024X1024;
 
   /**
    * The style of the generated images. Must be one of &#x60;vivid&#x60; or &#x60;natural&#x60;. Vivid causes the model to lean towards generating hyper-real and dramatic images. Natural causes the model to produce more natural, less hyper-real looking images. This param is only supported for &#x60;dall-e-3&#x60;.
@@ -293,7 +344,7 @@ public class CreateImageRequest {
 
   public static final String SERIALIZED_NAME_STYLE = "style";
   @SerializedName(SERIALIZED_NAME_STYLE)
-  private StyleEnum style = "vivid";
+  private StyleEnum style = StyleEnum.VIVID;
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
@@ -323,7 +374,7 @@ public class CreateImageRequest {
   }
 
 
-  public CreateImageRequest model(CreateImageRequestModel model) {
+  public CreateImageRequest model(ModelEnum model) {
     
     this.model = model;
     return this;
@@ -334,12 +385,12 @@ public class CreateImageRequest {
    * @return model
   **/
   @javax.annotation.Nullable
-  public CreateImageRequestModel getModel() {
+  public ModelEnum getModel() {
     return model;
   }
 
 
-  public void setModel(CreateImageRequestModel model) {
+  public void setModel(ModelEnum model) {
     this.model = model;
   }
 
@@ -587,9 +638,12 @@ public class CreateImageRequest {
       if (!jsonObj.get("prompt").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `prompt` to be a primitive type in the JSON string but got `%s`", jsonObj.get("prompt").toString()));
       }
+      if ((jsonObj.get("model") != null && !jsonObj.get("model").isJsonNull()) && !jsonObj.get("model").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
+      }
       // validate the optional field `model`
       if (jsonObj.get("model") != null && !jsonObj.get("model").isJsonNull()) {
-        CreateImageRequestModel.validateJsonElement(jsonObj.get("model"));
+        ModelEnum.validateJsonElement(jsonObj.get("model"));
       }
       if ((jsonObj.get("quality") != null && !jsonObj.get("quality").isJsonNull()) && !jsonObj.get("quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quality").toString()));

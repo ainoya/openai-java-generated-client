@@ -2,7 +2,7 @@
 
 OpenAI API
 - API version: 2.0.0
-  - Build date: 2023-11-17T05:48:03.618184Z[Etc/UTC]
+  - Build date: 2023-11-17T05:53:00.096330Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
@@ -229,7 +229,6 @@ Class | Method | HTTP request | Description
  - [CreateChatCompletionStreamResponseChoicesInner](docs/CreateChatCompletionStreamResponseChoicesInner.md)
  - [CreateCompletionRequest](docs/CreateCompletionRequest.md)
  - [CreateCompletionRequestModel](docs/CreateCompletionRequestModel.md)
- - [CreateCompletionRequestPrompt](docs/CreateCompletionRequestPrompt.md)
  - [CreateCompletionRequestStop](docs/CreateCompletionRequestStop.md)
  - [CreateCompletionResponse](docs/CreateCompletionResponse.md)
  - [CreateCompletionResponseChoicesInner](docs/CreateCompletionResponseChoicesInner.md)
@@ -250,14 +249,11 @@ Class | Method | HTTP request | Description
  - [CreateFineTuningJobRequestHyperparametersBatchSize](docs/CreateFineTuningJobRequestHyperparametersBatchSize.md)
  - [CreateFineTuningJobRequestHyperparametersLearningRateMultiplier](docs/CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.md)
  - [CreateFineTuningJobRequestHyperparametersNEpochs](docs/CreateFineTuningJobRequestHyperparametersNEpochs.md)
- - [CreateFineTuningJobRequestModel](docs/CreateFineTuningJobRequestModel.md)
  - [CreateImageEditRequestModel](docs/CreateImageEditRequestModel.md)
  - [CreateImageRequest](docs/CreateImageRequest.md)
- - [CreateImageRequestModel](docs/CreateImageRequestModel.md)
  - [CreateMessageRequest](docs/CreateMessageRequest.md)
  - [CreateModerationRequest](docs/CreateModerationRequest.md)
  - [CreateModerationRequestInput](docs/CreateModerationRequestInput.md)
- - [CreateModerationRequestModel](docs/CreateModerationRequestModel.md)
  - [CreateModerationResponse](docs/CreateModerationResponse.md)
  - [CreateModerationResponseResultsInner](docs/CreateModerationResponseResultsInner.md)
  - [CreateModerationResponseResultsInnerCategories](docs/CreateModerationResponseResultsInnerCategories.md)

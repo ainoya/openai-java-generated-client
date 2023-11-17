@@ -50,7 +50,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * ChatCompletionRequestMessageContentPartImageImageUrl
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:48:03.618184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:53:00.096330Z[Etc/UTC]")
 public class ChatCompletionRequestMessageContentPartImageImageUrl {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
@@ -112,7 +112,7 @@ public class ChatCompletionRequestMessageContentPartImageImageUrl {
 
   public static final String SERIALIZED_NAME_DETAIL = "detail";
   @SerializedName(SERIALIZED_NAME_DETAIL)
-  private DetailEnum detail = "auto";
+  private DetailEnum detail = DetailEnum.AUTO;
 
   public ChatCompletionRequestMessageContentPartImageImageUrl() {
   }

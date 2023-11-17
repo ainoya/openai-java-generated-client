@@ -5528,13 +5528,20 @@ components:
         stream: false
         temperature: 1
         model: null
-        prompt: null
+        prompt: This is a test.
         user: user-1234
       properties:
         model:
           $ref: '#/components/schemas/CreateCompletionRequest_model'
         prompt:
-          $ref: '#/components/schemas/CreateCompletionRequest_prompt'
+          default: '"<|endoftext|>"'
+          description: |
+            The prompt(s) to generate completions for, encoded as a string, array of strings, array of tokens, or array of token arrays.
+
+            Note that <|endoftext|> is the document separator that the model sees during training, so if a prompt is not specified the model will generate as if from the beginning of a new document.
+          example: This is a test.
+          nullable: true
+          type: string
         best_of:
           default: 1
           description: |
@@ -6782,7 +6789,7 @@ components:
       example:
         response_format: url
         size: 1024x1024
-        model: dall-e-3
+        model: dall-e-2
         style: vivid
         prompt: A cute baby sea otter
         user: user-1234
@@ -6795,7 +6802,11 @@ components:
           example: A cute baby sea otter
           type: string
         model:
-          $ref: '#/components/schemas/CreateImageRequest_model'
+          enum:
+          - dall-e-2
+          - dall-e-3
+          nullable: true
+          type: string
         "n":
           default: 1
           description: "The number of images to generate. Must be between 1 and 10.\
@@ -6806,7 +6817,7 @@ components:
           nullable: true
           type: integer
         quality:
-          default: '"standard"'
+          default: standard
           description: The quality of the image that will be generated. `hd` creates
             images with finer details and greater consistency across the image. This
             param is only supported for `dall-e-3`.
@@ -6816,7 +6827,7 @@ components:
           example: standard
           type: string
         response_format:
-          default: '"url"'
+          default: url
           description: The format in which the generated images are returned. Must
             be one of `url` or `b64_json`.
           enum:
@@ -6826,7 +6837,7 @@ components:
           nullable: true
           type: string
         size:
-          default: '"1024x1024"'
+          default: 1024x1024
           description: "The size of the generated images. Must be one of `256x256`,\
             \ `512x512`, or `1024x1024` for `dall-e-2`. Must be one of `1024x1024`,\
             \ `1792x1024`, or `1024x1792` for `dall-e-3` models."
@@ -6840,7 +6851,7 @@ components:
           nullable: true
           type: string
         style:
-          default: '"vivid"'
+          default: vivid
           description: "The style of the generated images. Must be one of `vivid`\
             \ or `natural`. Vivid causes the model to lean towards generating hyper-real\
             \ and dramatic images. Natural causes the model to produce more natural,\
@@ -6937,7 +6948,7 @@ components:
           nullable: true
           type: integer
         size:
-          default: '"1024x1024"'
+          default: 1024x1024
           description: "The size of the generated images. Must be one of `256x256`,\
             \ `512x512`, or `1024x1024`."
           enum:
@@ -6948,7 +6959,7 @@ components:
           nullable: true
           type: string
         response_format:
-          default: '"url"'
+          default: url
           description: The format in which the generated images are returned. Must
             be one of `url` or `b64_json`.
           enum:
@@ -6974,7 +6985,10 @@ components:
           format: binary
           type: string
         model:
-          $ref: '#/components/schemas/CreateImageEditRequest_model'
+          enum:
+          - dall-e-2
+          nullable: true
+          type: string
         "n":
           default: 1
           description: "The number of images to generate. Must be between 1 and 10.\
@@ -6985,7 +6999,7 @@ components:
           nullable: true
           type: integer
         response_format:
-          default: '"url"'
+          default: url
           description: The format in which the generated images are returned. Must
             be one of `url` or `b64_json`.
           enum:
@@ -6995,7 +7009,7 @@ components:
           nullable: true
           type: string
         size:
-          default: '"1024x1024"'
+          default: 1024x1024
           description: "The size of the generated images. Must be one of `256x256`,\
             \ `512x512`, or `1024x1024`."
           enum:
@@ -7016,12 +7030,15 @@ components:
     CreateModerationRequest:
       example:
         input: null
-        model: text-moderation-stable
+        model: text-moderation-latest
       properties:
         input:
           $ref: '#/components/schemas/CreateModerationRequest_input'
         model:
-          $ref: '#/components/schemas/CreateModerationRequest_model'
+          enum:
+          - text-moderation-latest
+          - text-moderation-stable
+          type: string
       required:
       - input
       type: object
@@ -7218,11 +7235,15 @@ components:
           batch_size: null
           n_epochs: null
           learning_rate_multiplier: null
-        model: gpt-3.5-turbo
+        model: babbage-002
         suffix: suffix
       properties:
         model:
-          $ref: '#/components/schemas/CreateFineTuningJobRequest_model'
+          enum:
+          - babbage-002
+          - davinci-002
+          - gpt-3.5-turbo
+          type: string
         training_file:
           description: |
             The ID of an uploaded file that contains training data.
@@ -10335,18 +10356,6 @@ components:
       description: |
         ID of the model to use. You can use the [List models](/docs/api-reference/models/list) API to see all of your available models, or see our [Model overview](/docs/models/overview) for descriptions of them.
       x-oaiTypeLabel: string
-    CreateCompletionRequest_prompt:
-      default: '"<|endoftext|>"'
-      description: |
-        The prompt(s) to generate completions for, encoded as a string, array of strings, array of tokens, or array of token arrays.
-
-        Note that <|endoftext|> is the document separator that the model sees during training, so if a prompt is not specified the model will generate as if from the beginning of a new document.
-      nullable: true
-      oneOf:
-      - default: ""
-        example: This is a test.
-        type: string
-      x-one-of-name: CreateCompletionRequestPrompt
     CreateCompletionRequest_stop:
       default: null
       description: |
@@ -10442,7 +10451,7 @@ components:
           format: uri
           type: string
         detail:
-          default: '"auto"'
+          default: auto
           description: Specifies the detail level of the image.
           enum:
           - auto
@@ -10741,18 +10750,6 @@ components:
       - index
       - text
       type: object
-    CreateImageRequest_model:
-      anyOf:
-      - type: string
-      - enum:
-        - dall-e-2
-        - dall-e-3
-        type: string
-      default: '"dall-e-2"'
-      description: The model to use for image generation.
-      example: dall-e-3
-      nullable: true
-      x-oaiTypeLabel: string
     CreateImageEditRequest_model:
       anyOf:
       - type: string
@@ -10772,21 +10769,6 @@ components:
         example: I want to kill them.
         type: string
       x-one-of-name: CreateModerationRequestInput
-    CreateModerationRequest_model:
-      anyOf:
-      - type: string
-      - enum:
-        - text-moderation-latest
-        - text-moderation-stable
-        type: string
-      default: '"text-moderation-latest"'
-      description: |
-        Two content moderations models are available: `text-moderation-stable` and `text-moderation-latest`.
-
-        The default is `text-moderation-latest` which will be automatically upgraded over time. This ensures you are always using our most accurate model. If you use `text-moderation-stable`, we will provide advanced notice before updating the model. Accuracy of `text-moderation-stable` may be slightly lower than for `text-moderation-latest`.
-      example: text-moderation-stable
-      nullable: false
-      x-oaiTypeLabel: string
     CreateModerationResponse_results_inner_categories:
       description: "A list of the categories, and whether they are flagged or not."
       example:
@@ -10966,19 +10948,6 @@ components:
       - category_scores
       - flagged
       type: object
-    CreateFineTuningJobRequest_model:
-      anyOf:
-      - type: string
-      - enum:
-        - babbage-002
-        - davinci-002
-        - gpt-3.5-turbo
-        type: string
-      description: |
-        The name of the model to fine-tune. You can select one of the
-        [supported models](/docs/guides/fine-tuning/what-models-can-be-fine-tuned).
-      example: gpt-3.5-turbo
-      x-oaiTypeLabel: string
     CreateFineTuningJobRequest_hyperparameters_batch_size:
       default: auto
       description: |

@@ -5285,10 +5285,8 @@ components:
             Note that <|endoftext|> is the document separator that the model sees during training, so if a prompt is not specified the model will generate as if from the beginning of a new document.
           default: '"<|endoftext|>"'
           nullable: true
-          oneOf:
-            - type: string
-              default: ""
-              example: "This is a test."
+          type: string
+          example: "This is a test."
             # - type: array
             #   items:
             #     type: string
@@ -5582,7 +5580,7 @@ components:
               type: string
               description: Specifies the detail level of the image.
               enum: ["auto", "low", "high"]
-              default: '"auto"'
+              default: "auto"
           required:
             - url
       required:
@@ -6480,7 +6478,7 @@ components:
         style:
           type: string
           enum: ["vivid", "natural"]
-          default: '"vivid"'
+          default: "vivid"
           example: "vivid"
           nullable: true
           description: The style of the generated images. Must be one of `vivid` or `natural`. Vivid causes the model to lean towards generating hyper-real and dramatic images. Natural causes the model to produce more natural, less hyper-real looking images. This param is only supported for `dall-e-3`.

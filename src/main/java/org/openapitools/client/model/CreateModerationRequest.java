@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import org.openapitools.client.model.CreateModerationRequestInput;
-import org.openapitools.client.model.CreateModerationRequestModel;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,15 +50,67 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * CreateModerationRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:48:03.618184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:53:00.096330Z[Etc/UTC]")
 public class CreateModerationRequest {
   public static final String SERIALIZED_NAME_INPUT = "input";
   @SerializedName(SERIALIZED_NAME_INPUT)
   private CreateModerationRequestInput input;
 
+  /**
+   * Gets or Sets model
+   */
+  @JsonAdapter(ModelEnum.Adapter.class)
+  public enum ModelEnum {
+    LATEST("text-moderation-latest"),
+    
+    STABLE("text-moderation-stable");
+
+    private String value;
+
+    ModelEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ModelEnum fromValue(String value) {
+      for (ModelEnum b : ModelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<ModelEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ModelEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ModelEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return ModelEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ModelEnum.fromValue(value);
+    }
+  }
+
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
-  private CreateModerationRequestModel model = "text-moderation-latest";
+  private ModelEnum model;
 
   public CreateModerationRequest() {
   }
@@ -85,7 +136,7 @@ public class CreateModerationRequest {
   }
 
 
-  public CreateModerationRequest model(CreateModerationRequestModel model) {
+  public CreateModerationRequest model(ModelEnum model) {
     
     this.model = model;
     return this;
@@ -96,12 +147,12 @@ public class CreateModerationRequest {
    * @return model
   **/
   @javax.annotation.Nullable
-  public CreateModerationRequestModel getModel() {
+  public ModelEnum getModel() {
     return model;
   }
 
 
-  public void setModel(CreateModerationRequestModel model) {
+  public void setModel(ModelEnum model) {
     this.model = model;
   }
 
@@ -191,9 +242,12 @@ public class CreateModerationRequest {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `input`
       CreateModerationRequestInput.validateJsonElement(jsonObj.get("input"));
+      if ((jsonObj.get("model") != null && !jsonObj.get("model").isJsonNull()) && !jsonObj.get("model").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
+      }
       // validate the optional field `model`
       if (jsonObj.get("model") != null && !jsonObj.get("model").isJsonNull()) {
-        CreateModerationRequestModel.validateJsonElement(jsonObj.get("model"));
+        ModelEnum.validateJsonElement(jsonObj.get("model"));
       }
   }
 

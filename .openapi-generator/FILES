@@ -57,7 +57,6 @@ docs/CreateChatCompletionStreamResponse.md
 docs/CreateChatCompletionStreamResponseChoicesInner.md
 docs/CreateCompletionRequest.md
 docs/CreateCompletionRequestModel.md
-docs/CreateCompletionRequestPrompt.md
 docs/CreateCompletionRequestStop.md
 docs/CreateCompletionResponse.md
 docs/CreateCompletionResponseChoicesInner.md
@@ -78,14 +77,11 @@ docs/CreateFineTuningJobRequestHyperparameters.md
 docs/CreateFineTuningJobRequestHyperparametersBatchSize.md
 docs/CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.md
 docs/CreateFineTuningJobRequestHyperparametersNEpochs.md
-docs/CreateFineTuningJobRequestModel.md
 docs/CreateImageEditRequestModel.md
 docs/CreateImageRequest.md
-docs/CreateImageRequestModel.md
 docs/CreateMessageRequest.md
 docs/CreateModerationRequest.md
 docs/CreateModerationRequestInput.md
-docs/CreateModerationRequestModel.md
 docs/CreateModerationResponse.md
 docs/CreateModerationResponseResultsInner.md
 docs/CreateModerationResponseResultsInnerCategories.md
@@ -239,7 +235,6 @@ src/main/java/org/openapitools/client/model/CreateChatCompletionStreamResponse.j
 src/main/java/org/openapitools/client/model/CreateChatCompletionStreamResponseChoicesInner.java
 src/main/java/org/openapitools/client/model/CreateCompletionRequest.java
 src/main/java/org/openapitools/client/model/CreateCompletionRequestModel.java
-src/main/java/org/openapitools/client/model/CreateCompletionRequestPrompt.java
 src/main/java/org/openapitools/client/model/CreateCompletionRequestStop.java
 src/main/java/org/openapitools/client/model/CreateCompletionResponse.java
 src/main/java/org/openapitools/client/model/CreateCompletionResponseChoicesInner.java
@@ -260,14 +255,11 @@ src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestHyperparam
 src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestHyperparametersBatchSize.java
 src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.java
 src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestHyperparametersNEpochs.java
-src/main/java/org/openapitools/client/model/CreateFineTuningJobRequestModel.java
 src/main/java/org/openapitools/client/model/CreateImageEditRequestModel.java
 src/main/java/org/openapitools/client/model/CreateImageRequest.java
-src/main/java/org/openapitools/client/model/CreateImageRequestModel.java
 src/main/java/org/openapitools/client/model/CreateMessageRequest.java
 src/main/java/org/openapitools/client/model/CreateModerationRequest.java
 src/main/java/org/openapitools/client/model/CreateModerationRequestInput.java
-src/main/java/org/openapitools/client/model/CreateModerationRequestModel.java
 src/main/java/org/openapitools/client/model/CreateModerationResponse.java
 src/main/java/org/openapitools/client/model/CreateModerationResponseResultsInner.java
 src/main/java/org/openapitools/client/model/CreateModerationResponseResultsInnerCategories.java

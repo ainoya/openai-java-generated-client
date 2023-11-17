@@ -205,8 +205,8 @@ public class ImagesApi {
      * @param mask An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where &#x60;image&#x60; should be edited. Must be a valid PNG file, less than 4MB, and have the same dimensions as &#x60;image&#x60;. (optional)
      * @param model  (optional, default to \&quot;dall-e-2\&quot;)
      * @param n The number of images to generate. Must be between 1 and 10. (optional, default to 1)
-     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to \&quot;1024x1024\&quot;)
-     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to \&quot;url\&quot;)
+     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to 1024x1024)
+     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to url)
      * @param user A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids).  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -318,8 +318,8 @@ public class ImagesApi {
      * @param mask An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where &#x60;image&#x60; should be edited. Must be a valid PNG file, less than 4MB, and have the same dimensions as &#x60;image&#x60;. (optional)
      * @param model  (optional, default to \&quot;dall-e-2\&quot;)
      * @param n The number of images to generate. Must be between 1 and 10. (optional, default to 1)
-     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to \&quot;1024x1024\&quot;)
-     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to \&quot;url\&quot;)
+     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to 1024x1024)
+     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to url)
      * @param user A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids).  (optional)
      * @return ImagesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -342,8 +342,8 @@ public class ImagesApi {
      * @param mask An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where &#x60;image&#x60; should be edited. Must be a valid PNG file, less than 4MB, and have the same dimensions as &#x60;image&#x60;. (optional)
      * @param model  (optional, default to \&quot;dall-e-2\&quot;)
      * @param n The number of images to generate. Must be between 1 and 10. (optional, default to 1)
-     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to \&quot;1024x1024\&quot;)
-     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to \&quot;url\&quot;)
+     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to 1024x1024)
+     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to url)
      * @param user A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids).  (optional)
      * @return ApiResponse&lt;ImagesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -367,8 +367,8 @@ public class ImagesApi {
      * @param mask An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where &#x60;image&#x60; should be edited. Must be a valid PNG file, less than 4MB, and have the same dimensions as &#x60;image&#x60;. (optional)
      * @param model  (optional, default to \&quot;dall-e-2\&quot;)
      * @param n The number of images to generate. Must be between 1 and 10. (optional, default to 1)
-     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to \&quot;1024x1024\&quot;)
-     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to \&quot;url\&quot;)
+     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to 1024x1024)
+     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to url)
      * @param user A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids).  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -389,10 +389,10 @@ public class ImagesApi {
     /**
      * Build call for createImageVariation
      * @param image The image to use as the basis for the variation(s). Must be a valid PNG file, less than 4MB, and square. (required)
-     * @param model  (optional, default to \&quot;dall-e-2\&quot;)
+     * @param model  (optional)
      * @param n The number of images to generate. Must be between 1 and 10. For &#x60;dall-e-3&#x60;, only &#x60;n&#x3D;1&#x60; is supported. (optional, default to 1)
-     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to \&quot;url\&quot;)
-     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to \&quot;1024x1024\&quot;)
+     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to url)
+     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to 1024x1024)
      * @param user A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids).  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -403,7 +403,7 @@ public class ImagesApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createImageVariationCall(File image, CreateImageEditRequestModel model, Integer n, String responseFormat, String size, String user, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createImageVariationCall(File image, String model, Integer n, String responseFormat, String size, String user, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -473,7 +473,7 @@ public class ImagesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createImageVariationValidateBeforeCall(File image, CreateImageEditRequestModel model, Integer n, String responseFormat, String size, String user, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createImageVariationValidateBeforeCall(File image, String model, Integer n, String responseFormat, String size, String user, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'image' is set
         if (image == null) {
             throw new ApiException("Missing the required parameter 'image' when calling createImageVariation(Async)");
@@ -487,10 +487,10 @@ public class ImagesApi {
      * Creates a variation of a given image.
      * 
      * @param image The image to use as the basis for the variation(s). Must be a valid PNG file, less than 4MB, and square. (required)
-     * @param model  (optional, default to \&quot;dall-e-2\&quot;)
+     * @param model  (optional)
      * @param n The number of images to generate. Must be between 1 and 10. For &#x60;dall-e-3&#x60;, only &#x60;n&#x3D;1&#x60; is supported. (optional, default to 1)
-     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to \&quot;url\&quot;)
-     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to \&quot;1024x1024\&quot;)
+     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to url)
+     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to 1024x1024)
      * @param user A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids).  (optional)
      * @return ImagesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -500,7 +500,7 @@ public class ImagesApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ImagesResponse createImageVariation(File image, CreateImageEditRequestModel model, Integer n, String responseFormat, String size, String user) throws ApiException {
+    public ImagesResponse createImageVariation(File image, String model, Integer n, String responseFormat, String size, String user) throws ApiException {
         ApiResponse<ImagesResponse> localVarResp = createImageVariationWithHttpInfo(image, model, n, responseFormat, size, user);
         return localVarResp.getData();
     }
@@ -509,10 +509,10 @@ public class ImagesApi {
      * Creates a variation of a given image.
      * 
      * @param image The image to use as the basis for the variation(s). Must be a valid PNG file, less than 4MB, and square. (required)
-     * @param model  (optional, default to \&quot;dall-e-2\&quot;)
+     * @param model  (optional)
      * @param n The number of images to generate. Must be between 1 and 10. For &#x60;dall-e-3&#x60;, only &#x60;n&#x3D;1&#x60; is supported. (optional, default to 1)
-     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to \&quot;url\&quot;)
-     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to \&quot;1024x1024\&quot;)
+     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to url)
+     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to 1024x1024)
      * @param user A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids).  (optional)
      * @return ApiResponse&lt;ImagesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -522,7 +522,7 @@ public class ImagesApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ImagesResponse> createImageVariationWithHttpInfo(File image, CreateImageEditRequestModel model, Integer n, String responseFormat, String size, String user) throws ApiException {
+    public ApiResponse<ImagesResponse> createImageVariationWithHttpInfo(File image, String model, Integer n, String responseFormat, String size, String user) throws ApiException {
         okhttp3.Call localVarCall = createImageVariationValidateBeforeCall(image, model, n, responseFormat, size, user, null);
         Type localVarReturnType = new TypeToken<ImagesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -532,10 +532,10 @@ public class ImagesApi {
      * Creates a variation of a given image. (asynchronously)
      * 
      * @param image The image to use as the basis for the variation(s). Must be a valid PNG file, less than 4MB, and square. (required)
-     * @param model  (optional, default to \&quot;dall-e-2\&quot;)
+     * @param model  (optional)
      * @param n The number of images to generate. Must be between 1 and 10. For &#x60;dall-e-3&#x60;, only &#x60;n&#x3D;1&#x60; is supported. (optional, default to 1)
-     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to \&quot;url\&quot;)
-     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to \&quot;1024x1024\&quot;)
+     * @param responseFormat The format in which the generated images are returned. Must be one of &#x60;url&#x60; or &#x60;b64_json&#x60;. (optional, default to url)
+     * @param size The size of the generated images. Must be one of &#x60;256x256&#x60;, &#x60;512x512&#x60;, or &#x60;1024x1024&#x60;. (optional, default to 1024x1024)
      * @param user A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids).  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -546,7 +546,7 @@ public class ImagesApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createImageVariationAsync(File image, CreateImageEditRequestModel model, Integer n, String responseFormat, String size, String user, final ApiCallback<ImagesResponse> _callback) throws ApiException {
+    public okhttp3.Call createImageVariationAsync(File image, String model, Integer n, String responseFormat, String size, String user, final ApiCallback<ImagesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = createImageVariationValidateBeforeCall(image, model, n, responseFormat, size, user, _callback);
         Type localVarReturnType = new TypeToken<ImagesResponse>(){}.getType();

@@ -25,7 +25,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import org.openapitools.client.model.CreateCompletionRequestModel;
-import org.openapitools.client.model.CreateCompletionRequestPrompt;
 import org.openapitools.client.model.CreateCompletionRequestStop;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -56,7 +55,7 @@ import tokyo.ainoya.openapi.client.JSON;
 /**
  * CreateCompletionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:48:03.618184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T05:53:00.096330Z[Etc/UTC]")
 public class CreateCompletionRequest {
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
@@ -64,7 +63,7 @@ public class CreateCompletionRequest {
 
   public static final String SERIALIZED_NAME_PROMPT = "prompt";
   @SerializedName(SERIALIZED_NAME_PROMPT)
-  private CreateCompletionRequestPrompt prompt = "<|endoftext|>";
+  private String prompt = "\"<|endoftext|>\"";
 
   public static final String SERIALIZED_NAME_BEST_OF = "best_of";
   @SerializedName(SERIALIZED_NAME_BEST_OF)
@@ -150,23 +149,23 @@ public class CreateCompletionRequest {
   }
 
 
-  public CreateCompletionRequest prompt(CreateCompletionRequestPrompt prompt) {
+  public CreateCompletionRequest prompt(String prompt) {
     
     this.prompt = prompt;
     return this;
   }
 
    /**
-   * Get prompt
+   * The prompt(s) to generate completions for, encoded as a string, array of strings, array of tokens, or array of token arrays.  Note that &lt;|endoftext|&gt; is the document separator that the model sees during training, so if a prompt is not specified the model will generate as if from the beginning of a new document. 
    * @return prompt
   **/
   @javax.annotation.Nullable
-  public CreateCompletionRequestPrompt getPrompt() {
+  public String getPrompt() {
     return prompt;
   }
 
 
-  public void setPrompt(CreateCompletionRequestPrompt prompt) {
+  public void setPrompt(String prompt) {
     this.prompt = prompt;
   }
 
@@ -653,8 +652,9 @@ public class CreateCompletionRequest {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `model`
       CreateCompletionRequestModel.validateJsonElement(jsonObj.get("model"));
-      // validate the required field `prompt`
-      CreateCompletionRequestPrompt.validateJsonElement(jsonObj.get("prompt"));
+      if ((jsonObj.get("prompt") != null && !jsonObj.get("prompt").isJsonNull()) && !jsonObj.get("prompt").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `prompt` to be a primitive type in the JSON string but got `%s`", jsonObj.get("prompt").toString()));
+      }
       // validate the optional field `stop`
       if (jsonObj.get("stop") != null && !jsonObj.get("stop").isJsonNull()) {
         CreateCompletionRequestStop.validateJsonElement(jsonObj.get("stop"));

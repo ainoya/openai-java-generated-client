@@ -8,7 +8,16 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**input** | [**CreateModerationRequestInput**](CreateModerationRequestInput.md) |  |  |
-|**model** | [**CreateModerationRequestModel**](CreateModerationRequestModel.md) |  |  [optional] |
+|**model** | [**ModelEnum**](#ModelEnum) |  |  [optional] |
+
+
+
+## Enum: ModelEnum
+
+| Name | Value |
+|---- | -----|
+| LATEST | &quot;text-moderation-latest&quot; |
+| STABLE | &quot;text-moderation-stable&quot; |
 
 
 
