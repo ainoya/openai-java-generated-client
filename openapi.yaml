@@ -5996,7 +5996,6 @@ components:
         logit_bias:
           type: object
           x-oaiTypeLabel: map
-          default: null
           nullable: true
           additionalProperties:
             type: integer
