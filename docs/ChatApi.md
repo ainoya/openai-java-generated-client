@@ -16,12 +16,12 @@ Creates a model response for the given chat conversation.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.ChatApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.ChatApi;
 
 public class Example {
   public static void main(String[] args) {

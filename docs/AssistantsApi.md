@@ -42,12 +42,12 @@ Cancels a run that is &#x60;in_progress&#x60;.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -109,12 +109,12 @@ Create an assistant with a model and instructions.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -174,12 +174,12 @@ Create an assistant file by attaching a [File](/docs/api-reference/files) to an 
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -241,12 +241,12 @@ Create a message.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -308,12 +308,12 @@ Create a run.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -375,12 +375,12 @@ Create a thread.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -440,12 +440,12 @@ Create a thread and run it in one request.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -505,12 +505,12 @@ Delete an assistant.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -570,12 +570,12 @@ Delete an assistant file.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -637,12 +637,12 @@ Delete a thread.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -702,12 +702,12 @@ Retrieves an assistant.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -767,12 +767,12 @@ Retrieves an AssistantFile.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -834,12 +834,12 @@ Retrieve a message.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -901,12 +901,12 @@ Retrieves a message file.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -970,12 +970,12 @@ Retrieves a run.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1037,12 +1037,12 @@ Retrieves a run step.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1106,12 +1106,12 @@ Retrieves a thread.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1171,12 +1171,12 @@ Returns a list of assistant files.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1244,12 +1244,12 @@ Returns a list of assistants.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1315,12 +1315,12 @@ Returns a list of message files.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1390,12 +1390,12 @@ Returns a list of messages for a given thread.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1463,12 +1463,12 @@ Returns a list of run steps belonging to a run.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1538,12 +1538,12 @@ Returns a list of runs belonging to a thread.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1611,12 +1611,12 @@ Modifies a message.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1680,12 +1680,12 @@ Modifies a run.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1749,12 +1749,12 @@ Modifies a thread.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1816,12 +1816,12 @@ When a run has the &#x60;status: \&quot;requires_action\&quot;&#x60; and &#x60;r
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AssistantsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
   public static void main(String[] args) {

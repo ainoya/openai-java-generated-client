@@ -20,12 +20,12 @@ Immediately cancel a fine-tune job.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.FineTunesApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.FineTunesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -85,12 +85,12 @@ Creates a job that fine-tunes a specified model from a given dataset.  Response 
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.FineTunesApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.FineTunesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -150,12 +150,12 @@ Get fine-grained status updates for a fine-tune job.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.FineTunesApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.FineTunesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -217,12 +217,12 @@ List your organization&#39;s fine-tuning jobs
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.FineTunesApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.FineTunesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -278,12 +278,12 @@ Gets info about the fine-tune job.  [Learn more about fine-tuning](/docs/guides/
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.FineTunesApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.FineTunesApi;
 
 public class Example {
   public static void main(String[] args) {

@@ -37,7 +37,7 @@ OpenAI API
 
 - API version: 2.0.0
 
-    - Build date: 2023-11-17T09:52:05.185996Z[Etc/UTC]
+    - Build date: 2023-11-17T11:22:33.428885Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
@@ -74,7 +74,7 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-    <groupId>dev.ainoya</groupId>
+    <groupId>com.github.ainoya</groupId>
     <artifactId>openai-java-generated-client</artifactId>
     <version>2.0.0</version>
     <scope>compile</scope>
@@ -92,7 +92,7 @@ mavenLocal()       // Needed if the 'openai-java-generated-client' jar has been 
 }
 
 dependencies {
-implementation "dev.ainoya:openai-java-generated-client:2.0.0"
+implementation "com.github.ainoya:openai-java-generated-client:2.0.0"
 }
 ```
 
@@ -115,10 +115,10 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-    import dev.ainoya.client.*;
-    import dev.ainoya.client.auth.*;
-    import dev.ainoya.client.model.*;
-    import dev.ainoya.openai.client.api.AssistantApi;
+    import com.github.ainoya.client.*;
+    import com.github.ainoya.client.auth.*;
+    import com.github.ainoya.client.model.*;
+    import com.github.ainoya.openai.client.api.AssistantApi;
 
     public class AssistantApiExample {
 

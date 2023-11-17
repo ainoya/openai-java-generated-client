@@ -18,12 +18,12 @@ Delete a fine-tuned model. You must have the Owner role in your organization to 
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.ModelsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.ModelsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -83,12 +83,12 @@ Lists the currently available models, and provides basic information about each 
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.ModelsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.ModelsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -144,12 +144,12 @@ Retrieves a model instance, providing basic information about the model such as 
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.ModelsApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.ModelsApi;
 
 public class Example {
   public static void main(String[] args) {

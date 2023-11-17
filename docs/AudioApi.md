@@ -18,12 +18,12 @@ Generates audio from the input text.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AudioApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AudioApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -83,12 +83,12 @@ Transcribes audio into the input language.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AudioApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AudioApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -158,12 +158,12 @@ Translates audio into English.
 ### Example
 ```java
 // Import classes:
-import dev.ainoya.client.ApiClient;
-import dev.ainoya.client.ApiException;
-import dev.ainoya.client.Configuration;
-import dev.ainoya.client.auth.*;
-import dev.ainoya.client.models.*;
-import dev.ainoya.openai.client.api.AudioApi;
+import com.github.ainoya.client.ApiClient;
+import com.github.ainoya.client.ApiException;
+import com.github.ainoya.client.Configuration;
+import com.github.ainoya.client.auth.*;
+import com.github.ainoya.client.models.*;
+import com.github.ainoya.openai.client.api.AudioApi;
 
 public class Example {
   public static void main(String[] args) {
