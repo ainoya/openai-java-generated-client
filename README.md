@@ -81,12 +81,12 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantApi;
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantApi;
 
 public class Example {
   public static void main(String[] args) {

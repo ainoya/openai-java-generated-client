@@ -18,14 +18,15 @@ All URIs are relative to *https://api.openai.com/v1*
 Upload a file that can be used across various endpoints/features. The size of all the files uploaded by one organization can be up to 100 GB.  The size of individual files for can be a maximum of 512MB. See the [Assistants Tools guide](/docs/assistants/tools) to learn more about the types of files supported. The Fine-tuning API only supports &#x60;.jsonl&#x60; files.  Please [contact us](https://help.openai.com/) if you need to increase these storage limits. 
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.FilesApi;
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.FilesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -85,14 +86,15 @@ public class Example {
 Delete a file.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.FilesApi;
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.FilesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -150,14 +152,15 @@ public class Example {
 Returns the contents of the specified file.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.FilesApi;
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.FilesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -215,14 +218,15 @@ public class Example {
 Returns a list of files that belong to the user&#39;s organization.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.FilesApi;
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.FilesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -280,37 +284,39 @@ public class Example {
 Returns information about a specific file.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.FilesApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.FilesApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    FilesApi apiInstance = new FilesApi(defaultClient);
-    String fileId = "fileId_example"; // String | The ID of the file to use for this request.
-    try {
-      OpenAIFile result = apiInstance.retrieveFile(fileId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling FilesApi#retrieveFile");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        FilesApi apiInstance = new FilesApi(defaultClient);
+        String fileId = "fileId_example"; // String | The ID of the file to use for this request.
+        try {
+            OpenAIFile result = apiInstance.retrieveFile(fileId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FilesApi#retrieveFile");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 

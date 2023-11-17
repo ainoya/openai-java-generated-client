@@ -16,37 +16,39 @@ All URIs are relative to *https://api.openai.com/v1*
 Generates audio from the input text.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AudioApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AudioApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AudioApi apiInstance = new AudioApi(defaultClient);
-    CreateSpeechRequest createSpeechRequest = new CreateSpeechRequest(); // CreateSpeechRequest | 
-    try {
-      File result = apiInstance.createSpeech(createSpeechRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AudioApi#createSpeech");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AudioApi apiInstance = new AudioApi(defaultClient);
+        CreateSpeechRequest createSpeechRequest = new CreateSpeechRequest(); // CreateSpeechRequest | 
+        try {
+            File result = apiInstance.createSpeech(createSpeechRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AudioApi#createSpeech");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -81,42 +83,44 @@ public class Example {
 Transcribes audio into the input language.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AudioApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AudioApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AudioApi apiInstance = new AudioApi(defaultClient);
-    File _file = new File("/path/to/file"); // File | The audio file object (not file name) to transcribe, in one of these formats: flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, or webm. 
-    CreateTranscriptionRequestModel model = new CreateTranscriptionRequestModel(); // CreateTranscriptionRequestModel | 
-    String language = "language_example"; // String | The language of the input audio. Supplying the input language in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format will improve accuracy and latency. 
-    String prompt = "prompt_example"; // String | An optional text to guide the model's style or continue a previous audio segment. The [prompt](/docs/guides/speech-to-text/prompting) should match the audio language. 
-    String responseFormat = "json"; // String | The format of the transcript output, in one of these options: `json`, `text`, `srt`, `verbose_json`, or `vtt`. 
-    BigDecimal temperature = new BigDecimal("0"); // BigDecimal | The sampling temperature, between 0 and 1. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use [log probability](https://en.wikipedia.org/wiki/Log_probability) to automatically increase the temperature until certain thresholds are hit. 
-    try {
-      CreateTranscriptionResponse result = apiInstance.createTranscription(_file, model, language, prompt, responseFormat, temperature);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AudioApi#createTranscription");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AudioApi apiInstance = new AudioApi(defaultClient);
+        File _file = new File("/path/to/file"); // File | The audio file object (not file name) to transcribe, in one of these formats: flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, or webm. 
+        CreateTranscriptionRequestModel model = new CreateTranscriptionRequestModel(); // CreateTranscriptionRequestModel | 
+        String language = "language_example"; // String | The language of the input audio. Supplying the input language in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format will improve accuracy and latency. 
+        String prompt = "prompt_example"; // String | An optional text to guide the model's style or continue a previous audio segment. The [prompt](/docs/guides/speech-to-text/prompting) should match the audio language. 
+        String responseFormat = "json"; // String | The format of the transcript output, in one of these options: `json`, `text`, `srt`, `verbose_json`, or `vtt`. 
+        BigDecimal temperature = new BigDecimal("0"); // BigDecimal | The sampling temperature, between 0 and 1. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use [log probability](https://en.wikipedia.org/wiki/Log_probability) to automatically increase the temperature until certain thresholds are hit. 
+        try {
+            CreateTranscriptionResponse result = apiInstance.createTranscription(_file, model, language, prompt, responseFormat, temperature);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AudioApi#createTranscription");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -156,41 +160,43 @@ public class Example {
 Translates audio into English.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AudioApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AudioApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AudioApi apiInstance = new AudioApi(defaultClient);
-    File _file = new File("/path/to/file"); // File | The audio file object (not file name) translate, in one of these formats: flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, or webm. 
-    CreateTranscriptionRequestModel model = new CreateTranscriptionRequestModel(); // CreateTranscriptionRequestModel | 
-    String prompt = "prompt_example"; // String | An optional text to guide the model's style or continue a previous audio segment. The [prompt](/docs/guides/speech-to-text/prompting) should be in English. 
-    String responseFormat = "json"; // String | The format of the transcript output, in one of these options: `json`, `text`, `srt`, `verbose_json`, or `vtt`. 
-    BigDecimal temperature = new BigDecimal("0"); // BigDecimal | The sampling temperature, between 0 and 1. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use [log probability](https://en.wikipedia.org/wiki/Log_probability) to automatically increase the temperature until certain thresholds are hit. 
-    try {
-      CreateTranslationResponse result = apiInstance.createTranslation(_file, model, prompt, responseFormat, temperature);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AudioApi#createTranslation");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AudioApi apiInstance = new AudioApi(defaultClient);
+        File _file = new File("/path/to/file"); // File | The audio file object (not file name) translate, in one of these formats: flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, or webm. 
+        CreateTranscriptionRequestModel model = new CreateTranscriptionRequestModel(); // CreateTranscriptionRequestModel | 
+        String prompt = "prompt_example"; // String | An optional text to guide the model's style or continue a previous audio segment. The [prompt](/docs/guides/speech-to-text/prompting) should be in English. 
+        String responseFormat = "json"; // String | The format of the transcript output, in one of these options: `json`, `text`, `srt`, `verbose_json`, or `vtt`. 
+        BigDecimal temperature = new BigDecimal("0"); // BigDecimal | The sampling temperature, between 0 and 1. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use [log probability](https://en.wikipedia.org/wiki/Log_probability) to automatically increase the temperature until certain thresholds are hit. 
+        try {
+            CreateTranslationResponse result = apiInstance.createTranslation(_file, model, prompt, responseFormat, temperature);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AudioApi#createTranslation");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 

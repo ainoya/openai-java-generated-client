@@ -16,37 +16,39 @@ All URIs are relative to *https://api.openai.com/v1*
 Creates an image given a prompt.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.ImagesApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.ImagesApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    ImagesApi apiInstance = new ImagesApi(defaultClient);
-    CreateImageRequest createImageRequest = new CreateImageRequest(); // CreateImageRequest | 
-    try {
-      ImagesResponse result = apiInstance.createImage(createImageRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ImagesApi#createImage");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        ImagesApi apiInstance = new ImagesApi(defaultClient);
+        CreateImageRequest createImageRequest = new CreateImageRequest(); // CreateImageRequest | 
+        try {
+            ImagesResponse result = apiInstance.createImage(createImageRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ImagesApi#createImage");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -81,44 +83,46 @@ public class Example {
 Creates an edited or extended image given an original image and a prompt.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.ImagesApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.ImagesApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    ImagesApi apiInstance = new ImagesApi(defaultClient);
-    File image = new File("/path/to/file"); // File | The image to edit. Must be a valid PNG file, less than 4MB, and square. If mask is not provided, image must have transparency, which will be used as the mask.
-    String prompt = "prompt_example"; // String | A text description of the desired image(s). The maximum length is 1000 characters.
-    File mask = new File("/path/to/file"); // File | An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where `image` should be edited. Must be a valid PNG file, less than 4MB, and have the same dimensions as `image`.
-    CreateImageEditRequestModel model = new CreateImageEditRequestModel(); // CreateImageEditRequestModel | 
-    Integer n = 1; // Integer | The number of images to generate. Must be between 1 and 10.
-    String size = "256x256"; // String | The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024`.
-    String responseFormat = "url"; // String | The format in which the generated images are returned. Must be one of `url` or `b64_json`.
-    String user = "user_example"; // String | A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids). 
-    try {
-      ImagesResponse result = apiInstance.createImageEdit(image, prompt, mask, model, n, size, responseFormat, user);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ImagesApi#createImageEdit");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        ImagesApi apiInstance = new ImagesApi(defaultClient);
+        File image = new File("/path/to/file"); // File | The image to edit. Must be a valid PNG file, less than 4MB, and square. If mask is not provided, image must have transparency, which will be used as the mask.
+        String prompt = "prompt_example"; // String | A text description of the desired image(s). The maximum length is 1000 characters.
+        File mask = new File("/path/to/file"); // File | An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where `image` should be edited. Must be a valid PNG file, less than 4MB, and have the same dimensions as `image`.
+        CreateImageEditRequestModel model = new CreateImageEditRequestModel(); // CreateImageEditRequestModel | 
+        Integer n = 1; // Integer | The number of images to generate. Must be between 1 and 10.
+        String size = "256x256"; // String | The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024`.
+        String responseFormat = "url"; // String | The format in which the generated images are returned. Must be one of `url` or `b64_json`.
+        String user = "user_example"; // String | A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids). 
+        try {
+            ImagesResponse result = apiInstance.createImageEdit(image, prompt, mask, model, n, size, responseFormat, user);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ImagesApi#createImageEdit");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -160,42 +164,44 @@ public class Example {
 Creates a variation of a given image.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.ImagesApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.ImagesApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    ImagesApi apiInstance = new ImagesApi(defaultClient);
-    File image = new File("/path/to/file"); // File | The image to use as the basis for the variation(s). Must be a valid PNG file, less than 4MB, and square.
-    String model = "dall-e-2"; // String | 
-    Integer n = 1; // Integer | The number of images to generate. Must be between 1 and 10. For `dall-e-3`, only `n=1` is supported.
-    String responseFormat = "url"; // String | The format in which the generated images are returned. Must be one of `url` or `b64_json`.
-    String size = "256x256"; // String | The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024`.
-    String user = "user_example"; // String | A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids). 
-    try {
-      ImagesResponse result = apiInstance.createImageVariation(image, model, n, responseFormat, size, user);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ImagesApi#createImageVariation");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        ImagesApi apiInstance = new ImagesApi(defaultClient);
+        File image = new File("/path/to/file"); // File | The image to use as the basis for the variation(s). Must be a valid PNG file, less than 4MB, and square.
+        String model = "dall-e-2"; // String | 
+        Integer n = 1; // Integer | The number of images to generate. Must be between 1 and 10. For `dall-e-3`, only `n=1` is supported.
+        String responseFormat = "url"; // String | The format in which the generated images are returned. Must be one of `url` or `b64_json`.
+        String size = "256x256"; // String | The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024`.
+        String user = "user_example"; // String | A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids). 
+        try {
+            ImagesResponse result = apiInstance.createImageVariation(image, model, n, responseFormat, size, user);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ImagesApi#createImageVariation");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 

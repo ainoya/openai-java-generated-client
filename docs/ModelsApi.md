@@ -16,37 +16,39 @@ All URIs are relative to *https://api.openai.com/v1*
 Delete a fine-tuned model. You must have the Owner role in your organization to delete a model.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.ModelsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.ModelsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    ModelsApi apiInstance = new ModelsApi(defaultClient);
-    String model = "ft:gpt-3.5-turbo:acemeco:suffix:abc123"; // String | The model to delete
-    try {
-      DeleteModelResponse result = apiInstance.deleteModel(model);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ModelsApi#deleteModel");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        ModelsApi apiInstance = new ModelsApi(defaultClient);
+        String model = "ft:gpt-3.5-turbo:acemeco:suffix:abc123"; // String | The model to delete
+        try {
+            DeleteModelResponse result = apiInstance.deleteModel(model);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ModelsApi#deleteModel");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -81,36 +83,38 @@ public class Example {
 Lists the currently available models, and provides basic information about each one such as the owner and availability.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.ModelsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.ModelsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    ModelsApi apiInstance = new ModelsApi(defaultClient);
-    try {
-      ListModelsResponse result = apiInstance.listModels();
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ModelsApi#listModels");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        ModelsApi apiInstance = new ModelsApi(defaultClient);
+        try {
+            ListModelsResponse result = apiInstance.listModels();
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ModelsApi#listModels");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -142,37 +146,39 @@ This endpoint does not need any parameter.
 Retrieves a model instance, providing basic information about the model such as the owner and permissioning.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.ModelsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.ModelsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    ModelsApi apiInstance = new ModelsApi(defaultClient);
-    String model = "gpt-3.5-turbo"; // String | The ID of the model to use for this request
-    try {
-      Model result = apiInstance.retrieveModel(model);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ModelsApi#retrieveModel");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        ModelsApi apiInstance = new ModelsApi(defaultClient);
+        String model = "gpt-3.5-turbo"; // String | The ID of the model to use for this request
+        try {
+            Model result = apiInstance.retrieveModel(model);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ModelsApi#retrieveModel");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 

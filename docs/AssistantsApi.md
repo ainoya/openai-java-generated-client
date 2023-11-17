@@ -40,38 +40,40 @@ All URIs are relative to *https://api.openai.com/v1*
 Cancels a run that is &#x60;in_progress&#x60;.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the thread to which this run belongs.
-    String runId = "runId_example"; // String | The ID of the run to cancel.
-    try {
-      RunObject result = apiInstance.cancelRun(threadId, runId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#cancelRun");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the thread to which this run belongs.
+        String runId = "runId_example"; // String | The ID of the run to cancel.
+        try {
+            RunObject result = apiInstance.cancelRun(threadId, runId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#cancelRun");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -107,37 +109,39 @@ public class Example {
 Create an assistant with a model and instructions.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    CreateAssistantRequest createAssistantRequest = new CreateAssistantRequest(); // CreateAssistantRequest | 
-    try {
-      AssistantObject result = apiInstance.createAssistant(createAssistantRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#createAssistant");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        CreateAssistantRequest createAssistantRequest = new CreateAssistantRequest(); // CreateAssistantRequest | 
+        try {
+            AssistantObject result = apiInstance.createAssistant(createAssistantRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#createAssistant");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -172,38 +176,40 @@ public class Example {
 Create an assistant file by attaching a [File](/docs/api-reference/files) to an [assistant](/docs/api-reference/assistants).
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String assistantId = "file-AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the assistant for which to create a File. 
-    CreateAssistantFileRequest createAssistantFileRequest = new CreateAssistantFileRequest(); // CreateAssistantFileRequest | 
-    try {
-      AssistantFileObject result = apiInstance.createAssistantFile(assistantId, createAssistantFileRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#createAssistantFile");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String assistantId = "file-AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the assistant for which to create a File. 
+        CreateAssistantFileRequest createAssistantFileRequest = new CreateAssistantFileRequest(); // CreateAssistantFileRequest | 
+        try {
+            AssistantFileObject result = apiInstance.createAssistantFile(assistantId, createAssistantFileRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#createAssistantFile");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -239,38 +245,40 @@ public class Example {
 Create a message.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the [thread](/docs/api-reference/threads) to create a message for.
-    CreateMessageRequest createMessageRequest = new CreateMessageRequest(); // CreateMessageRequest | 
-    try {
-      MessageObject result = apiInstance.createMessage(threadId, createMessageRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#createMessage");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the [thread](/docs/api-reference/threads) to create a message for.
+        CreateMessageRequest createMessageRequest = new CreateMessageRequest(); // CreateMessageRequest | 
+        try {
+            MessageObject result = apiInstance.createMessage(threadId, createMessageRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#createMessage");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -306,38 +314,40 @@ public class Example {
 Create a run.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the thread to run.
-    CreateRunRequest createRunRequest = new CreateRunRequest(); // CreateRunRequest | 
-    try {
-      RunObject result = apiInstance.createRun(threadId, createRunRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#createRun");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the thread to run.
+        CreateRunRequest createRunRequest = new CreateRunRequest(); // CreateRunRequest | 
+        try {
+            RunObject result = apiInstance.createRun(threadId, createRunRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#createRun");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -373,37 +383,39 @@ public class Example {
 Create a thread.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    CreateThreadRequest createThreadRequest = new CreateThreadRequest(); // CreateThreadRequest | 
-    try {
-      ThreadObject result = apiInstance.createThread(createThreadRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#createThread");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        CreateThreadRequest createThreadRequest = new CreateThreadRequest(); // CreateThreadRequest | 
+        try {
+            ThreadObject result = apiInstance.createThread(createThreadRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#createThread");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -438,37 +450,39 @@ public class Example {
 Create a thread and run it in one request.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    CreateThreadAndRunRequest createThreadAndRunRequest = new CreateThreadAndRunRequest(); // CreateThreadAndRunRequest | 
-    try {
-      RunObject result = apiInstance.createThreadAndRun(createThreadAndRunRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#createThreadAndRun");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        CreateThreadAndRunRequest createThreadAndRunRequest = new CreateThreadAndRunRequest(); // CreateThreadAndRunRequest | 
+        try {
+            RunObject result = apiInstance.createThreadAndRun(createThreadAndRunRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#createThreadAndRun");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -503,37 +517,39 @@ public class Example {
 Delete an assistant.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String assistantId = "assistantId_example"; // String | The ID of the assistant to delete.
-    try {
-      DeleteAssistantResponse result = apiInstance.deleteAssistant(assistantId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#deleteAssistant");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String assistantId = "assistantId_example"; // String | The ID of the assistant to delete.
+        try {
+            DeleteAssistantResponse result = apiInstance.deleteAssistant(assistantId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#deleteAssistant");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -568,38 +584,40 @@ public class Example {
 Delete an assistant file.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String assistantId = "assistantId_example"; // String | The ID of the assistant that the file belongs to.
-    String fileId = "fileId_example"; // String | The ID of the file to delete.
-    try {
-      DeleteAssistantFileResponse result = apiInstance.deleteAssistantFile(assistantId, fileId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#deleteAssistantFile");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String assistantId = "assistantId_example"; // String | The ID of the assistant that the file belongs to.
+        String fileId = "fileId_example"; // String | The ID of the file to delete.
+        try {
+            DeleteAssistantFileResponse result = apiInstance.deleteAssistantFile(assistantId, fileId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#deleteAssistantFile");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -635,37 +653,39 @@ public class Example {
 Delete a thread.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the thread to delete.
-    try {
-      DeleteThreadResponse result = apiInstance.deleteThread(threadId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#deleteThread");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the thread to delete.
+        try {
+            DeleteThreadResponse result = apiInstance.deleteThread(threadId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#deleteThread");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -700,37 +720,39 @@ public class Example {
 Retrieves an assistant.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String assistantId = "assistantId_example"; // String | The ID of the assistant to retrieve.
-    try {
-      AssistantObject result = apiInstance.getAssistant(assistantId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#getAssistant");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String assistantId = "assistantId_example"; // String | The ID of the assistant to retrieve.
+        try {
+            AssistantObject result = apiInstance.getAssistant(assistantId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#getAssistant");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -765,38 +787,40 @@ public class Example {
 Retrieves an AssistantFile.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String assistantId = "assistantId_example"; // String | The ID of the assistant who the file belongs to.
-    String fileId = "fileId_example"; // String | The ID of the file we're getting.
-    try {
-      AssistantFileObject result = apiInstance.getAssistantFile(assistantId, fileId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#getAssistantFile");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String assistantId = "assistantId_example"; // String | The ID of the assistant who the file belongs to.
+        String fileId = "fileId_example"; // String | The ID of the file we're getting.
+        try {
+            AssistantFileObject result = apiInstance.getAssistantFile(assistantId, fileId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#getAssistantFile");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -832,38 +856,40 @@ public class Example {
 Retrieve a message.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the [thread](/docs/api-reference/threads) to which this message belongs.
-    String messageId = "messageId_example"; // String | The ID of the message to retrieve.
-    try {
-      MessageObject result = apiInstance.getMessage(threadId, messageId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#getMessage");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the [thread](/docs/api-reference/threads) to which this message belongs.
+        String messageId = "messageId_example"; // String | The ID of the message to retrieve.
+        try {
+            MessageObject result = apiInstance.getMessage(threadId, messageId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#getMessage");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -899,39 +925,41 @@ public class Example {
 Retrieves a message file.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "thread_AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the thread to which the message and File belong.
-    String messageId = "msg_AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the message the file belongs to.
-    String fileId = "file-AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the file being retrieved.
-    try {
-      MessageFileObject result = apiInstance.getMessageFile(threadId, messageId, fileId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#getMessageFile");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "thread_AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the thread to which the message and File belong.
+        String messageId = "msg_AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the message the file belongs to.
+        String fileId = "file-AF1WoRqd3aJAHsqc9NY7iL8F"; // String | The ID of the file being retrieved.
+        try {
+            MessageFileObject result = apiInstance.getMessageFile(threadId, messageId, fileId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#getMessageFile");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -968,38 +996,40 @@ public class Example {
 Retrieves a run.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the [thread](/docs/api-reference/threads) that was run.
-    String runId = "runId_example"; // String | The ID of the run to retrieve.
-    try {
-      RunObject result = apiInstance.getRun(threadId, runId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#getRun");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the [thread](/docs/api-reference/threads) that was run.
+        String runId = "runId_example"; // String | The ID of the run to retrieve.
+        try {
+            RunObject result = apiInstance.getRun(threadId, runId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#getRun");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -1035,39 +1065,41 @@ public class Example {
 Retrieves a run step.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the thread to which the run and run step belongs.
-    String runId = "runId_example"; // String | The ID of the run to which the run step belongs.
-    String stepId = "stepId_example"; // String | The ID of the run step to retrieve.
-    try {
-      RunStepObject result = apiInstance.getRunStep(threadId, runId, stepId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#getRunStep");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the thread to which the run and run step belongs.
+        String runId = "runId_example"; // String | The ID of the run to which the run step belongs.
+        String stepId = "stepId_example"; // String | The ID of the run step to retrieve.
+        try {
+            RunStepObject result = apiInstance.getRunStep(threadId, runId, stepId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#getRunStep");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -1104,37 +1136,39 @@ public class Example {
 Retrieves a thread.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the thread to retrieve.
-    try {
-      ThreadObject result = apiInstance.getThread(threadId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#getThread");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the thread to retrieve.
+        try {
+            ThreadObject result = apiInstance.getThread(threadId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#getThread");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -1169,41 +1203,43 @@ public class Example {
 Returns a list of assistant files.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String assistantId = "assistantId_example"; // String | The ID of the assistant the file belongs to.
-    Integer limit = 20; // Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-    String order = "asc"; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-    String after = "after_example"; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-    String before = "before_example"; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
-    try {
-      ListAssistantFilesResponse result = apiInstance.listAssistantFiles(assistantId, limit, order, after, before);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#listAssistantFiles");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String assistantId = "assistantId_example"; // String | The ID of the assistant the file belongs to.
+        Integer limit = 20; // Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+        String order = "asc"; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+        String after = "after_example"; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+        String before = "before_example"; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+        try {
+            ListAssistantFilesResponse result = apiInstance.listAssistantFiles(assistantId, limit, order, after, before);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#listAssistantFiles");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -1242,40 +1278,42 @@ public class Example {
 Returns a list of assistants.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    Integer limit = 20; // Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-    String order = "asc"; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-    String after = "after_example"; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-    String before = "before_example"; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
-    try {
-      ListAssistantsResponse result = apiInstance.listAssistants(limit, order, after, before);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#listAssistants");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        Integer limit = 20; // Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+        String order = "asc"; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+        String after = "after_example"; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+        String before = "before_example"; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+        try {
+            ListAssistantsResponse result = apiInstance.listAssistants(limit, order, after, before);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#listAssistants");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -1313,42 +1351,44 @@ public class Example {
 Returns a list of message files.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the thread that the message and files belong to.
-    String messageId = "messageId_example"; // String | The ID of the message that the files belongs to.
-    Integer limit = 20; // Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-    String order = "asc"; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-    String after = "after_example"; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-    String before = "before_example"; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
-    try {
-      ListMessageFilesResponse result = apiInstance.listMessageFiles(threadId, messageId, limit, order, after, before);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#listMessageFiles");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the thread that the message and files belong to.
+        String messageId = "messageId_example"; // String | The ID of the message that the files belongs to.
+        Integer limit = 20; // Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+        String order = "asc"; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+        String after = "after_example"; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+        String before = "before_example"; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+        try {
+            ListMessageFilesResponse result = apiInstance.listMessageFiles(threadId, messageId, limit, order, after, before);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#listMessageFiles");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -1388,41 +1428,43 @@ public class Example {
 Returns a list of messages for a given thread.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the [thread](/docs/api-reference/threads) the messages belong to.
-    Integer limit = 20; // Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-    String order = "asc"; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-    String after = "after_example"; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-    String before = "before_example"; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
-    try {
-      ListMessagesResponse result = apiInstance.listMessages(threadId, limit, order, after, before);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#listMessages");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the [thread](/docs/api-reference/threads) the messages belong to.
+        Integer limit = 20; // Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+        String order = "asc"; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+        String after = "after_example"; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+        String before = "before_example"; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+        try {
+            ListMessagesResponse result = apiInstance.listMessages(threadId, limit, order, after, before);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#listMessages");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -1461,42 +1503,44 @@ public class Example {
 Returns a list of run steps belonging to a run.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the thread the run and run steps belong to.
-    String runId = "runId_example"; // String | The ID of the run the run steps belong to.
-    Integer limit = 20; // Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-    String order = "asc"; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-    String after = "after_example"; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-    String before = "before_example"; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
-    try {
-      ListRunStepsResponse result = apiInstance.listRunSteps(threadId, runId, limit, order, after, before);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#listRunSteps");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the thread the run and run steps belong to.
+        String runId = "runId_example"; // String | The ID of the run the run steps belong to.
+        Integer limit = 20; // Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+        String order = "asc"; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+        String after = "after_example"; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+        String before = "before_example"; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+        try {
+            ListRunStepsResponse result = apiInstance.listRunSteps(threadId, runId, limit, order, after, before);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#listRunSteps");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -1536,41 +1580,43 @@ public class Example {
 Returns a list of runs belonging to a thread.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the thread the run belongs to.
-    Integer limit = 20; // Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-    String order = "asc"; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-    String after = "after_example"; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-    String before = "before_example"; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
-    try {
-      ListRunsResponse result = apiInstance.listRuns(threadId, limit, order, after, before);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#listRuns");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the thread the run belongs to.
+        Integer limit = 20; // Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+        String order = "asc"; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+        String after = "after_example"; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+        String before = "before_example"; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+        try {
+            ListRunsResponse result = apiInstance.listRuns(threadId, limit, order, after, before);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#listRuns");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -1609,39 +1655,41 @@ public class Example {
 Modifies a message.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the thread to which this message belongs.
-    String messageId = "messageId_example"; // String | The ID of the message to modify.
-    ModifyMessageRequest modifyMessageRequest = new ModifyMessageRequest(); // ModifyMessageRequest | 
-    try {
-      MessageObject result = apiInstance.modifyMessage(threadId, messageId, modifyMessageRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#modifyMessage");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the thread to which this message belongs.
+        String messageId = "messageId_example"; // String | The ID of the message to modify.
+        ModifyMessageRequest modifyMessageRequest = new ModifyMessageRequest(); // ModifyMessageRequest | 
+        try {
+            MessageObject result = apiInstance.modifyMessage(threadId, messageId, modifyMessageRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#modifyMessage");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -1678,39 +1726,41 @@ public class Example {
 Modifies a run.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the [thread](/docs/api-reference/threads) that was run.
-    String runId = "runId_example"; // String | The ID of the run to modify.
-    ModifyRunRequest modifyRunRequest = new ModifyRunRequest(); // ModifyRunRequest | 
-    try {
-      RunObject result = apiInstance.modifyRun(threadId, runId, modifyRunRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#modifyRun");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the [thread](/docs/api-reference/threads) that was run.
+        String runId = "runId_example"; // String | The ID of the run to modify.
+        ModifyRunRequest modifyRunRequest = new ModifyRunRequest(); // ModifyRunRequest | 
+        try {
+            RunObject result = apiInstance.modifyRun(threadId, runId, modifyRunRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#modifyRun");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -1747,38 +1797,40 @@ public class Example {
 Modifies a thread.
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the thread to modify. Only the `metadata` can be modified.
-    ModifyThreadRequest modifyThreadRequest = new ModifyThreadRequest(); // ModifyThreadRequest | 
-    try {
-      ThreadObject result = apiInstance.modifyThread(threadId, modifyThreadRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#modifyThread");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the thread to modify. Only the `metadata` can be modified.
+        ModifyThreadRequest modifyThreadRequest = new ModifyThreadRequest(); // ModifyThreadRequest | 
+        try {
+            ThreadObject result = apiInstance.modifyThread(threadId, modifyThreadRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#modifyThread");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
@@ -1814,39 +1866,41 @@ public class Example {
 When a run has the &#x60;status: \&quot;requires_action\&quot;&#x60; and &#x60;required_action.type&#x60; is &#x60;submit_tool_outputs&#x60;, this endpoint can be used to submit the outputs from the tool calls once they&#39;re all completed. All outputs must be submitted in a single request. 
 
 ### Example
+
 ```java
 // Import classes:
-import tokyo.ainoya.openapi.client.ApiClient;
-import tokyo.ainoya.openapi.client.ApiException;
-import tokyo.ainoya.openapi.client.Configuration;
-import tokyo.ainoya.openapi.client.auth.*;
-import tokyo.ainoya.openapi.client.models.*;
-import tokyo.ainoya.openapi.client.api.AssistantsApi;
+
+import tokyo.ainoya.openai.client.ApiClient;
+import tokyo.ainoya.openai.client.ApiException;
+import tokyo.ainoya.openai.client.Configuration;
+import tokyo.ainoya.openai.client.auth.*;
+import tokyo.ainoya.openai.client.models.*;
+import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.openai.com/v1");
-    
-    // Configure HTTP bearer authorization: ApiKeyAuth
-    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.openai.com/v1");
 
-    AssistantsApi apiInstance = new AssistantsApi(defaultClient);
-    String threadId = "threadId_example"; // String | The ID of the [thread](/docs/api-reference/threads) to which this run belongs.
-    String runId = "runId_example"; // String | The ID of the run that requires the tool output submission.
-    SubmitToolOutputsRunRequest submitToolOutputsRunRequest = new SubmitToolOutputsRunRequest(); // SubmitToolOutputsRunRequest | 
-    try {
-      RunObject result = apiInstance.submitToolOuputsToRun(threadId, runId, submitToolOutputsRunRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AssistantsApi#submitToolOuputsToRun");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        // Configure HTTP bearer authorization: ApiKeyAuth
+        HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setBearerToken("BEARER TOKEN");
+
+        AssistantsApi apiInstance = new AssistantsApi(defaultClient);
+        String threadId = "threadId_example"; // String | The ID of the [thread](/docs/api-reference/threads) to which this run belongs.
+        String runId = "runId_example"; // String | The ID of the run that requires the tool output submission.
+        SubmitToolOutputsRunRequest submitToolOutputsRunRequest = new SubmitToolOutputsRunRequest(); // SubmitToolOutputsRunRequest | 
+        try {
+            RunObject result = apiInstance.submitToolOuputsToRun(threadId, runId, submitToolOutputsRunRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AssistantsApi#submitToolOuputsToRun");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
