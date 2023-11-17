@@ -13,11 +13,16 @@
 
 package tokyo.ainoya.openai.client.api;
 
-import tokyo.ainoya.openai.client.ApiException;
-import org.openapitools.client.model.CreateModerationRequest;
-import org.openapitools.client.model.CreateModerationResponse;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.model.CreateModerationRequest;
+import dev.ainoya.client.model.CreateModerationResponse;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for ModerationsApi

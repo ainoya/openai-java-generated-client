@@ -13,12 +13,17 @@
 
 package tokyo.ainoya.openai.client.api;
 
-import tokyo.ainoya.openai.client.ApiException;
-import org.openapitools.client.model.DeleteModelResponse;
-import org.openapitools.client.model.ListModelsResponse;
-import org.openapitools.client.model.Model;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.model.DeleteModelResponse;
+import dev.ainoya.client.model.ListModelsResponse;
+import dev.ainoya.client.model.Model;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for ModelsApi

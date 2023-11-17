@@ -16,11 +16,11 @@ Creates a new edit for the provided input, instruction, and parameters.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.EditsApi;
 
 public class Example {

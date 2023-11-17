@@ -13,13 +13,18 @@
 
 package tokyo.ainoya.openai.client.api;
 
-import tokyo.ainoya.openai.client.ApiException;
-import org.openapitools.client.model.CreateImageEditRequestModel;
-import org.openapitools.client.model.CreateImageRequest;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.model.CreateImageEditRequestModel;
+import dev.ainoya.client.model.CreateImageRequest;
 import java.io.File;
-import org.openapitools.client.model.ImagesResponse;
+import dev.ainoya.client.model.ImagesResponse;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for ImagesApi

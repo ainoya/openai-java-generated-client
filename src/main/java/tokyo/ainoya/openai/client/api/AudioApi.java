@@ -13,14 +13,14 @@
 
 package tokyo.ainoya.openai.client.api;
 
-import tokyo.ainoya.openai.client.ApiCallback;
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.ApiResponse;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.Pair;
-import tokyo.ainoya.openai.client.ProgressRequestBody;
-import tokyo.ainoya.openai.client.ProgressResponseBody;
+import dev.ainoya.client.ApiCallback;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.ApiResponse;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.Pair;
+import dev.ainoya.client.ProgressRequestBody;
+import dev.ainoya.client.ProgressResponseBody;
 
 import com.google.gson.reflect.TypeToken;
 
@@ -28,10 +28,10 @@ import java.io.IOException;
 
 
 import java.math.BigDecimal;
-import org.openapitools.client.model.CreateSpeechRequest;
-import org.openapitools.client.model.CreateTranscriptionRequestModel;
-import org.openapitools.client.model.CreateTranscriptionResponse;
-import org.openapitools.client.model.CreateTranslationResponse;
+import dev.ainoya.client.model.CreateSpeechRequest;
+import dev.ainoya.client.model.CreateTranscriptionRequestModel;
+import dev.ainoya.client.model.CreateTranscriptionResponse;
+import dev.ainoya.client.model.CreateTranslationResponse;
 import java.io.File;
 
 import java.lang.reflect.Type;

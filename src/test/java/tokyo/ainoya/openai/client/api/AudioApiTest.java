@@ -13,15 +13,20 @@
 
 package tokyo.ainoya.openai.client.api;
 
-import tokyo.ainoya.openai.client.ApiException;
+import dev.ainoya.client.ApiException;
 import java.math.BigDecimal;
-import org.openapitools.client.model.CreateSpeechRequest;
-import org.openapitools.client.model.CreateTranscriptionRequestModel;
-import org.openapitools.client.model.CreateTranscriptionResponse;
-import org.openapitools.client.model.CreateTranslationResponse;
+import dev.ainoya.client.model.CreateSpeechRequest;
+import dev.ainoya.client.model.CreateTranscriptionRequestModel;
+import dev.ainoya.client.model.CreateTranscriptionResponse;
+import dev.ainoya.client.model.CreateTranslationResponse;
 import java.io.File;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for AudioApi

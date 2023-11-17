@@ -13,11 +13,16 @@
 
 package tokyo.ainoya.openai.client.api;
 
-import tokyo.ainoya.openai.client.ApiException;
-import org.openapitools.client.model.CreateCompletionRequest;
-import org.openapitools.client.model.CreateCompletionResponse;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.model.CreateCompletionRequest;
+import dev.ainoya.client.model.CreateCompletionResponse;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for CompletionsApi

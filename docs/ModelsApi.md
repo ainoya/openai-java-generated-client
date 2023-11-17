@@ -18,11 +18,11 @@ Delete a fine-tuned model. You must have the Owner role in your organization to 
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.ModelsApi;
 
 public class Example {
@@ -83,11 +83,11 @@ Lists the currently available models, and provides basic information about each 
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.ModelsApi;
 
 public class Example {
@@ -144,11 +144,11 @@ Retrieves a model instance, providing basic information about the model such as 
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.ModelsApi;
 
 public class Example {

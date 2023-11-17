@@ -13,13 +13,18 @@
 
 package tokyo.ainoya.openai.client.api;
 
-import tokyo.ainoya.openai.client.ApiException;
-import org.openapitools.client.model.DeleteFileResponse;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.model.DeleteFileResponse;
 import java.io.File;
-import org.openapitools.client.model.ListFilesResponse;
-import org.openapitools.client.model.OpenAIFile;
+import dev.ainoya.client.model.ListFilesResponse;
+import dev.ainoya.client.model.OpenAIFile;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for FilesApi

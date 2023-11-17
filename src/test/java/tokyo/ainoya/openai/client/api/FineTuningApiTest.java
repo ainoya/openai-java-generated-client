@@ -13,13 +13,18 @@
 
 package tokyo.ainoya.openai.client.api;
 
-import tokyo.ainoya.openai.client.ApiException;
-import org.openapitools.client.model.CreateFineTuningJobRequest;
-import org.openapitools.client.model.FineTuningJob;
-import org.openapitools.client.model.ListFineTuningJobEventsResponse;
-import org.openapitools.client.model.ListPaginatedFineTuningJobsResponse;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.model.CreateFineTuningJobRequest;
+import dev.ainoya.client.model.FineTuningJob;
+import dev.ainoya.client.model.ListFineTuningJobEventsResponse;
+import dev.ainoya.client.model.ListPaginatedFineTuningJobsResponse;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for FineTuningApi

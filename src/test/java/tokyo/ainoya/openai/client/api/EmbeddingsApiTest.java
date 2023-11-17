@@ -13,11 +13,16 @@
 
 package tokyo.ainoya.openai.client.api;
 
-import tokyo.ainoya.openai.client.ApiException;
-import org.openapitools.client.model.CreateEmbeddingRequest;
-import org.openapitools.client.model.CreateEmbeddingResponse;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.model.CreateEmbeddingRequest;
+import dev.ainoya.client.model.CreateEmbeddingResponse;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for EmbeddingsApi

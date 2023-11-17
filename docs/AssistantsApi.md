@@ -42,11 +42,11 @@ Cancels a run that is &#x60;in_progress&#x60;.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -109,11 +109,11 @@ Create an assistant with a model and instructions.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -174,11 +174,11 @@ Create an assistant file by attaching a [File](/docs/api-reference/files) to an 
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -241,11 +241,11 @@ Create a message.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -308,11 +308,11 @@ Create a run.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -375,11 +375,11 @@ Create a thread.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -440,11 +440,11 @@ Create a thread and run it in one request.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -505,11 +505,11 @@ Delete an assistant.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -570,11 +570,11 @@ Delete an assistant file.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -637,11 +637,11 @@ Delete a thread.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -702,11 +702,11 @@ Retrieves an assistant.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -767,11 +767,11 @@ Retrieves an AssistantFile.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -834,11 +834,11 @@ Retrieve a message.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -901,11 +901,11 @@ Retrieves a message file.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -970,11 +970,11 @@ Retrieves a run.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -1037,11 +1037,11 @@ Retrieves a run step.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -1106,11 +1106,11 @@ Retrieves a thread.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -1171,11 +1171,11 @@ Returns a list of assistant files.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -1244,11 +1244,11 @@ Returns a list of assistants.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -1315,11 +1315,11 @@ Returns a list of message files.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -1390,11 +1390,11 @@ Returns a list of messages for a given thread.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -1463,11 +1463,11 @@ Returns a list of run steps belonging to a run.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -1538,11 +1538,11 @@ Returns a list of runs belonging to a thread.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -1611,11 +1611,11 @@ Modifies a message.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -1680,11 +1680,11 @@ Modifies a run.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -1749,11 +1749,11 @@ Modifies a thread.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {
@@ -1816,11 +1816,11 @@ When a run has the &#x60;status: \&quot;requires_action\&quot;&#x60; and &#x60;r
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.AssistantsApi;
 
 public class Example {

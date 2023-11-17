@@ -18,11 +18,11 @@ Creates an image given a prompt.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.ImagesApi;
 
 public class Example {
@@ -83,11 +83,11 @@ Creates an edited or extended image given an original image and a prompt.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.ImagesApi;
 
 public class Example {
@@ -162,11 +162,11 @@ Creates a variation of a given image.
 ### Example
 ```java
 // Import classes:
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.auth.*;
-import tokyo.ainoya.openai.client.models.*;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.auth.*;
+import dev.ainoya.client.models.*;
 import tokyo.ainoya.openai.client.api.ImagesApi;
 
 public class Example {

@@ -13,23 +13,23 @@
 
 package tokyo.ainoya.openai.client.api;
 
-import tokyo.ainoya.openai.client.ApiCallback;
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.ApiResponse;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.Pair;
-import tokyo.ainoya.openai.client.ProgressRequestBody;
-import tokyo.ainoya.openai.client.ProgressResponseBody;
+import dev.ainoya.client.ApiCallback;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.ApiResponse;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.Pair;
+import dev.ainoya.client.ProgressRequestBody;
+import dev.ainoya.client.ProgressResponseBody;
 
 import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 
 
-import org.openapitools.client.model.DeleteModelResponse;
-import org.openapitools.client.model.ListModelsResponse;
-import org.openapitools.client.model.Model;
+import dev.ainoya.client.model.DeleteModelResponse;
+import dev.ainoya.client.model.ListModelsResponse;
+import dev.ainoya.client.model.Model;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

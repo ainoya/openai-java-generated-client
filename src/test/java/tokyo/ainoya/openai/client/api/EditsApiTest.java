@@ -13,11 +13,16 @@
 
 package tokyo.ainoya.openai.client.api;
 
-import tokyo.ainoya.openai.client.ApiException;
-import org.openapitools.client.model.CreateEditRequest;
-import org.openapitools.client.model.CreateEditResponse;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.model.CreateEditRequest;
+import dev.ainoya.client.model.CreateEditResponse;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for EditsApi

@@ -13,46 +13,46 @@
 
 package tokyo.ainoya.openai.client.api;
 
-import tokyo.ainoya.openai.client.ApiCallback;
-import tokyo.ainoya.openai.client.ApiClient;
-import tokyo.ainoya.openai.client.ApiException;
-import tokyo.ainoya.openai.client.ApiResponse;
-import tokyo.ainoya.openai.client.Configuration;
-import tokyo.ainoya.openai.client.Pair;
-import tokyo.ainoya.openai.client.ProgressRequestBody;
-import tokyo.ainoya.openai.client.ProgressResponseBody;
+import dev.ainoya.client.ApiCallback;
+import dev.ainoya.client.ApiClient;
+import dev.ainoya.client.ApiException;
+import dev.ainoya.client.ApiResponse;
+import dev.ainoya.client.Configuration;
+import dev.ainoya.client.Pair;
+import dev.ainoya.client.ProgressRequestBody;
+import dev.ainoya.client.ProgressResponseBody;
 
 import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 
 
-import org.openapitools.client.model.AssistantFileObject;
-import org.openapitools.client.model.AssistantObject;
-import org.openapitools.client.model.CreateAssistantFileRequest;
-import org.openapitools.client.model.CreateAssistantRequest;
-import org.openapitools.client.model.CreateMessageRequest;
-import org.openapitools.client.model.CreateRunRequest;
-import org.openapitools.client.model.CreateThreadAndRunRequest;
-import org.openapitools.client.model.CreateThreadRequest;
-import org.openapitools.client.model.DeleteAssistantFileResponse;
-import org.openapitools.client.model.DeleteAssistantResponse;
-import org.openapitools.client.model.DeleteThreadResponse;
-import org.openapitools.client.model.ListAssistantFilesResponse;
-import org.openapitools.client.model.ListAssistantsResponse;
-import org.openapitools.client.model.ListMessageFilesResponse;
-import org.openapitools.client.model.ListMessagesResponse;
-import org.openapitools.client.model.ListRunStepsResponse;
-import org.openapitools.client.model.ListRunsResponse;
-import org.openapitools.client.model.MessageFileObject;
-import org.openapitools.client.model.MessageObject;
-import org.openapitools.client.model.ModifyMessageRequest;
-import org.openapitools.client.model.ModifyRunRequest;
-import org.openapitools.client.model.ModifyThreadRequest;
-import org.openapitools.client.model.RunObject;
-import org.openapitools.client.model.RunStepObject;
-import org.openapitools.client.model.SubmitToolOutputsRunRequest;
-import org.openapitools.client.model.ThreadObject;
+import dev.ainoya.client.model.AssistantFileObject;
+import dev.ainoya.client.model.AssistantObject;
+import dev.ainoya.client.model.CreateAssistantFileRequest;
+import dev.ainoya.client.model.CreateAssistantRequest;
+import dev.ainoya.client.model.CreateMessageRequest;
+import dev.ainoya.client.model.CreateRunRequest;
+import dev.ainoya.client.model.CreateThreadAndRunRequest;
+import dev.ainoya.client.model.CreateThreadRequest;
+import dev.ainoya.client.model.DeleteAssistantFileResponse;
+import dev.ainoya.client.model.DeleteAssistantResponse;
+import dev.ainoya.client.model.DeleteThreadResponse;
+import dev.ainoya.client.model.ListAssistantFilesResponse;
+import dev.ainoya.client.model.ListAssistantsResponse;
+import dev.ainoya.client.model.ListMessageFilesResponse;
+import dev.ainoya.client.model.ListMessagesResponse;
+import dev.ainoya.client.model.ListRunStepsResponse;
+import dev.ainoya.client.model.ListRunsResponse;
+import dev.ainoya.client.model.MessageFileObject;
+import dev.ainoya.client.model.MessageObject;
+import dev.ainoya.client.model.ModifyMessageRequest;
+import dev.ainoya.client.model.ModifyRunRequest;
+import dev.ainoya.client.model.ModifyThreadRequest;
+import dev.ainoya.client.model.RunObject;
+import dev.ainoya.client.model.RunStepObject;
+import dev.ainoya.client.model.SubmitToolOutputsRunRequest;
+import dev.ainoya.client.model.ThreadObject;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
