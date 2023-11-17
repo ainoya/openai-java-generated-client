@@ -1,5 +1,8 @@
 # OpenAI API Java Client generated from OpenAPI specification with openapi-generator
 
+[![Release](https://jitpack.io/v/User/Repo.svg)]
+(https://jitpack.io/#User/Repo)
+
 ## Overview
 
 This repository contains a Java client library for the OpenAI API, generated using the OpenAPI Generator tool. The library is based on the official OpenAPI specification provided by OpenAI, which can be found at [openai/openai-openapi](https://github.com/openai/openai-openapi).
