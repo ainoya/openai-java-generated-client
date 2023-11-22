@@ -50,7 +50,7 @@ import com.github.ainoya.client.JSON;
 /**
  * RunStepDetailsToolCallsFunctionObject
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T02:42:43.048655Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T02:50:54.505343Z[Etc/UTC]")
 public class RunStepDetailsToolCallsFunctionObject {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

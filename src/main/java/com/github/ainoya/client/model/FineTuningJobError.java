@@ -49,7 +49,7 @@ import com.github.ainoya.client.JSON;
 /**
  * For fine-tuning jobs that have &#x60;failed&#x60;, this will contain more information on the cause of the failure.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T02:42:43.048655Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T02:50:54.505343Z[Etc/UTC]")
 public class FineTuningJobError {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)

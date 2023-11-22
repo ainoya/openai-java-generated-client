@@ -39,7 +39,7 @@ OpenAI API
 
 - API version: 2.0.0
 
-    - Build date: 2023-11-22T02:42:43.048655Z[Etc/UTC]
+    - Build date: 2023-11-22T02:50:54.505343Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
@@ -78,7 +78,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.github.ainoya</groupId>
     <artifactId>openai-java-generated-client</artifactId>
-    <version>0.0.4</version>
+    <version>0.0.7</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -94,7 +94,7 @@ mavenLocal()       // Needed if the 'openai-java-generated-client' jar has been 
 }
 
 dependencies {
-implementation "com.github.ainoya:openai-java-generated-client:0.0.4"
+implementation "com.github.ainoya:openai-java-generated-client:0.0.7"
 }
 ```
 
@@ -108,7 +108,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/openai-java-generated-client-0.0.4.jar`
+- `target/openai-java-generated-client-0.0.7.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -260,8 +260,10 @@ Class | Method | HTTP request | Description
  - [CreateChatCompletionRequestResponseFormat](docs/CreateChatCompletionRequestResponseFormat.md)
  - [CreateChatCompletionResponse](docs/CreateChatCompletionResponse.md)
  - [CreateChatCompletionResponseChoicesInner](docs/CreateChatCompletionResponseChoicesInner.md)
+ - [CreateChatCompletionResponseChoicesInnerFinishDetails](docs/CreateChatCompletionResponseChoicesInnerFinishDetails.md)
  - [CreateChatCompletionStreamResponse](docs/CreateChatCompletionStreamResponse.md)
  - [CreateChatCompletionStreamResponseChoicesInner](docs/CreateChatCompletionStreamResponseChoicesInner.md)
+ - [CreateChatCompletionStreamResponseChoicesInnerFinishDetails](docs/CreateChatCompletionStreamResponseChoicesInnerFinishDetails.md)
  - [CreateCompletionRequest](docs/CreateCompletionRequest.md)
  - [CreateCompletionRequestModel](docs/CreateCompletionRequestModel.md)
  - [CreateCompletionRequestStop](docs/CreateCompletionRequestStop.md)

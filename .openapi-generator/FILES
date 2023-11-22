@@ -53,8 +53,10 @@ docs/CreateChatCompletionRequestFunctionCall.md
 docs/CreateChatCompletionRequestResponseFormat.md
 docs/CreateChatCompletionResponse.md
 docs/CreateChatCompletionResponseChoicesInner.md
+docs/CreateChatCompletionResponseChoicesInnerFinishDetails.md
 docs/CreateChatCompletionStreamResponse.md
 docs/CreateChatCompletionStreamResponseChoicesInner.md
+docs/CreateChatCompletionStreamResponseChoicesInnerFinishDetails.md
 docs/CreateCompletionRequest.md
 docs/CreateCompletionRequestModel.md
 docs/CreateCompletionRequestStop.md
@@ -245,8 +247,10 @@ src/main/java/com/github/ainoya/client/model/CreateChatCompletionRequestFunction
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionRequestResponseFormat.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionResponse.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionResponseChoicesInner.java
+src/main/java/com/github/ainoya/client/model/CreateChatCompletionResponseChoicesInnerFinishDetails.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionStreamResponse.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionStreamResponseChoicesInner.java
+src/main/java/com/github/ainoya/client/model/CreateChatCompletionStreamResponseChoicesInnerFinishDetails.java
 src/main/java/com/github/ainoya/client/model/CreateCompletionRequest.java
 src/main/java/com/github/ainoya/client/model/CreateCompletionRequestModel.java
 src/main/java/com/github/ainoya/client/model/CreateCompletionRequestStop.java
@@ -372,6 +376,5 @@ src/main/java/com/github/ainoya/openai/client/api/FineTuningApi.java
 src/main/java/com/github/ainoya/openai/client/api/ImagesApi.java
 src/main/java/com/github/ainoya/openai/client/api/ModelsApi.java
 src/main/java/com/github/ainoya/openai/client/api/ModerationsApi.java
-src/test/java/com/github/ainoya/client/model/CreateChatCompletionFunctionResponseChoicesInnerFinishDetailsTest.java
-src/test/java/com/github/ainoya/client/model/CreateCompletionResponseChoicesInnerFinishDetailsTest.java
-src/test/java/com/github/ainoya/client/model/CreateEditResponseChoicesInnerFinishDetailsTest.java
+src/test/java/com/github/ainoya/client/model/CreateChatCompletionResponseChoicesInnerFinishDetailsTest.java
+src/test/java/com/github/ainoya/client/model/CreateChatCompletionStreamResponseChoicesInnerFinishDetailsTest.java

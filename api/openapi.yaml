@@ -6380,7 +6380,9 @@ components:
         id: id
         choices:
         - finish_reason: stop
-          finish_details: stop
+          finish_details:
+            stop: stop
+            type: stop
           index: 0
           message:
             role: assistant
@@ -6400,7 +6402,9 @@ components:
               type: function
             content: content
         - finish_reason: stop
-          finish_details: stop
+          finish_details:
+            stop: stop
+            type: stop
           index: 0
           message:
             role: assistant
@@ -10646,10 +10650,31 @@ components:
         type: string
       - $ref: '#/components/schemas/ChatCompletionFunctionCallOption'
       x-oaiExpandable: true
+    CreateChatCompletionResponse_choices_inner_finish_details:
+      description: |
+        The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
+        `length` if the maximum number of tokens specified in the request was reached,
+        `content_filter` if content was omitted due to a flag from our content filters,
+        `tool_calls` if the model called a tool, or `function_call` (deprecated) if the model called a function.
+      example:
+        stop: stop
+        type: stop
+      properties:
+        type:
+          enum:
+          - stop
+          - length
+          - content_filter
+          type: string
+        stop:
+          type: string
+      type: object
     CreateChatCompletionResponse_choices_inner:
       example:
         finish_reason: stop
-        finish_details: stop
+        finish_details:
+          stop: stop
+          type: stop
         index: 0
         message:
           role: assistant
@@ -10683,18 +10708,7 @@ components:
           - function_call
           type: string
         finish_details:
-          description: |
-            The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
-            `length` if the maximum number of tokens specified in the request was reached,
-            `content_filter` if content was omitted due to a flag from our content filters,
-            `tool_calls` if the model called a tool, or `function_call` (deprecated) if the model called a function.
-          enum:
-          - stop
-          - length
-          - tool_calls
-          - content_filter
-          - function_call
-          type: string
+          $ref: '#/components/schemas/CreateChatCompletionResponse_choices_inner_finish_details'
         index:
           description: The index of the choice in the list of choices.
           type: integer
@@ -10707,11 +10721,6 @@ components:
     CreateChatCompletionFunctionResponse_choices_inner_finish_details:
       description: |
         The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `function_call` if the model called a function.
-      enum:
-      - stop
-      - length
-      - function_call
-      - content_filter
       properties:
         type:
           enum:
@@ -10745,6 +10754,24 @@ components:
       - index
       - message
       type: object
+    CreateChatCompletionStreamResponse_choices_inner_finish_details:
+      description: |
+        The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
+        `length` if the maximum number of tokens specified in the request was reached,
+        `content_filter` if content was omitted due to a flag from our content filters,
+        `tool_calls` if the model called a tool, or `function_call` (deprecated) if the model called a function.
+      nullable: true
+      properties:
+        type:
+          enum:
+          - stop
+          - length
+          - function_call
+          - content_filter
+          type: string
+        stop:
+          type: string
+      type: object
     CreateChatCompletionStreamResponse_choices_inner:
       properties:
         delta:
@@ -10764,19 +10791,7 @@ components:
           nullable: true
           type: string
         finish_details:
-          description: |
-            The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
-            `length` if the maximum number of tokens specified in the request was reached,
-            `content_filter` if content was omitted due to a flag from our content filters,
-            `tool_calls` if the model called a tool, or `function_call` (deprecated) if the model called a function.
-          enum:
-          - stop
-          - length
-          - tool_calls
-          - content_filter
-          - function_call
-          nullable: true
-          type: string
+          $ref: '#/components/schemas/CreateChatCompletionStreamResponse_choices_inner_finish_details'
         index:
           description: The index of the choice in the list of choices.
           type: integer

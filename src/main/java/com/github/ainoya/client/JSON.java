@@ -135,8 +135,10 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionRequestResponseFormat.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionResponseChoicesInner.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionResponseChoicesInnerFinishDetails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionStreamResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionStreamResponseChoicesInner.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionStreamResponseChoicesInnerFinishDetails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateCompletionRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateCompletionRequestModel.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateCompletionRequestStop.CustomTypeAdapterFactory());

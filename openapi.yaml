@@ -6166,20 +6166,18 @@ components:
                     "function_call",
                   ]
               finish_details:
-                type: string
                 description: &chat_completion_finish_reason_description |
                   The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
                   `length` if the maximum number of tokens specified in the request was reached,
                   `content_filter` if content was omitted due to a flag from our content filters,
                   `tool_calls` if the model called a tool, or `function_call` (deprecated) if the model called a function.
-                enum:
-                  [
-                    "stop",
-                    "length",
-                    "tool_calls",
-                    "content_filter",
-                    "function_call",
-                  ]
+                type: object 
+                properties:
+                  type:
+                    type: string
+                    enum: ["stop", "length", "content_filter"]
+                  stop:
+                    type: string
               index:
                 type: integer
                 description: The index of the choice in the list of choices.
@@ -6241,7 +6239,6 @@ components:
                 description:
                   &chat_completion_function_finish_reason_description |
                   The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `function_call` if the model called a function.
-                enum: ["stop", "length", "function_call", "content_filter"]
                 type: object 
                 properties:
                   type:
@@ -6332,17 +6329,15 @@ components:
                   ]
                 nullable: true
               finish_details:
-                type: string
                 description: *chat_completion_finish_reason_description
-                enum:
-                  [
-                    "stop",
-                    "length",
-                    "tool_calls",
-                    "content_filter",
-                    "function_call",
-                  ]
                 nullable: true
+                type: object 
+                properties:
+                  type:
+                    type: string
+                    enum: ["stop", "length", "function_call", "content_filter"]
+                  stop:
+                    type: string
               index:
                 type: integer
                 description: The index of the choice in the list of choices.
