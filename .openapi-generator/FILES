@@ -47,6 +47,7 @@ docs/CreateAssistantFileRequest.md
 docs/CreateAssistantRequest.md
 docs/CreateChatCompletionFunctionResponse.md
 docs/CreateChatCompletionFunctionResponseChoicesInner.md
+docs/CreateChatCompletionFunctionResponseChoicesInnerFinishDetails.md
 docs/CreateChatCompletionRequest.md
 docs/CreateChatCompletionRequestFunctionCall.md
 docs/CreateChatCompletionRequestResponseFormat.md
@@ -59,11 +60,13 @@ docs/CreateCompletionRequestModel.md
 docs/CreateCompletionRequestStop.md
 docs/CreateCompletionResponse.md
 docs/CreateCompletionResponseChoicesInner.md
+docs/CreateCompletionResponseChoicesInnerFinishDetails.md
 docs/CreateCompletionResponseChoicesInnerLogprobs.md
 docs/CreateEditRequest.md
 docs/CreateEditRequestModel.md
 docs/CreateEditResponse.md
 docs/CreateEditResponseChoicesInner.md
+docs/CreateEditResponseChoicesInnerFinishDetails.md
 docs/CreateEmbeddingRequest.md
 docs/CreateEmbeddingRequestInput.md
 docs/CreateEmbeddingResponse.md
@@ -236,6 +239,7 @@ src/main/java/com/github/ainoya/client/model/CreateAssistantFileRequest.java
 src/main/java/com/github/ainoya/client/model/CreateAssistantRequest.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionFunctionResponse.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionFunctionResponseChoicesInner.java
+src/main/java/com/github/ainoya/client/model/CreateChatCompletionFunctionResponseChoicesInnerFinishDetails.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionRequest.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionRequestFunctionCall.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionRequestResponseFormat.java
@@ -248,11 +252,13 @@ src/main/java/com/github/ainoya/client/model/CreateCompletionRequestModel.java
 src/main/java/com/github/ainoya/client/model/CreateCompletionRequestStop.java
 src/main/java/com/github/ainoya/client/model/CreateCompletionResponse.java
 src/main/java/com/github/ainoya/client/model/CreateCompletionResponseChoicesInner.java
+src/main/java/com/github/ainoya/client/model/CreateCompletionResponseChoicesInnerFinishDetails.java
 src/main/java/com/github/ainoya/client/model/CreateCompletionResponseChoicesInnerLogprobs.java
 src/main/java/com/github/ainoya/client/model/CreateEditRequest.java
 src/main/java/com/github/ainoya/client/model/CreateEditRequestModel.java
 src/main/java/com/github/ainoya/client/model/CreateEditResponse.java
 src/main/java/com/github/ainoya/client/model/CreateEditResponseChoicesInner.java
+src/main/java/com/github/ainoya/client/model/CreateEditResponseChoicesInnerFinishDetails.java
 src/main/java/com/github/ainoya/client/model/CreateEmbeddingRequest.java
 src/main/java/com/github/ainoya/client/model/CreateEmbeddingRequestInput.java
 src/main/java/com/github/ainoya/client/model/CreateEmbeddingResponse.java
@@ -366,3 +372,6 @@ src/main/java/com/github/ainoya/openai/client/api/FineTuningApi.java
 src/main/java/com/github/ainoya/openai/client/api/ImagesApi.java
 src/main/java/com/github/ainoya/openai/client/api/ModelsApi.java
 src/main/java/com/github/ainoya/openai/client/api/ModerationsApi.java
+src/test/java/com/github/ainoya/client/model/CreateChatCompletionFunctionResponseChoicesInnerFinishDetailsTest.java
+src/test/java/com/github/ainoya/client/model/CreateCompletionResponseChoicesInnerFinishDetailsTest.java
+src/test/java/com/github/ainoya/client/model/CreateEditResponseChoicesInnerFinishDetailsTest.java

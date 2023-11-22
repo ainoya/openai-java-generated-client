@@ -39,7 +39,7 @@ OpenAI API
 
 - API version: 2.0.0
 
-    - Build date: 2023-11-22T01:56:26.046112Z[Etc/UTC]
+    - Build date: 2023-11-22T02:42:43.048655Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
@@ -254,6 +254,7 @@ Class | Method | HTTP request | Description
  - [CreateAssistantRequest](docs/CreateAssistantRequest.md)
  - [CreateChatCompletionFunctionResponse](docs/CreateChatCompletionFunctionResponse.md)
  - [CreateChatCompletionFunctionResponseChoicesInner](docs/CreateChatCompletionFunctionResponseChoicesInner.md)
+ - [CreateChatCompletionFunctionResponseChoicesInnerFinishDetails](docs/CreateChatCompletionFunctionResponseChoicesInnerFinishDetails.md)
  - [CreateChatCompletionRequest](docs/CreateChatCompletionRequest.md)
  - [CreateChatCompletionRequestFunctionCall](docs/CreateChatCompletionRequestFunctionCall.md)
  - [CreateChatCompletionRequestResponseFormat](docs/CreateChatCompletionRequestResponseFormat.md)
@@ -266,11 +267,13 @@ Class | Method | HTTP request | Description
  - [CreateCompletionRequestStop](docs/CreateCompletionRequestStop.md)
  - [CreateCompletionResponse](docs/CreateCompletionResponse.md)
  - [CreateCompletionResponseChoicesInner](docs/CreateCompletionResponseChoicesInner.md)
+ - [CreateCompletionResponseChoicesInnerFinishDetails](docs/CreateCompletionResponseChoicesInnerFinishDetails.md)
  - [CreateCompletionResponseChoicesInnerLogprobs](docs/CreateCompletionResponseChoicesInnerLogprobs.md)
  - [CreateEditRequest](docs/CreateEditRequest.md)
  - [CreateEditRequestModel](docs/CreateEditRequestModel.md)
  - [CreateEditResponse](docs/CreateEditResponse.md)
  - [CreateEditResponseChoicesInner](docs/CreateEditResponseChoicesInner.md)
+ - [CreateEditResponseChoicesInnerFinishDetails](docs/CreateEditResponseChoicesInnerFinishDetails.md)
  - [CreateEmbeddingRequest](docs/CreateEmbeddingRequest.md)
  - [CreateEmbeddingRequestInput](docs/CreateEmbeddingRequestInput.md)
  - [CreateEmbeddingResponse](docs/CreateEmbeddingResponse.md)

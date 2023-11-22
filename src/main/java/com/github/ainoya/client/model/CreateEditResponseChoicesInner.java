@@ -14,6 +14,7 @@
 package com.github.ainoya.client.model;
 
 import java.util.Objects;
+import com.github.ainoya.client.model.CreateEditResponseChoicesInnerFinishDetails;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,7 +50,7 @@ import com.github.ainoya.client.JSON;
 /**
  * CreateEditResponseChoicesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T01:56:26.046112Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T02:42:43.048655Z[Etc/UTC]")
 public class CreateEditResponseChoicesInner {
   /**
    * The reason the model stopped generating tokens. This will be &#x60;stop&#x60; if the model hit a natural stop point or a provided stop sequence, &#x60;length&#x60; if the maximum number of tokens specified in the request was reached, or &#x60;content_filter&#x60; if content was omitted due to a flag from our content filters. 
@@ -107,61 +108,9 @@ public class CreateEditResponseChoicesInner {
   @SerializedName(SERIALIZED_NAME_FINISH_REASON)
   private FinishReasonEnum finishReason;
 
-  /**
-   * The reason the model stopped generating tokens. This will be &#x60;stop&#x60; if the model hit a natural stop point or a provided stop sequence, &#x60;length&#x60; if the maximum number of tokens specified in the request was reached, or &#x60;content_filter&#x60; if content was omitted due to a flag from our content filters. 
-   */
-  @JsonAdapter(FinishDetailsEnum.Adapter.class)
-  public enum FinishDetailsEnum {
-    STOP("stop"),
-    
-    LENGTH("length");
-
-    private String value;
-
-    FinishDetailsEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static FinishDetailsEnum fromValue(String value) {
-      for (FinishDetailsEnum b : FinishDetailsEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<FinishDetailsEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final FinishDetailsEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public FinishDetailsEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return FinishDetailsEnum.fromValue(value);
-      }
-    }
-
-    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      String value = jsonElement.getAsString();
-      FinishDetailsEnum.fromValue(value);
-    }
-  }
-
   public static final String SERIALIZED_NAME_FINISH_DETAILS = "finish_details";
   @SerializedName(SERIALIZED_NAME_FINISH_DETAILS)
-  private FinishDetailsEnum finishDetails;
+  private CreateEditResponseChoicesInnerFinishDetails finishDetails;
 
   public static final String SERIALIZED_NAME_INDEX = "index";
   @SerializedName(SERIALIZED_NAME_INDEX)
@@ -195,23 +144,23 @@ public class CreateEditResponseChoicesInner {
   }
 
 
-  public CreateEditResponseChoicesInner finishDetails(FinishDetailsEnum finishDetails) {
+  public CreateEditResponseChoicesInner finishDetails(CreateEditResponseChoicesInnerFinishDetails finishDetails) {
     
     this.finishDetails = finishDetails;
     return this;
   }
 
    /**
-   * The reason the model stopped generating tokens. This will be &#x60;stop&#x60; if the model hit a natural stop point or a provided stop sequence, &#x60;length&#x60; if the maximum number of tokens specified in the request was reached, or &#x60;content_filter&#x60; if content was omitted due to a flag from our content filters. 
+   * Get finishDetails
    * @return finishDetails
   **/
   @javax.annotation.Nullable
-  public FinishDetailsEnum getFinishDetails() {
+  public CreateEditResponseChoicesInnerFinishDetails getFinishDetails() {
     return finishDetails;
   }
 
 
-  public void setFinishDetails(FinishDetailsEnum finishDetails) {
+  public void setFinishDetails(CreateEditResponseChoicesInnerFinishDetails finishDetails) {
     this.finishDetails = finishDetails;
   }
 
@@ -393,12 +342,9 @@ public class CreateEditResponseChoicesInner {
       if (jsonObj.get("finish_reason") != null && !jsonObj.get("finish_reason").isJsonNull()) {
         FinishReasonEnum.validateJsonElement(jsonObj.get("finish_reason"));
       }
-      if ((jsonObj.get("finish_details") != null && !jsonObj.get("finish_details").isJsonNull()) && !jsonObj.get("finish_details").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `finish_details` to be a primitive type in the JSON string but got `%s`", jsonObj.get("finish_details").toString()));
-      }
       // validate the optional field `finish_details`
       if (jsonObj.get("finish_details") != null && !jsonObj.get("finish_details").isJsonNull()) {
-        FinishDetailsEnum.validateJsonElement(jsonObj.get("finish_details"));
+        CreateEditResponseChoicesInnerFinishDetails.validateJsonElement(jsonObj.get("finish_details"));
       }
       if (!jsonObj.get("text").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("text").toString()));

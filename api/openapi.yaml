@@ -5688,7 +5688,9 @@ components:
         id: id
         choices:
         - finish_reason: stop
-          finish_details: stop
+          finish_details:
+            stop: stop
+            type: stop
           index: 0
           text: text
           logprobs:
@@ -5705,7 +5707,9 @@ components:
             - 6
             - 6
         - finish_reason: stop
-          finish_details: stop
+          finish_details:
+            stop: stop
+            type: stop
           index: 0
           text: text
           logprobs:
@@ -6756,11 +6760,15 @@ components:
           total_tokens: 5
         choices:
         - finish_reason: stop
-          finish_details: stop
+          finish_details:
+            stop: stop
+            type: stop
           index: 0
           text: text
         - finish_reason: stop
-          finish_details: stop
+          finish_details:
+            stop: stop
+            type: stop
           index: 0
           text: text
         object: edit
@@ -10388,6 +10396,24 @@ components:
 
         nullable: true
         type: string
+    CreateCompletionResponse_choices_inner_finish_details:
+      description: |
+        The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
+        `length` if the maximum number of tokens specified in the request was reached,
+        or `content_filter` if content was omitted due to a flag from our content filters.
+      example:
+        stop: stop
+        type: stop
+      properties:
+        type:
+          enum:
+          - stop
+          - length
+          - content_filter
+          type: string
+        stop:
+          type: string
+      type: object
     CreateCompletionResponse_choices_inner_logprobs:
       example:
         top_logprobs:
@@ -10426,7 +10452,9 @@ components:
     CreateCompletionResponse_choices_inner:
       example:
         finish_reason: stop
-        finish_details: stop
+        finish_details:
+          stop: stop
+          type: stop
         index: 0
         text: text
         logprobs:
@@ -10454,15 +10482,7 @@ components:
           - content_filter
           type: string
         finish_details:
-          description: |
-            The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
-            `length` if the maximum number of tokens specified in the request was reached,
-            or `content_filter` if content was omitted due to a flag from our content filters.
-          enum:
-          - stop
-          - length
-          - content_filter
-          type: string
+          $ref: '#/components/schemas/CreateCompletionResponse_choices_inner_finish_details'
         index:
           type: integer
         logprobs:
@@ -10684,6 +10704,25 @@ components:
       - index
       - message
       type: object
+    CreateChatCompletionFunctionResponse_choices_inner_finish_details:
+      description: |
+        The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `function_call` if the model called a function.
+      enum:
+      - stop
+      - length
+      - function_call
+      - content_filter
+      properties:
+        type:
+          enum:
+          - stop
+          - length
+          - function_call
+          - content_filter
+          type: string
+        stop:
+          type: string
+      type: object
     CreateChatCompletionFunctionResponse_choices_inner:
       properties:
         finish_reason:
@@ -10696,14 +10735,7 @@ components:
           - content_filter
           type: string
         finish_details:
-          description: |
-            The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `function_call` if the model called a function.
-          enum:
-          - stop
-          - length
-          - function_call
-          - content_filter
-          type: string
+          $ref: '#/components/schemas/CreateChatCompletionFunctionResponse_choices_inner_finish_details'
         index:
           description: The index of the choice in the list of choices.
           type: integer
@@ -10763,10 +10795,29 @@ components:
         or `code-davinci-edit-001` model with this endpoint.
       example: text-davinci-edit-001
       x-oaiTypeLabel: string
+    CreateEditResponse_choices_inner_finish_details:
+      description: |
+        The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
+        `length` if the maximum number of tokens specified in the request was reached,
+        or `content_filter` if content was omitted due to a flag from our content filters.
+      example:
+        stop: stop
+        type: stop
+      properties:
+        type:
+          enum:
+          - stop
+          - length
+          type: string
+        stop:
+          type: string
+      type: object
     CreateEditResponse_choices_inner:
       example:
         finish_reason: stop
-        finish_details: stop
+        finish_details:
+          stop: stop
+          type: stop
         index: 0
         text: text
       properties:
@@ -10780,14 +10831,7 @@ components:
           - length
           type: string
         finish_details:
-          description: |
-            The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
-            `length` if the maximum number of tokens specified in the request was reached,
-            or `content_filter` if content was omitted due to a flag from our content filters.
-          enum:
-          - stop
-          - length
-          type: string
+          $ref: '#/components/schemas/CreateEditResponse_choices_inner_finish_details'
         index:
           description: The index of the choice in the list of choices.
           type: integer
