@@ -49,7 +49,7 @@ import com.github.ainoya.client.JSON;
 /**
  * ChatCompletionNamedToolChoiceFunction
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-21T14:20:26.645366Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T01:56:26.046112Z[Etc/UTC]")
 public class ChatCompletionNamedToolChoiceFunction {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)

@@ -49,7 +49,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Describes an OpenAI model offering that can be used with the API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-21T14:20:26.645366Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T01:56:26.046112Z[Etc/UTC]")
 public class Model {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

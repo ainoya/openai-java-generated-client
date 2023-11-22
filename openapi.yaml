@@ -5469,12 +5469,19 @@ components:
           items:
             type: object
             required:
-              - finish_reason
+              # - finish_reason
               - index
               - logprobs
               - text
             properties:
               finish_reason:
+                type: string
+                description: &completion_finish_reason_description |
+                  The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
+                  `length` if the maximum number of tokens specified in the request was reached,
+                  or `content_filter` if content was omitted due to a flag from our content filters.
+                enum: ["stop", "length", "content_filter"]
+              finish_details:
                 type: string
                 description: &completion_finish_reason_description |
                   The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
@@ -6134,11 +6141,26 @@ components:
           items:
             type: object
             required:
-              - finish_reason
+              # - finish_reason gpt-4 returns `finish_details` instead of `finish_reason`
               - index
               - message
             properties:
               finish_reason:
+                type: string
+                description: &chat_completion_finish_reason_description |
+                  The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
+                  `length` if the maximum number of tokens specified in the request was reached,
+                  `content_filter` if content was omitted due to a flag from our content filters,
+                  `tool_calls` if the model called a tool, or `function_call` (deprecated) if the model called a function.
+                enum:
+                  [
+                    "stop",
+                    "length",
+                    "tool_calls",
+                    "content_filter",
+                    "function_call",
+                  ]
+              finish_details:
                 type: string
                 description: &chat_completion_finish_reason_description |
                   The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence,
@@ -6200,11 +6222,17 @@ components:
           items:
             type: object
             required:
-              - finish_reason
+              # - finish_reason
               - index
               - message
             properties:
               finish_reason:
+                type: string
+                description:
+                  &chat_completion_function_finish_reason_description |
+                  The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `function_call` if the model called a function.
+                enum: ["stop", "length", "function_call", "content_filter"]
+              finish_details:
                 type: string
                 description:
                   &chat_completion_function_finish_reason_description |
@@ -6275,12 +6303,24 @@ components:
             type: object
             required:
               - delta
-              - finish_reason
+              # - finish_reason
               - index
             properties:
               delta:
                 $ref: "#/components/schemas/ChatCompletionStreamResponseDelta"
               finish_reason:
+                type: string
+                description: *chat_completion_finish_reason_description
+                enum:
+                  [
+                    "stop",
+                    "length",
+                    "tool_calls",
+                    "content_filter",
+                    "function_call",
+                  ]
+                nullable: true
+              finish_details:
                 type: string
                 description: *chat_completion_finish_reason_description
                 enum:
@@ -6391,9 +6431,13 @@ components:
             required:
               - text
               - index
-              - finish_reason
+              # - finish_reason
             properties:
               finish_reason:
+                type: string
+                description: *completion_finish_reason_description
+                enum: ["stop", "length"]
+              finish_details:
                 type: string
                 description: *completion_finish_reason_description
                 enum: ["stop", "length"]

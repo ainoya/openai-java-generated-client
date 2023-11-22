@@ -50,7 +50,7 @@ import com.github.ainoya.client.JSON;
 /**
  * A URL for the file that&#39;s generated when the assistant used the &#x60;code_interpreter&#x60; tool to generate a file.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-21T14:20:26.645366Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T01:56:26.046112Z[Etc/UTC]")
 public class MessageContentTextAnnotationsFilePathObject {
   /**
    * Always &#x60;file_path&#x60;.
