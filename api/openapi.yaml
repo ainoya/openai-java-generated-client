@@ -9055,7 +9055,6 @@ components:
       - metadata
       - model
       - object
-      - required_action
       - started_at
       - status
       - thread_id

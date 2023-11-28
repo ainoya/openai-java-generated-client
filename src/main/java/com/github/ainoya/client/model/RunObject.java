@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,7 +55,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Represents an execution run on a [thread](/docs/api-reference/threads).
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-21T14:20:26.645366Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T04:42:30.516763Z[Etc/UTC]")
 public class RunObject {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -714,9 +715,20 @@ public class RunObject {
         Objects.equals(this.additionalProperties, runObject.additionalProperties);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(id, _object, createdAt, threadId, assistantId, status, requiredAction, lastError, expiresAt, startedAt, cancelledAt, failedAt, completedAt, model, instructions, tools, fileIds, metadata, additionalProperties);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -791,7 +803,6 @@ public class RunObject {
     openapiRequiredFields.add("thread_id");
     openapiRequiredFields.add("assistant_id");
     openapiRequiredFields.add("status");
-    openapiRequiredFields.add("required_action");
     openapiRequiredFields.add("last_error");
     openapiRequiredFields.add("expires_at");
     openapiRequiredFields.add("started_at");
@@ -844,8 +855,10 @@ public class RunObject {
       }
       // validate the required field `status`
       StatusEnum.validateJsonElement(jsonObj.get("status"));
-      // validate the required field `required_action`
-      RunObjectRequiredAction.validateJsonElement(jsonObj.get("required_action"));
+      // validate the optional field `required_action`
+      if (jsonObj.get("required_action") != null && !jsonObj.get("required_action").isJsonNull()) {
+        RunObjectRequiredAction.validateJsonElement(jsonObj.get("required_action"));
+      }
       // validate the required field `last_error`
       RunObjectLastError.validateJsonElement(jsonObj.get("last_error"));
       if (!jsonObj.get("model").isJsonPrimitive()) {
