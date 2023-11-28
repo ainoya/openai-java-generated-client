@@ -52,11 +52,11 @@ import com.github.ainoya.client.JSON;
 /**
  * Details on the tool outputs needed for this run to continue.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:21:58.409121Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:29:56.631434Z[Etc/UTC]")
 public class RunObjectRequiredActionSubmitToolOutputs {
   public static final String SERIALIZED_NAME_TOOL_CALLS = "tool_calls";
   @SerializedName(SERIALIZED_NAME_TOOL_CALLS)
-  private List<RunToolCallObject> toolCalls = new ArrayList<>();
+  private List<RunToolCallObject> toolCalls;
 
   public RunObjectRequiredActionSubmitToolOutputs() {
   }
@@ -79,7 +79,7 @@ public class RunObjectRequiredActionSubmitToolOutputs {
    * A list of the relevant tool calls.
    * @return toolCalls
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public List<RunToolCallObject> getToolCalls() {
     return toolCalls;
   }
@@ -185,7 +185,6 @@ public class RunObjectRequiredActionSubmitToolOutputs {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("tool_calls");
   }
 
  /**
@@ -200,24 +199,21 @@ public class RunObjectRequiredActionSubmitToolOutputs {
           throw new IllegalArgumentException(String.format("The required field(s) %s in RunObjectRequiredActionSubmitToolOutputs is not found in the empty JSON string", RunObjectRequiredActionSubmitToolOutputs.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (jsonObj.get("tool_calls") != null && !jsonObj.get("tool_calls").isJsonNull()) {
+        JsonArray jsonArraytoolCalls = jsonObj.getAsJsonArray("tool_calls");
+        if (jsonArraytoolCalls != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("tool_calls").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `tool_calls` to be an array in the JSON string but got `%s`", jsonObj.get("tool_calls").toString()));
+          }
 
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RunObjectRequiredActionSubmitToolOutputs.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          // validate the optional field `tool_calls` (array)
+          for (int i = 0; i < jsonArraytoolCalls.size(); i++) {
+            RunToolCallObject.validateJsonElement(jsonArraytoolCalls.get(i));
+          };
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("tool_calls").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tool_calls` to be an array in the JSON string but got `%s`", jsonObj.get("tool_calls").toString()));
-      }
-
-      JsonArray jsonArraytoolCalls = jsonObj.getAsJsonArray("tool_calls");
-      // validate the required field `tool_calls` (array)
-      for (int i = 0; i < jsonArraytoolCalls.size(); i++) {
-        RunToolCallObject.validateJsonElement(jsonArraytoolCalls.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

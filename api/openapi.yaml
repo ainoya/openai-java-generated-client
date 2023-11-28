@@ -11130,8 +11130,6 @@ components:
           items:
             $ref: '#/components/schemas/RunToolCallObject'
           type: array
-      required:
-      - tool_calls
       type: object
     RunObject_required_action:
       description: Details on the action required to continue the run. Will be `null`

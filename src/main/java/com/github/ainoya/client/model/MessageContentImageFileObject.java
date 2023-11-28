@@ -50,7 +50,7 @@ import com.github.ainoya.client.JSON;
 /**
  * References an image [File](/docs/api-reference/files) in the content of a message.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:21:58.409121Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:29:56.631434Z[Etc/UTC]")
 public class MessageContentImageFileObject {
   /**
    * Always &#x60;image_file&#x60;.

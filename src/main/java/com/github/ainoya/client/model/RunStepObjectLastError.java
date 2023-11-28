@@ -49,7 +49,7 @@ import com.github.ainoya.client.JSON;
 /**
  * The last error associated with this run step. Will be &#x60;null&#x60; if there are no errors.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:21:58.409121Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:29:56.631434Z[Etc/UTC]")
 public class RunStepObjectLastError {
   /**
    * One of &#x60;server_error&#x60; or &#x60;rate_limit_exceeded&#x60;.

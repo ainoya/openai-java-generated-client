@@ -7989,8 +7989,8 @@ components:
                   description: A list of the relevant tool calls.
                   items:
                     $ref: "#/components/schemas/RunToolCallObject"
-              required:
-                - tool_calls
+              # required:
+              #   - tool_calls
           # required:
           #   - type
           #   - submit_tool_outputs

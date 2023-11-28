@@ -49,7 +49,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Deletes the association between the assistant and the file, but does not delete the [File](/docs/api-reference/files) object itself.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:21:58.409121Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:29:56.631434Z[Etc/UTC]")
 public class DeleteAssistantFileResponse {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
