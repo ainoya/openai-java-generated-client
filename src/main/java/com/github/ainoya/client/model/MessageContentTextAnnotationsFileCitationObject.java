@@ -50,7 +50,7 @@ import com.github.ainoya.client.JSON;
 /**
  * A citation within the message that points to a specific quote from a specific File associated with the assistant or the message. Generated when the assistant uses the \&quot;retrieval\&quot; tool to search files.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T04:42:30.516763Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:21:58.409121Z[Etc/UTC]")
 public class MessageContentTextAnnotationsFileCitationObject {
   /**
    * Always &#x60;file_citation&#x60;.

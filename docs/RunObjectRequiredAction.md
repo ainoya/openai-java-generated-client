@@ -8,8 +8,8 @@ Details on the action required to continue the run. Will be `null` if no action 
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**type** | [**TypeEnum**](#TypeEnum) | For now, this is always &#x60;submit_tool_outputs&#x60;. |  |
-|**submitToolOutputs** | [**RunObjectRequiredActionSubmitToolOutputs**](RunObjectRequiredActionSubmitToolOutputs.md) |  |  |
+|**type** | [**TypeEnum**](#TypeEnum) | For now, this is always &#x60;submit_tool_outputs&#x60;. |  [optional] |
+|**submitToolOutputs** | [**RunObjectRequiredActionSubmitToolOutputs**](RunObjectRequiredActionSubmitToolOutputs.md) |  |  [optional] |
 
 
 

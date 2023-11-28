@@ -11159,9 +11159,6 @@ components:
           type: string
         submit_tool_outputs:
           $ref: '#/components/schemas/RunObject_required_action_submit_tool_outputs'
-      required:
-      - submit_tool_outputs
-      - type
       type: object
     RunObject_last_error:
       description: The last error associated with this run. Will be `null` if there

@@ -52,7 +52,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Represents policy compliance report by OpenAI&#39;s content moderation model against a given input.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T04:42:30.516763Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:21:58.409121Z[Etc/UTC]")
 public class CreateModerationResponse {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

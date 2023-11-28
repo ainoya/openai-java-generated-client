@@ -50,7 +50,7 @@ import com.github.ainoya.client.JSON;
 /**
  * CreateChatCompletionStreamResponseChoicesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T04:42:30.516763Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:21:58.409121Z[Etc/UTC]")
 public class CreateChatCompletionStreamResponseChoicesInner {
   public static final String SERIALIZED_NAME_DELTA = "delta";
   @SerializedName(SERIALIZED_NAME_DELTA)

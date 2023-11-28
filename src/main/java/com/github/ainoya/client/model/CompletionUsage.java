@@ -49,7 +49,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Usage statistics for the completion request.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T04:42:30.516763Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:21:58.409121Z[Etc/UTC]")
 public class CompletionUsage {
   public static final String SERIALIZED_NAME_COMPLETION_TOKENS = "completion_tokens";
   @SerializedName(SERIALIZED_NAME_COMPLETION_TOKENS)

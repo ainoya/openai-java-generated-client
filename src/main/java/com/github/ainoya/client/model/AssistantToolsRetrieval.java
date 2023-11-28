@@ -49,7 +49,7 @@ import com.github.ainoya.client.JSON;
 /**
  * AssistantToolsRetrieval
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T04:42:30.516763Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:21:58.409121Z[Etc/UTC]")
 public class AssistantToolsRetrieval {
   /**
    * The type of tool being defined: &#x60;retrieval&#x60;

@@ -7991,9 +7991,9 @@ components:
                     $ref: "#/components/schemas/RunToolCallObject"
               required:
                 - tool_calls
-          required:
-            - type
-            - submit_tool_outputs
+          # required:
+          #   - type
+          #   - submit_tool_outputs
         last_error:
           type: object
           description: The last error associated with this run. Will be `null` if there are no errors.

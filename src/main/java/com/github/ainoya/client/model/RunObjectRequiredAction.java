@@ -50,7 +50,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Details on the action required to continue the run. Will be &#x60;null&#x60; if no action is required.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T04:42:30.516763Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:21:58.409121Z[Etc/UTC]")
 public class RunObjectRequiredAction {
   /**
    * For now, this is always &#x60;submit_tool_outputs&#x60;.
@@ -123,7 +123,7 @@ public class RunObjectRequiredAction {
    * For now, this is always &#x60;submit_tool_outputs&#x60;.
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public TypeEnum getType() {
     return type;
   }
@@ -144,7 +144,7 @@ public class RunObjectRequiredAction {
    * Get submitToolOutputs
    * @return submitToolOutputs
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public RunObjectRequiredActionSubmitToolOutputs getSubmitToolOutputs() {
     return submitToolOutputs;
   }
@@ -253,8 +253,6 @@ public class RunObjectRequiredAction {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("type");
-    openapiRequiredFields.add("submit_tool_outputs");
   }
 
  /**
@@ -269,21 +267,18 @@ public class RunObjectRequiredAction {
           throw new IllegalArgumentException(String.format("The required field(s) %s in RunObjectRequiredAction is not found in the empty JSON string", RunObjectRequiredAction.openapiRequiredFields.toString()));
         }
       }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RunObjectRequiredAction.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("type").isJsonPrimitive()) {
+      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
-      // validate the required field `type`
-      TypeEnum.validateJsonElement(jsonObj.get("type"));
-      // validate the required field `submit_tool_outputs`
-      RunObjectRequiredActionSubmitToolOutputs.validateJsonElement(jsonObj.get("submit_tool_outputs"));
+      // validate the optional field `type`
+      if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
+        TypeEnum.validateJsonElement(jsonObj.get("type"));
+      }
+      // validate the optional field `submit_tool_outputs`
+      if (jsonObj.get("submit_tool_outputs") != null && !jsonObj.get("submit_tool_outputs").isJsonNull()) {
+        RunObjectRequiredActionSubmitToolOutputs.validateJsonElement(jsonObj.get("submit_tool_outputs"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
