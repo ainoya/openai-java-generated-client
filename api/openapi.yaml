@@ -9043,19 +9043,13 @@ components:
           x-oaiTypeLabel: map
       required:
       - assistant_id
-      - cancelled_at
-      - completed_at
       - created_at
-      - expires_at
-      - failed_at
       - file_ids
       - id
       - instructions
-      - last_error
       - metadata
       - model
       - object
-      - started_at
       - status
       - thread_id
       - tools

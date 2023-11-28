@@ -39,7 +39,7 @@ OpenAI API
 
 - API version: 2.0.0
 
-    - Build date: 2023-11-28T05:29:56.631434Z[Etc/UTC]
+    - Build date: 2023-11-28T05:37:10.597293Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 

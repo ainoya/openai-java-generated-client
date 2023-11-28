@@ -50,7 +50,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Specifies a tool the model should use. Use to force the model to call a specific function.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:29:56.631434Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:37:10.597293Z[Etc/UTC]")
 public class ChatCompletionNamedToolChoice {
   /**
    * The type of the tool. Currently, only &#x60;function&#x60; is supported.

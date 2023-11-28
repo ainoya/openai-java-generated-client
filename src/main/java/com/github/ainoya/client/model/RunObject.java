@@ -55,7 +55,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Represents an execution run on a [thread](/docs/api-reference/threads).
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:29:56.631434Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:37:10.597293Z[Etc/UTC]")
 public class RunObject {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -424,7 +424,7 @@ public class RunObject {
    * The Unix timestamp (in seconds) for when the run will expire.
    * @return expiresAt
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getExpiresAt() {
     return expiresAt;
   }
@@ -803,12 +803,6 @@ public class RunObject {
     openapiRequiredFields.add("thread_id");
     openapiRequiredFields.add("assistant_id");
     openapiRequiredFields.add("status");
-    openapiRequiredFields.add("last_error");
-    openapiRequiredFields.add("expires_at");
-    openapiRequiredFields.add("started_at");
-    openapiRequiredFields.add("cancelled_at");
-    openapiRequiredFields.add("failed_at");
-    openapiRequiredFields.add("completed_at");
     openapiRequiredFields.add("model");
     openapiRequiredFields.add("instructions");
     openapiRequiredFields.add("tools");
@@ -859,8 +853,10 @@ public class RunObject {
       if (jsonObj.get("required_action") != null && !jsonObj.get("required_action").isJsonNull()) {
         RunObjectRequiredAction.validateJsonElement(jsonObj.get("required_action"));
       }
-      // validate the required field `last_error`
-      RunObjectLastError.validateJsonElement(jsonObj.get("last_error"));
+      // validate the optional field `last_error`
+      if (jsonObj.get("last_error") != null && !jsonObj.get("last_error").isJsonNull()) {
+        RunObjectLastError.validateJsonElement(jsonObj.get("last_error"));
+      }
       if (!jsonObj.get("model").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
       }

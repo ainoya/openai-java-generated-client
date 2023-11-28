@@ -8064,12 +8064,12 @@ components:
         - assistant_id
         - status
         # - required_action
-        - last_error
-        - expires_at
-        - started_at
-        - cancelled_at
-        - failed_at
-        - completed_at
+        # - last_error
+        # - expires_at
+        # - started_at
+        # - cancelled_at
+        # - failed_at
+        # - completed_at
         - model
         - instructions
         - tools
