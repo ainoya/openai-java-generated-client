@@ -51,7 +51,7 @@ import com.github.ainoya.client.JSON;
  * @deprecated
  */
 @Deprecated
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-05T03:45:56.255334Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-05T04:26:29.609083Z[Etc/UTC]")
 public class ChatCompletionRequestFunctionMessage {
   /**
    * The role of the messages author, in this case &#x60;function&#x60;.
