@@ -51,7 +51,7 @@ import com.github.ainoya.client.JSON;
 /**
  * CreateModerationResponseResultsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:37:10.597293Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-05T03:45:56.255334Z[Etc/UTC]")
 public class CreateModerationResponseResultsInner {
   public static final String SERIALIZED_NAME_FLAGGED = "flagged";
   @SerializedName(SERIALIZED_NAME_FLAGGED)

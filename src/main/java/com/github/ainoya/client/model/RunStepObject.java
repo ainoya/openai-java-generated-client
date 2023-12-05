@@ -51,7 +51,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Represents a step in execution of a run. 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:37:10.597293Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-05T03:45:56.255334Z[Etc/UTC]")
 public class RunStepObject {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

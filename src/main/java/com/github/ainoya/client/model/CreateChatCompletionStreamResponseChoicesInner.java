@@ -22,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,7 +51,7 @@ import com.github.ainoya.client.JSON;
 /**
  * CreateChatCompletionStreamResponseChoicesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T05:37:10.597293Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-05T03:45:56.255334Z[Etc/UTC]")
 public class CreateChatCompletionStreamResponseChoicesInner {
   public static final String SERIALIZED_NAME_DELTA = "delta";
   @SerializedName(SERIALIZED_NAME_DELTA)
@@ -118,6 +119,68 @@ public class CreateChatCompletionStreamResponseChoicesInner {
   @SerializedName(SERIALIZED_NAME_FINISH_REASON)
   private FinishReasonEnum finishReason;
 
+  /**
+   * The reason the model stopped generating tokens. This will be &#x60;stop&#x60; if the model hit a natural stop point or a provided stop sequence, &#x60;length&#x60; if the maximum number of tokens specified in the request was reached, &#x60;content_filter&#x60; if content was omitted due to a flag from our content filters, &#x60;tool_calls&#x60; if the model called a tool, or &#x60;function_call&#x60; (deprecated) if the model called a function. 
+   */
+  @JsonAdapter(FinishDetailsEnum.Adapter.class)
+  public enum FinishDetailsEnum {
+    STOP("stop"),
+    
+    LENGTH("length"),
+    
+    TOOL_CALLS("tool_calls"),
+    
+    CONTENT_FILTER("content_filter"),
+    
+    FUNCTION_CALL("function_call");
+
+    private String value;
+
+    FinishDetailsEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static FinishDetailsEnum fromValue(String value) {
+      for (FinishDetailsEnum b : FinishDetailsEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<FinishDetailsEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final FinishDetailsEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public FinishDetailsEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return FinishDetailsEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      FinishDetailsEnum.fromValue(value);
+    }
+  }
+
+  public static final String SERIALIZED_NAME_FINISH_DETAILS = "finish_details";
+  @SerializedName(SERIALIZED_NAME_FINISH_DETAILS)
+  private FinishDetailsEnum finishDetails;
+
   public static final String SERIALIZED_NAME_INDEX = "index";
   @SerializedName(SERIALIZED_NAME_INDEX)
   private Integer index;
@@ -164,6 +227,27 @@ public class CreateChatCompletionStreamResponseChoicesInner {
 
   public void setFinishReason(FinishReasonEnum finishReason) {
     this.finishReason = finishReason;
+  }
+
+
+  public CreateChatCompletionStreamResponseChoicesInner finishDetails(FinishDetailsEnum finishDetails) {
+    
+    this.finishDetails = finishDetails;
+    return this;
+  }
+
+   /**
+   * The reason the model stopped generating tokens. This will be &#x60;stop&#x60; if the model hit a natural stop point or a provided stop sequence, &#x60;length&#x60; if the maximum number of tokens specified in the request was reached, &#x60;content_filter&#x60; if content was omitted due to a flag from our content filters, &#x60;tool_calls&#x60; if the model called a tool, or &#x60;function_call&#x60; (deprecated) if the model called a function. 
+   * @return finishDetails
+  **/
+  @javax.annotation.Nullable
+  public FinishDetailsEnum getFinishDetails() {
+    return finishDetails;
+  }
+
+
+  public void setFinishDetails(FinishDetailsEnum finishDetails) {
+    this.finishDetails = finishDetails;
   }
 
 
@@ -244,13 +328,25 @@ public class CreateChatCompletionStreamResponseChoicesInner {
     CreateChatCompletionStreamResponseChoicesInner createChatCompletionStreamResponseChoicesInner = (CreateChatCompletionStreamResponseChoicesInner) o;
     return Objects.equals(this.delta, createChatCompletionStreamResponseChoicesInner.delta) &&
         Objects.equals(this.finishReason, createChatCompletionStreamResponseChoicesInner.finishReason) &&
+        Objects.equals(this.finishDetails, createChatCompletionStreamResponseChoicesInner.finishDetails) &&
         Objects.equals(this.index, createChatCompletionStreamResponseChoicesInner.index)&&
         Objects.equals(this.additionalProperties, createChatCompletionStreamResponseChoicesInner.additionalProperties);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
-    return Objects.hash(delta, finishReason, index, additionalProperties);
+    return Objects.hash(delta, finishReason, finishDetails, index, additionalProperties);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -259,6 +355,7 @@ public class CreateChatCompletionStreamResponseChoicesInner {
     sb.append("class CreateChatCompletionStreamResponseChoicesInner {\n");
     sb.append("    delta: ").append(toIndentedString(delta)).append("\n");
     sb.append("    finishReason: ").append(toIndentedString(finishReason)).append("\n");
+    sb.append("    finishDetails: ").append(toIndentedString(finishDetails)).append("\n");
     sb.append("    index: ").append(toIndentedString(index)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
@@ -285,12 +382,12 @@ public class CreateChatCompletionStreamResponseChoicesInner {
     openapiFields = new HashSet<String>();
     openapiFields.add("delta");
     openapiFields.add("finish_reason");
+    openapiFields.add("finish_details");
     openapiFields.add("index");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("delta");
-    openapiRequiredFields.add("finish_reason");
     openapiRequiredFields.add("index");
   }
 
@@ -319,8 +416,17 @@ public class CreateChatCompletionStreamResponseChoicesInner {
       if ((jsonObj.get("finish_reason") != null && !jsonObj.get("finish_reason").isJsonNull()) && !jsonObj.get("finish_reason").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `finish_reason` to be a primitive type in the JSON string but got `%s`", jsonObj.get("finish_reason").toString()));
       }
-      // validate the required field `finish_reason`
-      FinishReasonEnum.validateJsonElement(jsonObj.get("finish_reason"));
+      // validate the optional field `finish_reason`
+      if (jsonObj.get("finish_reason") != null && !jsonObj.get("finish_reason").isJsonNull()) {
+        FinishReasonEnum.validateJsonElement(jsonObj.get("finish_reason"));
+      }
+      if ((jsonObj.get("finish_details") != null && !jsonObj.get("finish_details").isJsonNull()) && !jsonObj.get("finish_details").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `finish_details` to be a primitive type in the JSON string but got `%s`", jsonObj.get("finish_details").toString()));
+      }
+      // validate the optional field `finish_details`
+      if (jsonObj.get("finish_details") != null && !jsonObj.get("finish_details").isJsonNull()) {
+        FinishDetailsEnum.validateJsonElement(jsonObj.get("finish_details"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
