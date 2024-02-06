@@ -50,7 +50,7 @@ import com.github.ainoya.client.JSON;
 /**
  * ModifyRunRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-05T04:26:29.609083Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-06T08:58:14.331730Z[Etc/UTC]")
 public class ModifyRunRequest {
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)

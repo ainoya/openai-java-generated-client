@@ -52,7 +52,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Represents a streamed chunk of a chat completion response returned by model, based on the provided input.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-05T04:26:29.609083Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-06T08:58:14.331730Z[Etc/UTC]")
 public class CreateChatCompletionStreamResponse {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

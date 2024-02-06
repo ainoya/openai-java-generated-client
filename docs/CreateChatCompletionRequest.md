@@ -33,6 +33,8 @@
 | Name | Value |
 |---- | -----|
 | _4_1106_PREVIEW | &quot;gpt-4-1106-preview&quot; |
+| _4_0125_PREVIEW | &quot;gpt-4-0125-preview&quot; |
+| _4_TURBO_PREVIEW | &quot;gpt-4-turbo-preview&quot; |
 | _4_VISION_PREVIEW | &quot;gpt-4-vision-preview&quot; |
 | _4 | &quot;gpt-4&quot; |
 | _4_0314 | &quot;gpt-4-0314&quot; |

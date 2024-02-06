@@ -50,7 +50,7 @@ import com.github.ainoya.client.JSON;
 /**
  * The text content that is part of a message.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-05T04:26:29.609083Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-06T08:58:14.331730Z[Etc/UTC]")
 public class MessageContentTextObject {
   /**
    * Always &#x60;text&#x60;.

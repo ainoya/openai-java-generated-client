@@ -49,7 +49,7 @@ import com.github.ainoya.client.JSON;
 /**
  * ChatCompletionRequestMessageContentPartText
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-05T04:26:29.609083Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-06T08:58:14.331730Z[Etc/UTC]")
 public class ChatCompletionRequestMessageContentPartText {
   /**
    * The type of the content part.
