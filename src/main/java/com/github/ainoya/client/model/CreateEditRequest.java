@@ -52,7 +52,7 @@ import com.github.ainoya.client.JSON;
 /**
  * CreateEditRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T09:36:36.583717Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T09:39:57.939147Z[Etc/UTC]")
 public class CreateEditRequest {
   public static final String SERIALIZED_NAME_INSTRUCTION = "instruction";
   @SerializedName(SERIALIZED_NAME_INSTRUCTION)
