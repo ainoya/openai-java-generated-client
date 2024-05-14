@@ -13,9 +13,9 @@
 
 package com.github.ainoya.client;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T01:19:53.351390Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T09:32:24.604030Z[Etc/UTC]")
 public class Configuration {
-    public static final String VERSION = "0.0.15";
+    public static final String VERSION = "v0.0.16";
 
     private static ApiClient defaultApiClient = new ApiClient();
 
