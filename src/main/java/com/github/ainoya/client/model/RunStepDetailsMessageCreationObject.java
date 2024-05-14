@@ -50,7 +50,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Details of the message creation by the run step.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T01:14:18.675075Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T01:19:53.351390Z[Etc/UTC]")
 public class RunStepDetailsMessageCreationObject {
   /**
    * Always &#x60;message_creation&#x60;&#x60;.

@@ -52,7 +52,7 @@ import com.github.ainoya.client.JSON;
 /**
  * ListModelsResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T01:14:18.675075Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T01:19:53.351390Z[Etc/UTC]")
 public class ListModelsResponse {
   /**
    * Gets or Sets _object

@@ -48,6 +48,7 @@
 | _3_5_TURBO_0301 | &quot;gpt-3.5-turbo-0301&quot; |
 | _3_5_TURBO_0613 | &quot;gpt-3.5-turbo-0613&quot; |
 | _3_5_TURBO_16K_0613 | &quot;gpt-3.5-turbo-16k-0613&quot; |
+| _4O | &quot;gpt-4o&quot; |
 
 
 

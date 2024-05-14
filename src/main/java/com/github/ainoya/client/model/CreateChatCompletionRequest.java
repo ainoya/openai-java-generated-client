@@ -61,7 +61,7 @@ import com.github.ainoya.client.JSON;
 /**
  * CreateChatCompletionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T01:14:18.675075Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T01:19:53.351390Z[Etc/UTC]")
 public class CreateChatCompletionRequest {
   public static final String SERIALIZED_NAME_MESSAGES = "messages";
   @SerializedName(SERIALIZED_NAME_MESSAGES)
@@ -102,7 +102,9 @@ public class CreateChatCompletionRequest {
     
     _3_5_TURBO_0613("gpt-3.5-turbo-0613"),
     
-    _3_5_TURBO_16K_0613("gpt-3.5-turbo-16k-0613");
+    _3_5_TURBO_16K_0613("gpt-3.5-turbo-16k-0613"),
+    
+    _4O("gpt-4o");
 
     private String value;
 
