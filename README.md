@@ -45,7 +45,7 @@ OpenAI API
 
 - API version: 2.0.0
 
-    - Build date: 2024-05-14T09:39:57.939147Z[Etc/UTC]
+    - Build date: 2024-05-14T09:44:36.597799Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
@@ -84,7 +84,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.github.ainoya</groupId>
     <artifactId>openai-java-generated-client</artifactId>
-    <version>v0.0.16</version>
+    <version>0.0.17</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -100,7 +100,7 @@ mavenLocal()       // Needed if the 'openai-java-generated-client' jar has been 
 }
 
 dependencies {
-implementation "com.github.ainoya:openai-java-generated-client:v0.0.16"
+implementation "com.github.ainoya:openai-java-generated-client:0.0.17"
 }
 ```
 
@@ -114,7 +114,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/openai-java-generated-client-v0.0.16.jar`
+- `target/openai-java-generated-client-0.0.17.jar`
 - `target/lib/*.jar`
 
 ## Getting Started

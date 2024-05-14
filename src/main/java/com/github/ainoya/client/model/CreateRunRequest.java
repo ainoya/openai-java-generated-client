@@ -53,7 +53,7 @@ import com.github.ainoya.client.JSON;
 /**
  * CreateRunRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T09:39:57.939147Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T09:44:36.597799Z[Etc/UTC]")
 public class CreateRunRequest {
   public static final String SERIALIZED_NAME_ASSISTANT_ID = "assistant_id";
   @SerializedName(SERIALIZED_NAME_ASSISTANT_ID)

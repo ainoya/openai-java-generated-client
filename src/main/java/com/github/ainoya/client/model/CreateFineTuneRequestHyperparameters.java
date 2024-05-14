@@ -49,7 +49,7 @@ import com.github.ainoya.client.JSON;
 /**
  * The hyperparameters used for the fine-tuning job.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T09:39:57.939147Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T09:44:36.597799Z[Etc/UTC]")
 public class CreateFineTuneRequestHyperparameters {
   /**
    * The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset. 
