@@ -2,6 +2,12 @@
 
 [![Release](https://jitpack.io/v/ainoya/openai-java-generated-client.svg)](https://jitpack.io/#ainoya/openai-java-generated-client)
 
+## How to build
+
+```bash
+./generate-api-client.sh vXX.XX.XX
+```
+
 ## Overview
 
 This repository contains a Java client library for the OpenAI API, generated using the OpenAPI Generator tool. The library is based on the official OpenAPI specification provided by OpenAI, which can be found at [openai/openai-openapi](https://github.com/openai/openai-openapi).
@@ -39,7 +45,7 @@ OpenAI API
 
 - API version: 2.0.0
 
-    - Build date: 2024-05-14T09:32:24.604030Z[Etc/UTC]
+    - Build date: 2024-05-14T09:36:36.583717Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 

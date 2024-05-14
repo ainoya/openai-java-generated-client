@@ -49,7 +49,7 @@ import com.github.ainoya.client.JSON;
 /**
  * SubmitToolOutputsRunRequestToolOutputsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T09:32:24.604030Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T09:36:36.583717Z[Etc/UTC]")
 public class SubmitToolOutputsRunRequestToolOutputsInner {
   public static final String SERIALIZED_NAME_TOOL_CALL_ID = "tool_call_id";
   @SerializedName(SERIALIZED_NAME_TOOL_CALL_ID)
