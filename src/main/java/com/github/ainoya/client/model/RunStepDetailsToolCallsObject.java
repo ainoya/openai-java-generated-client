@@ -52,7 +52,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Details of the tool call.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-06T08:58:14.331730Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T01:14:18.675075Z[Etc/UTC]")
 public class RunStepDetailsToolCallsObject {
   /**
    * Always &#x60;tool_calls&#x60;.

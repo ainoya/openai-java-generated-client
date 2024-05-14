@@ -50,7 +50,7 @@ import com.google.gson.JsonParseException;
 
 import com.github.ainoya.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-06T08:58:14.331730Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T01:14:18.675075Z[Etc/UTC]")
 public class CreateTranscriptionRequestModel extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(CreateTranscriptionRequestModel.class.getName());
 

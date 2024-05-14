@@ -49,7 +49,7 @@ import com.github.ainoya.client.JSON;
 /**
  * The hyperparameters used for the fine-tuning job.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-06T08:58:14.331730Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-14T01:14:18.675075Z[Etc/UTC]")
 public class CreateFineTuningJobRequestHyperparameters {
   /**
    * Number of examples in each batch. A larger batch size means that model parameters are updated less frequently, but with lower variance. 
