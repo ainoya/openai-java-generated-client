@@ -2,7 +2,7 @@
 
 # CreateModerationResponse
 
-Represents policy compliance report by OpenAI's content moderation model against a given input.
+Represents if a given text input is potentially harmful.
 
 ## Properties
 

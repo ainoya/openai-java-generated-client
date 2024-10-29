@@ -4,14 +4,14 @@ All URIs are relative to *https://api.openai.com/v1*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createChatCompletion**](ChatApi.md#createChatCompletion) | **POST** /chat/completions | Creates a model response for the given chat conversation. |
+| [**createChatCompletion**](ChatApi.md#createChatCompletion) | **POST** /chat/completions | Creates a model response for the given chat conversation. Learn more in the [text generation](/docs/guides/text-generation), [vision](/docs/guides/vision), and [audio](/docs/guides/audio) guides.  |
 
 
 <a id="createChatCompletion"></a>
 # **createChatCompletion**
 > CreateChatCompletionResponse createChatCompletion(createChatCompletionRequest)
 
-Creates a model response for the given chat conversation.
+Creates a model response for the given chat conversation. Learn more in the [text generation](/docs/guides/text-generation), [vision](/docs/guides/vision), and [audio](/docs/guides/audio) guides. 
 
 ### Example
 ```java
