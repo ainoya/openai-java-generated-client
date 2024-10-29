@@ -21,7 +21,6 @@ import com.github.ainoya.client.model.ChatCompletionTool;
 import com.github.ainoya.client.model.ChatCompletionToolChoiceOption;
 import com.github.ainoya.client.model.CreateChatCompletionRequestAudio;
 import com.github.ainoya.client.model.CreateChatCompletionRequestFunctionCall;
-import com.github.ainoya.client.model.CreateChatCompletionRequestModel;
 import com.github.ainoya.client.model.CreateChatCompletionRequestResponseFormat;
 import com.github.ainoya.client.model.CreateChatCompletionRequestStop;
 import com.google.gson.TypeAdapter;
@@ -64,15 +63,131 @@ import com.github.ainoya.client.JSON;
 /**
  * CreateChatCompletionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T12:48:55.661559293Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T13:08:57.656944544Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreateChatCompletionRequest {
   public static final String SERIALIZED_NAME_MESSAGES = "messages";
   @SerializedName(SERIALIZED_NAME_MESSAGES)
   private List<ChatCompletionRequestMessage> messages = new ArrayList<>();
 
+  /**
+   * Gets or Sets model
+   */
+  @JsonAdapter(ModelEnum.Adapter.class)
+  public enum ModelEnum {
+    O1_PREVIEW("o1-preview"),
+    
+    O1_PREVIEW_2024_09_12("o1-preview-2024-09-12"),
+    
+    O1_MINI("o1-mini"),
+    
+    O1_MINI_2024_09_12("o1-mini-2024-09-12"),
+    
+    GPT_4O("gpt-4o"),
+    
+    GPT_4O_2024_08_06("gpt-4o-2024-08-06"),
+    
+    GPT_4O_2024_05_13("gpt-4o-2024-05-13"),
+    
+    GPT_4O_2024_08_062("gpt-4o-2024-08-06"),
+    
+    GPT_4O_REALTIME_PREVIEW("gpt-4o-realtime-preview"),
+    
+    GPT_4O_REALTIME_PREVIEW_2024_10_01("gpt-4o-realtime-preview-2024-10-01"),
+    
+    GPT_4O_AUDIO_PREVIEW("gpt-4o-audio-preview"),
+    
+    GPT_4O_AUDIO_PREVIEW_2024_10_01("gpt-4o-audio-preview-2024-10-01"),
+    
+    CHATGPT_4O_LATEST("chatgpt-4o-latest"),
+    
+    GPT_4O_MINI("gpt-4o-mini"),
+    
+    GPT_4O_MINI_2024_07_18("gpt-4o-mini-2024-07-18"),
+    
+    GPT_4_TURBO("gpt-4-turbo"),
+    
+    GPT_4_TURBO_2024_04_09("gpt-4-turbo-2024-04-09"),
+    
+    GPT_4_0125_PREVIEW("gpt-4-0125-preview"),
+    
+    GPT_4_TURBO_PREVIEW("gpt-4-turbo-preview"),
+    
+    GPT_4_1106_PREVIEW("gpt-4-1106-preview"),
+    
+    GPT_4_VISION_PREVIEW("gpt-4-vision-preview"),
+    
+    GPT_4("gpt-4"),
+    
+    GPT_4_0314("gpt-4-0314"),
+    
+    GPT_4_0613("gpt-4-0613"),
+    
+    GPT_4_32K("gpt-4-32k"),
+    
+    GPT_4_32K_0314("gpt-4-32k-0314"),
+    
+    GPT_4_32K_0613("gpt-4-32k-0613"),
+    
+    GPT_3_5_TURBO("gpt-3.5-turbo"),
+    
+    GPT_3_5_TURBO_16K("gpt-3.5-turbo-16k"),
+    
+    GPT_3_5_TURBO_0301("gpt-3.5-turbo-0301"),
+    
+    GPT_3_5_TURBO_0613("gpt-3.5-turbo-0613"),
+    
+    GPT_3_5_TURBO_1106("gpt-3.5-turbo-1106"),
+    
+    GPT_3_5_TURBO_0125("gpt-3.5-turbo-0125"),
+    
+    GPT_3_5_TURBO_16K_0613("gpt-3.5-turbo-16k-0613");
+
+    private String value;
+
+    ModelEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ModelEnum fromValue(String value) {
+      for (ModelEnum b : ModelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<ModelEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ModelEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ModelEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return ModelEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ModelEnum.fromValue(value);
+    }
+  }
+
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
-  private CreateChatCompletionRequestModel model;
+  private ModelEnum model;
 
   public static final String SERIALIZED_NAME_STORE = "store";
   @SerializedName(SERIALIZED_NAME_STORE)
@@ -315,7 +430,7 @@ public class CreateChatCompletionRequest {
   }
 
 
-  public CreateChatCompletionRequest model(CreateChatCompletionRequestModel model) {
+  public CreateChatCompletionRequest model(ModelEnum model) {
     this.model = model;
     return this;
   }
@@ -325,11 +440,11 @@ public class CreateChatCompletionRequest {
    * @return model
    */
   @javax.annotation.Nonnull
-  public CreateChatCompletionRequestModel getModel() {
+  public ModelEnum getModel() {
     return model;
   }
 
-  public void setModel(CreateChatCompletionRequestModel model) {
+  public void setModel(ModelEnum model) {
     this.model = model;
   }
 
@@ -1115,8 +1230,11 @@ public class CreateChatCompletionRequest {
       for (int i = 0; i < jsonArraymessages.size(); i++) {
         ChatCompletionRequestMessage.validateJsonElement(jsonArraymessages.get(i));
       };
+      if (!jsonObj.get("model").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
+      }
       // validate the required field `model`
-      CreateChatCompletionRequestModel.validateJsonElement(jsonObj.get("model"));
+      ModelEnum.validateJsonElement(jsonObj.get("model"));
       // ensure the optional json data is an array if present
       if (jsonObj.get("modalities") != null && !jsonObj.get("modalities").isJsonNull() && !jsonObj.get("modalities").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `modalities` to be an array in the JSON string but got `%s`", jsonObj.get("modalities").toString()));

@@ -210,7 +210,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionRequestAudio.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionRequestFunctionCall.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionRequestModel.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionRequestResponseFormat.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionRequestStop.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.github.ainoya.client.model.CreateChatCompletionResponse.CustomTypeAdapterFactory());

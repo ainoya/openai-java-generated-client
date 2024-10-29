@@ -8,7 +8,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**messages** | [**List&lt;ChatCompletionRequestMessage&gt;**](ChatCompletionRequestMessage.md) | A list of messages comprising the conversation so far. Depending on the [model](/docs/models) you use, different message types (modalities) are supported, like [text](/docs/guides/text-generation), [images](/docs/guides/vision), and [audio](/docs/guides/audio).  |  |
-|**model** | [**CreateChatCompletionRequestModel**](CreateChatCompletionRequestModel.md) |  |  |
+|**model** | [**ModelEnum**](#ModelEnum) |  |  |
 |**store** | **Boolean** | Whether or not to store the output of this chat completion request for use in our [model distillation](/docs/guides/distillation) or [evals](/docs/guides/evals) products.  |  [optional] |
 |**metadata** | **Map&lt;String, String&gt;** | Developer-defined tags and values used for filtering completions in the [dashboard](https://platform.openai.com/chat-completions).  |  [optional] |
 |**frequencyPenalty** | **BigDecimal** | Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model&#39;s likelihood to repeat the same line verbatim.  [See more information about frequency and presence penalties.](/docs/guides/text-generation/parameter-details)  |  [optional] |
@@ -35,6 +35,47 @@
 |**user** | **String** | A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids).  |  [optional] |
 |**functionCall** | [**CreateChatCompletionRequestFunctionCall**](CreateChatCompletionRequestFunctionCall.md) |  |  [optional] |
 |**functions** | [**List&lt;ChatCompletionFunctions&gt;**](ChatCompletionFunctions.md) | Deprecated in favor of &#x60;tools&#x60;.  A list of functions the model may generate JSON inputs for.  |  [optional] |
+
+
+
+## Enum: ModelEnum
+
+| Name | Value |
+|---- | -----|
+| O1_PREVIEW | &quot;o1-preview&quot; |
+| O1_PREVIEW_2024_09_12 | &quot;o1-preview-2024-09-12&quot; |
+| O1_MINI | &quot;o1-mini&quot; |
+| O1_MINI_2024_09_12 | &quot;o1-mini-2024-09-12&quot; |
+| GPT_4O | &quot;gpt-4o&quot; |
+| GPT_4O_2024_08_06 | &quot;gpt-4o-2024-08-06&quot; |
+| GPT_4O_2024_05_13 | &quot;gpt-4o-2024-05-13&quot; |
+| GPT_4O_2024_08_062 | &quot;gpt-4o-2024-08-06&quot; |
+| GPT_4O_REALTIME_PREVIEW | &quot;gpt-4o-realtime-preview&quot; |
+| GPT_4O_REALTIME_PREVIEW_2024_10_01 | &quot;gpt-4o-realtime-preview-2024-10-01&quot; |
+| GPT_4O_AUDIO_PREVIEW | &quot;gpt-4o-audio-preview&quot; |
+| GPT_4O_AUDIO_PREVIEW_2024_10_01 | &quot;gpt-4o-audio-preview-2024-10-01&quot; |
+| CHATGPT_4O_LATEST | &quot;chatgpt-4o-latest&quot; |
+| GPT_4O_MINI | &quot;gpt-4o-mini&quot; |
+| GPT_4O_MINI_2024_07_18 | &quot;gpt-4o-mini-2024-07-18&quot; |
+| GPT_4_TURBO | &quot;gpt-4-turbo&quot; |
+| GPT_4_TURBO_2024_04_09 | &quot;gpt-4-turbo-2024-04-09&quot; |
+| GPT_4_0125_PREVIEW | &quot;gpt-4-0125-preview&quot; |
+| GPT_4_TURBO_PREVIEW | &quot;gpt-4-turbo-preview&quot; |
+| GPT_4_1106_PREVIEW | &quot;gpt-4-1106-preview&quot; |
+| GPT_4_VISION_PREVIEW | &quot;gpt-4-vision-preview&quot; |
+| GPT_4 | &quot;gpt-4&quot; |
+| GPT_4_0314 | &quot;gpt-4-0314&quot; |
+| GPT_4_0613 | &quot;gpt-4-0613&quot; |
+| GPT_4_32K | &quot;gpt-4-32k&quot; |
+| GPT_4_32K_0314 | &quot;gpt-4-32k-0314&quot; |
+| GPT_4_32K_0613 | &quot;gpt-4-32k-0613&quot; |
+| GPT_3_5_TURBO | &quot;gpt-3.5-turbo&quot; |
+| GPT_3_5_TURBO_16K | &quot;gpt-3.5-turbo-16k&quot; |
+| GPT_3_5_TURBO_0301 | &quot;gpt-3.5-turbo-0301&quot; |
+| GPT_3_5_TURBO_0613 | &quot;gpt-3.5-turbo-0613&quot; |
+| GPT_3_5_TURBO_1106 | &quot;gpt-3.5-turbo-1106&quot; |
+| GPT_3_5_TURBO_0125 | &quot;gpt-3.5-turbo-0125&quot; |
+| GPT_3_5_TURBO_16K_0613 | &quot;gpt-3.5-turbo-16k-0613&quot; |
 
 
 

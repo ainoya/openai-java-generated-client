@@ -48,7 +48,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Represents an individual service account in a project.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T12:48:55.661559293Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T13:08:57.656944544Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ProjectServiceAccount {
   /**
    * The object type, which is always &#x60;organization.project.service_account&#x60;

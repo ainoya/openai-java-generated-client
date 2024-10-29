@@ -11106,7 +11106,7 @@ components:
         stream: false
         temperature: 1
         tool_choice: none
-        model: gpt-4o
+        model: o1-preview
         service_tier: auto
         audio:
           voice: alloy
@@ -11138,7 +11138,42 @@ components:
           minItems: 1
           type: array
         model:
-          $ref: '#/components/schemas/CreateChatCompletionRequest_model'
+          enum:
+          - o1-preview
+          - o1-preview-2024-09-12
+          - o1-mini
+          - o1-mini-2024-09-12
+          - gpt-4o
+          - gpt-4o-2024-08-06
+          - gpt-4o-2024-05-13
+          - gpt-4o-2024-08-06
+          - gpt-4o-realtime-preview
+          - gpt-4o-realtime-preview-2024-10-01
+          - gpt-4o-audio-preview
+          - gpt-4o-audio-preview-2024-10-01
+          - chatgpt-4o-latest
+          - gpt-4o-mini
+          - gpt-4o-mini-2024-07-18
+          - gpt-4-turbo
+          - gpt-4-turbo-2024-04-09
+          - gpt-4-0125-preview
+          - gpt-4-turbo-preview
+          - gpt-4-1106-preview
+          - gpt-4-vision-preview
+          - gpt-4
+          - gpt-4-0314
+          - gpt-4-0613
+          - gpt-4-32k
+          - gpt-4-32k-0314
+          - gpt-4-32k-0613
+          - gpt-3.5-turbo
+          - gpt-3.5-turbo-16k
+          - gpt-3.5-turbo-0301
+          - gpt-3.5-turbo-0613
+          - gpt-3.5-turbo-1106
+          - gpt-3.5-turbo-0125
+          - gpt-3.5-turbo-16k-0613
+          type: string
         store:
           default: false
           description: |
@@ -21113,49 +21148,6 @@ components:
       - logprobs
       - message
       type: object
-    CreateChatCompletionRequest_model:
-      anyOf:
-      - type: string
-      - enum:
-        - o1-preview
-        - o1-preview-2024-09-12
-        - o1-mini
-        - o1-mini-2024-09-12
-        - gpt-4o
-        - gpt-4o-2024-08-06
-        - gpt-4o-2024-05-13
-        - gpt-4o-2024-08-06
-        - gpt-4o-realtime-preview
-        - gpt-4o-realtime-preview-2024-10-01
-        - gpt-4o-audio-preview
-        - gpt-4o-audio-preview-2024-10-01
-        - chatgpt-4o-latest
-        - gpt-4o-mini
-        - gpt-4o-mini-2024-07-18
-        - gpt-4-turbo
-        - gpt-4-turbo-2024-04-09
-        - gpt-4-0125-preview
-        - gpt-4-turbo-preview
-        - gpt-4-1106-preview
-        - gpt-4-vision-preview
-        - gpt-4
-        - gpt-4-0314
-        - gpt-4-0613
-        - gpt-4-32k
-        - gpt-4-32k-0314
-        - gpt-4-32k-0613
-        - gpt-3.5-turbo
-        - gpt-3.5-turbo-16k
-        - gpt-3.5-turbo-0301
-        - gpt-3.5-turbo-0613
-        - gpt-3.5-turbo-1106
-        - gpt-3.5-turbo-0125
-        - gpt-3.5-turbo-16k-0613
-        type: string
-      description: "ID of the model to use. See the [model endpoint compatibility](/docs/models/model-endpoint-compatibility)\
-        \ table for details on which models work with the Chat API."
-      example: gpt-4o
-      x-oaiTypeLabel: string
     CreateChatCompletionRequest_audio:
       description: |
         Parameters for audio output. Required when audio output is requested with

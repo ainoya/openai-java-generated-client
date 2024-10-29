@@ -11820,7 +11820,6 @@ components:
           example: gpt-4o
           anyOf:
             - type: string
-            - type: string
               enum:
                 - o1-preview
                 - o1-preview-2024-09-12

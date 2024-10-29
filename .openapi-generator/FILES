@@ -129,7 +129,6 @@ docs/CreateChatCompletionFunctionResponseChoicesInner.md
 docs/CreateChatCompletionRequest.md
 docs/CreateChatCompletionRequestAudio.md
 docs/CreateChatCompletionRequestFunctionCall.md
-docs/CreateChatCompletionRequestModel.md
 docs/CreateChatCompletionRequestResponseFormat.md
 docs/CreateChatCompletionRequestStop.md
 docs/CreateChatCompletionResponse.md
@@ -631,7 +630,6 @@ src/main/java/com/github/ainoya/client/model/CreateChatCompletionFunctionRespons
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionRequest.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionRequestAudio.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionRequestFunctionCall.java
-src/main/java/com/github/ainoya/client/model/CreateChatCompletionRequestModel.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionRequestResponseFormat.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionRequestStop.java
 src/main/java/com/github/ainoya/client/model/CreateChatCompletionResponse.java
