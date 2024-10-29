@@ -8,7 +8,7 @@ Details of the message creation by the run step.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**type** | [**TypeEnum**](#TypeEnum) | Always &#x60;message_creation&#x60;&#x60;. |  |
+|**type** | [**TypeEnum**](#TypeEnum) | Always &#x60;message_creation&#x60;. |  |
 |**messageCreation** | [**RunStepDetailsMessageCreationObjectMessageCreation**](RunStepDetailsMessageCreationObjectMessageCreation.md) |  |  |
 
 

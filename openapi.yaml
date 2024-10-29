@@ -12076,7 +12076,7 @@ components:
         stop:
           description: |
             Up to 4 sequences where the API will stop generating further tokens.
-          # default: null
+          default: null
           oneOf:
             - type: string
               nullable: true
@@ -12507,7 +12507,6 @@ components:
             Note that <|endoftext|> is the document separator that the model
             sees during training, so if a prompt is not specified the model will
             generate as if from the beginning of a new document.
-          default: <|endoftext|>
           nullable: true
           oneOf:
             - type: string
@@ -12574,7 +12573,6 @@ components:
         logit_bias:
           type: object
           x-oaiTypeLabel: map
-          default: null
           nullable: true
           additionalProperties:
             type: integer
@@ -12599,7 +12597,6 @@ components:
           type: integer
           minimum: 0
           maximum: 5
-          default: null
           nullable: true
           description: >
             Include the log probabilities on the `logprobs` most likely output
@@ -12671,7 +12668,6 @@ components:
           description: >
             Up to 4 sequences where the API will stop generating further tokens.
             The returned text will not contain the stop sequence.
-          default: null
           nullable: true
           oneOf:
             - type: string
@@ -13073,7 +13069,6 @@ components:
                 - type: integer
                   minimum: 1
                   maximum: 256
-              default: auto
             learning_rate_multiplier:
               description: >
                 Scaling factor for the learning rate. A smaller learning rate
@@ -13087,7 +13082,6 @@ components:
                 - type: number
                   minimum: 0
                   exclusiveMinimum: true
-              default: auto
             n_epochs:
               description: >
                 The number of epochs to train the model for. An epoch refers to
@@ -13101,7 +13095,6 @@ components:
                 - type: integer
                   minimum: 1
                   maximum: 50
-              default: auto
         suffix:
           description: >
             A string of up to 64 characters that will be added to your
@@ -13302,7 +13295,6 @@ components:
         model:
           anyOf:
             - type: string
-            - type: string
               enum:
                 - dall-e-2
                 - dall-e-3
@@ -13387,7 +13379,6 @@ components:
           format: binary
         model:
           anyOf:
-            - type: string
             - type: string
               enum:
                 - dall-e-2
@@ -13582,7 +13573,6 @@ components:
           default: omni-moderation-latest
           example: omni-moderation-2024-09-26
           anyOf:
-            - type: string
             - type: string
               enum:
                 - omni-moderation-latest
@@ -13982,7 +13972,6 @@ components:
           example: gpt-4o
           anyOf:
             - type: string
-            - type: string
               enum:
                 - gpt-4o
                 - gpt-4o-2024-08-06
@@ -14127,7 +14116,6 @@ components:
             `tts-1-hd`
           anyOf:
             - type: string
-            - type: string
               enum:
                 - tts-1
                 - tts-1-hd
@@ -14191,7 +14179,6 @@ components:
             with the assistant will be used.
           example: gpt-4o
           anyOf:
-            - type: string
             - type: string
               enum:
                 - gpt-4o
@@ -14537,7 +14524,7 @@ components:
             are hit.
           type: number
           default: 0
-        timestamp_granularities[]:
+        timestamp_granularities:
           description: >
             The timestamp granularities to populate for this transcription.
             `response_format` must be set `verbose_json` to use timestamp
@@ -14643,9 +14630,7 @@ components:
           description: >
             ID of the model to use. Only `whisper-1` (which is powered by our
             open source Whisper V2 model) is currently available.
-          example: whisper-1
           anyOf:
-            - type: string
             - type: string
               enum:
                 - whisper-1
@@ -15170,7 +15155,6 @@ components:
                 - type: integer
                   minimum: 1
                   maximum: 50
-              default: auto
               description: >-
                 The number of epochs to train the model for. An epoch refers to
                 one full cycle through the training dataset.

@@ -8,7 +8,7 @@ Details on the tool outputs needed for this run to continue.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**toolCalls** | [**List&lt;RunToolCallObject&gt;**](RunToolCallObject.md) | A list of the relevant tool calls. |  [optional] |
+|**toolCalls** | [**List&lt;RunToolCallObject&gt;**](RunToolCallObject.md) | A list of the relevant tool calls. |  |
 
 
 
