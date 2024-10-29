@@ -11221,7 +11221,6 @@ components:
         true`.
       type: object
       nullable: true
-      default: null
       properties:
         include_usage:
           type: boolean
@@ -11892,7 +11891,6 @@ components:
         logit_bias:
           type: object
           x-oaiTypeLabel: map
-          default: null
           nullable: true
           additionalProperties:
             type: integer
