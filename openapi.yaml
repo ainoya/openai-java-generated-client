@@ -12076,7 +12076,7 @@ components:
         stop:
           description: |
             Up to 4 sequences where the API will stop generating further tokens.
-          default: null
+          # default: null
           oneOf:
             - type: string
               nullable: true
