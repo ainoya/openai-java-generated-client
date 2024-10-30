@@ -12128,6 +12128,7 @@ components:
             We generally recommend altering this or `temperature` but not both.
         tools:
           type: array
+          nullable: true
           description: >
             A list of tools the model may call. Currently, only functions are
             supported as a tool. Use this to provide a list of functions the
@@ -12146,47 +12147,6 @@ components:
             A unique identifier representing your end-user, which can help
             OpenAI to monitor and detect abuse. [Learn
             more](/docs/guides/safety-best-practices/end-user-ids).
-        function_call:
-          deprecated: true
-          description: >
-            Deprecated in favor of `tool_choice`.
-
-
-            Controls which (if any) function is called by the model.
-
-            `none` means the model will not call a function and instead
-            generates a message.
-
-            `auto` means the model can pick between generating a message or
-            calling a function.
-
-            Specifying a particular function via `{"name": "my_function"}`
-            forces the model to call that function.
-
-
-            `none` is the default when no functions are present. `auto` is the
-            default if functions are present.
-          oneOf:
-            - type: string
-              description: >
-                `none` means the model will not call a function and instead
-                generates a message. `auto` means the model can pick between
-                generating a message or calling a function.
-              enum:
-                - none
-                - auto
-            - $ref: "#/components/schemas/ChatCompletionFunctionCallOption"
-          x-oaiExpandable: true
-        functions:
-          deprecated: true
-          nullable: true
-          description: |
-            Deprecated in favor of `tools`.
-
-            A list of functions the model may generate JSON inputs for.
-          type: array
-          items:
-            $ref: "#/components/schemas/ChatCompletionFunctions"
       required:
         - model
         - messages
@@ -12208,7 +12168,6 @@ components:
               - finish_reason
               - index
               - message
-              - logprobs
             properties:
               finish_reason:
                 type: string
@@ -16550,9 +16509,6 @@ components:
         - created_at
         - thread_id
         - status
-        - incomplete_details
-        - completed_at
-        - incomplete_at
         - role
         - content
         - assistant_id
@@ -16989,7 +16945,7 @@ components:
         calling](/docs/guides/function-calling/parallel-function-calling) during
         tool use.
       type: boolean
-      default: true
+      nullable: true
     Project:
       type: object
       description: Represents an individual project.
@@ -19717,20 +19673,13 @@ components:
         - created_at
         - thread_id
         - assistant_id
-        - status
         - required_action
         - last_error
-        - expires_at
-        - started_at
-        - cancelled_at
-        - failed_at
-        - completed_at
         - model
         - instructions
         - tools
         - metadata
         - usage
-        - incomplete_details
         - max_prompt_tokens
         - max_completion_tokens
         - truncation_strategy
@@ -20381,13 +20330,8 @@ components:
         - thread_id
         - run_id
         - type
-        - status
         - step_details
         - last_error
-        - expired_at
-        - cancelled_at
-        - failed_at
-        - completed_at
         - metadata
         - usage
       x-oaiMeta:

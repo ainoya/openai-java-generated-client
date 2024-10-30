@@ -48,7 +48,7 @@ import com.github.ainoya.client.JSON;
 /**
  * AssistantToolsCode
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T13:08:57.656944544Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AssistantToolsCode {
   /**
    * The type of tool being defined: &#x60;code_interpreter&#x60;

@@ -45,7 +45,7 @@ OpenAI API
 
 - API version: 2.3.0
 
-    - Build date: 2024-10-29T13:08:57.656944544Z[Etc/UTC]
+    - Build date: 2024-10-30T00:41:41.163543671Z[Etc/UTC]
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
@@ -84,7 +84,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.github.ainoya</groupId>
     <artifactId>openai-java-generated-client</artifactId>
-    <version>0.0.19</version>
+    <version>0.0.30</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -100,7 +100,7 @@ mavenLocal()       // Needed if the 'openai-java-generated-client' jar has been 
 }
 
 dependencies {
-implementation "com.github.ainoya:openai-java-generated-client:0.0.19"
+implementation "com.github.ainoya:openai-java-generated-client:0.0.30"
 }
 ```
 
@@ -114,7 +114,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/openai-java-generated-client-0.0.19.jar`
+- `target/openai-java-generated-client-0.0.30.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -379,7 +379,6 @@ Class | Method | HTTP request | Description
  - [CreateChatCompletionFunctionResponseChoicesInner](docs/CreateChatCompletionFunctionResponseChoicesInner.md)
  - [CreateChatCompletionRequest](docs/CreateChatCompletionRequest.md)
  - [CreateChatCompletionRequestAudio](docs/CreateChatCompletionRequestAudio.md)
- - [CreateChatCompletionRequestFunctionCall](docs/CreateChatCompletionRequestFunctionCall.md)
  - [CreateChatCompletionRequestResponseFormat](docs/CreateChatCompletionRequestResponseFormat.md)
  - [CreateChatCompletionRequestStop](docs/CreateChatCompletionRequestStop.md)
  - [CreateChatCompletionResponse](docs/CreateChatCompletionResponse.md)

@@ -23,6 +23,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,7 +51,7 @@ import com.github.ainoya.client.JSON;
 /**
  * CreateChatCompletionResponseChoicesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T13:08:57.656944544Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreateChatCompletionResponseChoicesInner {
   /**
    * The reason the model stopped generating tokens. This will be &#x60;stop&#x60; if the model hit a natural stop point or a provided stop sequence, &#x60;length&#x60; if the maximum number of tokens specified in the request was reached, &#x60;content_filter&#x60; if content was omitted due to a flag from our content filters, &#x60;tool_calls&#x60; if the model called a tool, or &#x60;function_call&#x60; (deprecated) if the model called a function. 
@@ -266,9 +267,20 @@ public class CreateChatCompletionResponseChoicesInner {
         Objects.equals(this.additionalProperties, createChatCompletionResponseChoicesInner.additionalProperties);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(finishReason, index, message, logprobs, additionalProperties);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -312,7 +324,6 @@ public class CreateChatCompletionResponseChoicesInner {
     openapiRequiredFields.add("finish_reason");
     openapiRequiredFields.add("index");
     openapiRequiredFields.add("message");
-    openapiRequiredFields.add("logprobs");
   }
 
   /**
@@ -342,8 +353,10 @@ public class CreateChatCompletionResponseChoicesInner {
       FinishReasonEnum.validateJsonElement(jsonObj.get("finish_reason"));
       // validate the required field `message`
       ChatCompletionResponseMessage.validateJsonElement(jsonObj.get("message"));
-      // validate the required field `logprobs`
-      CreateChatCompletionResponseChoicesInnerLogprobs.validateJsonElement(jsonObj.get("logprobs"));
+      // validate the optional field `logprobs`
+      if (jsonObj.get("logprobs") != null && !jsonObj.get("logprobs").isJsonNull()) {
+        CreateChatCompletionResponseChoicesInnerLogprobs.validateJsonElement(jsonObj.get("logprobs"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

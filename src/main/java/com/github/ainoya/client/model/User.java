@@ -48,7 +48,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Represents an individual &#x60;user&#x60; within an organization.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T13:08:57.656944544Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class User {
   /**
    * The object type, which is always &#x60;organization.user&#x60;

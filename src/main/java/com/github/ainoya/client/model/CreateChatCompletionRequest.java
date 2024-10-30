@@ -14,13 +14,11 @@
 package com.github.ainoya.client.model;
 
 import java.util.Objects;
-import com.github.ainoya.client.model.ChatCompletionFunctions;
 import com.github.ainoya.client.model.ChatCompletionRequestMessage;
 import com.github.ainoya.client.model.ChatCompletionStreamOptions;
 import com.github.ainoya.client.model.ChatCompletionTool;
 import com.github.ainoya.client.model.ChatCompletionToolChoiceOption;
 import com.github.ainoya.client.model.CreateChatCompletionRequestAudio;
-import com.github.ainoya.client.model.CreateChatCompletionRequestFunctionCall;
 import com.github.ainoya.client.model.CreateChatCompletionRequestResponseFormat;
 import com.github.ainoya.client.model.CreateChatCompletionRequestStop;
 import com.google.gson.TypeAdapter;
@@ -63,7 +61,7 @@ import com.github.ainoya.client.JSON;
 /**
  * CreateChatCompletionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T13:08:57.656944544Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreateChatCompletionRequest {
   public static final String SERIALIZED_NAME_MESSAGES = "messages";
   @SerializedName(SERIALIZED_NAME_MESSAGES)
@@ -376,7 +374,7 @@ public class CreateChatCompletionRequest {
 
   public static final String SERIALIZED_NAME_TOOLS = "tools";
   @SerializedName(SERIALIZED_NAME_TOOLS)
-  private List<ChatCompletionTool> tools = new ArrayList<>();
+  private List<ChatCompletionTool> tools;
 
   public static final String SERIALIZED_NAME_TOOL_CHOICE = "tool_choice";
   @SerializedName(SERIALIZED_NAME_TOOL_CHOICE)
@@ -384,21 +382,11 @@ public class CreateChatCompletionRequest {
 
   public static final String SERIALIZED_NAME_PARALLEL_TOOL_CALLS = "parallel_tool_calls";
   @SerializedName(SERIALIZED_NAME_PARALLEL_TOOL_CALLS)
-  private Boolean parallelToolCalls = true;
+  private Boolean parallelToolCalls;
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
   private String user;
-
-  public static final String SERIALIZED_NAME_FUNCTION_CALL = "function_call";
-  @Deprecated
-  @SerializedName(SERIALIZED_NAME_FUNCTION_CALL)
-  private CreateChatCompletionRequestFunctionCall functionCall;
-
-  public static final String SERIALIZED_NAME_FUNCTIONS = "functions";
-  @Deprecated
-  @SerializedName(SERIALIZED_NAME_FUNCTIONS)
-  private List<ChatCompletionFunctions> functions = new ArrayList<>();
 
   public CreateChatCompletionRequest() {
   }
@@ -954,60 +942,6 @@ public class CreateChatCompletionRequest {
     this.user = user;
   }
 
-
-  @Deprecated
-  public CreateChatCompletionRequest functionCall(CreateChatCompletionRequestFunctionCall functionCall) {
-    this.functionCall = functionCall;
-    return this;
-  }
-
-  /**
-   * Get functionCall
-   * @return functionCall
-   * @deprecated
-   */
-  @Deprecated
-  @javax.annotation.Nullable
-  public CreateChatCompletionRequestFunctionCall getFunctionCall() {
-    return functionCall;
-  }
-
-  @Deprecated
-  public void setFunctionCall(CreateChatCompletionRequestFunctionCall functionCall) {
-    this.functionCall = functionCall;
-  }
-
-
-  @Deprecated
-  public CreateChatCompletionRequest functions(List<ChatCompletionFunctions> functions) {
-    this.functions = functions;
-    return this;
-  }
-
-  public CreateChatCompletionRequest addFunctionsItem(ChatCompletionFunctions functionsItem) {
-    if (this.functions == null) {
-      this.functions = new ArrayList<>();
-    }
-    this.functions.add(functionsItem);
-    return this;
-  }
-
-  /**
-   * Deprecated in favor of &#x60;tools&#x60;.  A list of functions the model may generate JSON inputs for. 
-   * @return functions
-   * @deprecated
-   */
-  @Deprecated
-  @javax.annotation.Nullable
-  public List<ChatCompletionFunctions> getFunctions() {
-    return functions;
-  }
-
-  @Deprecated
-  public void setFunctions(List<ChatCompletionFunctions> functions) {
-    this.functions = functions;
-  }
-
   /**
    * A container for additional, undeclared properties.
    * This is a holder for any undeclared properties as specified with
@@ -1088,9 +1022,7 @@ public class CreateChatCompletionRequest {
         Objects.equals(this.tools, createChatCompletionRequest.tools) &&
         Objects.equals(this.toolChoice, createChatCompletionRequest.toolChoice) &&
         Objects.equals(this.parallelToolCalls, createChatCompletionRequest.parallelToolCalls) &&
-        Objects.equals(this.user, createChatCompletionRequest.user) &&
-        Objects.equals(this.functionCall, createChatCompletionRequest.functionCall) &&
-        Objects.equals(this.functions, createChatCompletionRequest.functions)&&
+        Objects.equals(this.user, createChatCompletionRequest.user)&&
         Objects.equals(this.additionalProperties, createChatCompletionRequest.additionalProperties);
   }
 
@@ -1100,7 +1032,7 @@ public class CreateChatCompletionRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(messages, model, store, metadata, frequencyPenalty, logitBias, logprobs, topLogprobs, maxTokens, maxCompletionTokens, n, modalities, audio, presencePenalty, responseFormat, seed, serviceTier, stop, stream, streamOptions, temperature, topP, tools, toolChoice, parallelToolCalls, user, functionCall, functions, additionalProperties);
+    return Objects.hash(messages, model, store, metadata, frequencyPenalty, logitBias, logprobs, topLogprobs, maxTokens, maxCompletionTokens, n, modalities, audio, presencePenalty, responseFormat, seed, serviceTier, stop, stream, streamOptions, temperature, topP, tools, toolChoice, parallelToolCalls, user, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1140,8 +1072,6 @@ public class CreateChatCompletionRequest {
     sb.append("    toolChoice: ").append(toIndentedString(toolChoice)).append("\n");
     sb.append("    parallelToolCalls: ").append(toIndentedString(parallelToolCalls)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
-    sb.append("    functionCall: ").append(toIndentedString(functionCall)).append("\n");
-    sb.append("    functions: ").append(toIndentedString(functions)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -1191,8 +1121,6 @@ public class CreateChatCompletionRequest {
     openapiFields.add("tool_choice");
     openapiFields.add("parallel_tool_calls");
     openapiFields.add("user");
-    openapiFields.add("function_call");
-    openapiFields.add("functions");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -1282,24 +1210,6 @@ public class CreateChatCompletionRequest {
       }
       if ((jsonObj.get("user") != null && !jsonObj.get("user").isJsonNull()) && !jsonObj.get("user").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user").toString()));
-      }
-      // validate the optional field `function_call`
-      if (jsonObj.get("function_call") != null && !jsonObj.get("function_call").isJsonNull()) {
-        CreateChatCompletionRequestFunctionCall.validateJsonElement(jsonObj.get("function_call"));
-      }
-      if (jsonObj.get("functions") != null && !jsonObj.get("functions").isJsonNull()) {
-        JsonArray jsonArrayfunctions = jsonObj.getAsJsonArray("functions");
-        if (jsonArrayfunctions != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("functions").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `functions` to be an array in the JSON string but got `%s`", jsonObj.get("functions").toString()));
-          }
-
-          // validate the optional field `functions` (array)
-          for (int i = 0; i < jsonArrayfunctions.size(); i++) {
-            ChatCompletionFunctions.validateJsonElement(jsonArrayfunctions.get(i));
-          };
-        }
       }
   }
 

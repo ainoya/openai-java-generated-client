@@ -60,7 +60,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Represents an execution run on a [thread](/docs/api-reference/threads).
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T13:08:57.656944544Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RunObject {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -280,7 +280,7 @@ public class RunObject {
 
   public static final String SERIALIZED_NAME_PARALLEL_TOOL_CALLS = "parallel_tool_calls";
   @SerializedName(SERIALIZED_NAME_PARALLEL_TOOL_CALLS)
-  private Boolean parallelToolCalls = true;
+  private Boolean parallelToolCalls;
 
   public static final String SERIALIZED_NAME_RESPONSE_FORMAT = "response_format";
   @SerializedName(SERIALIZED_NAME_RESPONSE_FORMAT)
@@ -783,7 +783,7 @@ public class RunObject {
    * Whether to enable [parallel function calling](/docs/guides/function-calling/parallel-function-calling) during tool use.
    * @return parallelToolCalls
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Boolean getParallelToolCalls() {
     return parallelToolCalls;
   }
@@ -1004,12 +1004,6 @@ public class RunObject {
     openapiRequiredFields.add("status");
     openapiRequiredFields.add("required_action");
     openapiRequiredFields.add("last_error");
-    openapiRequiredFields.add("expires_at");
-    openapiRequiredFields.add("started_at");
-    openapiRequiredFields.add("cancelled_at");
-    openapiRequiredFields.add("failed_at");
-    openapiRequiredFields.add("completed_at");
-    openapiRequiredFields.add("incomplete_details");
     openapiRequiredFields.add("model");
     openapiRequiredFields.add("instructions");
     openapiRequiredFields.add("tools");
@@ -1066,8 +1060,10 @@ public class RunObject {
       RunObjectRequiredAction.validateJsonElement(jsonObj.get("required_action"));
       // validate the required field `last_error`
       RunObjectLastError.validateJsonElement(jsonObj.get("last_error"));
-      // validate the required field `incomplete_details`
-      RunObjectIncompleteDetails.validateJsonElement(jsonObj.get("incomplete_details"));
+      // validate the optional field `incomplete_details`
+      if (jsonObj.get("incomplete_details") != null && !jsonObj.get("incomplete_details").isJsonNull()) {
+        RunObjectIncompleteDetails.validateJsonElement(jsonObj.get("incomplete_details"));
+      }
       if (!jsonObj.get("model").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
       }

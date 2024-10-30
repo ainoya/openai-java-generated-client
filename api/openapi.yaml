@@ -10283,11 +10283,6 @@ components:
       type: object
     ChatCompletionFunctions:
       deprecated: true
-      example:
-        name: name
-        description: description
-        parameters:
-          key: ""
       properties:
         description:
           description: "A description of what the function does, used by the model\
@@ -11056,28 +11051,6 @@ components:
         logit_bias:
           key: 6
         seed: 2147483647
-        functions:
-        - name: name
-          description: description
-          parameters:
-            key: ""
-        - name: name
-          description: description
-          parameters:
-            key: ""
-        - name: name
-          description: description
-          parameters:
-            key: ""
-        - name: name
-          description: description
-          parameters:
-            key: ""
-        - name: name
-          description: description
-          parameters:
-            key: ""
-        function_call: none
         presence_penalty: -1.079145645226094
         tools:
         - function:
@@ -11347,32 +11320,20 @@ components:
             A list of tools the model may call. Currently, only functions are supported as a tool. Use this to provide a list of functions the model may generate JSON inputs for. A max of 128 functions are supported.
           items:
             $ref: '#/components/schemas/ChatCompletionTool'
+          nullable: true
           type: array
         tool_choice:
           $ref: '#/components/schemas/ChatCompletionToolChoiceOption'
         parallel_tool_calls:
-          default: true
           description: "Whether to enable [parallel function calling](/docs/guides/function-calling/parallel-function-calling)\
             \ during tool use."
+          nullable: true
           type: boolean
         user:
           description: |
             A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids).
           example: user-1234
           type: string
-        function_call:
-          $ref: '#/components/schemas/CreateChatCompletionRequest_function_call'
-        functions:
-          deprecated: true
-          description: |
-            Deprecated in favor of `tools`.
-
-            A list of functions the model may generate JSON inputs for.
-          items:
-            $ref: '#/components/schemas/ChatCompletionFunctions'
-          maxItems: 128
-          minItems: 1
-          type: array
       required:
       - messages
       - model
@@ -12858,9 +12819,9 @@ components:
         tool_choice:
           $ref: '#/components/schemas/AssistantsApiToolChoiceOption'
         parallel_tool_calls:
-          default: true
           description: "Whether to enable [parallel function calling](/docs/guides/function-calling/parallel-function-calling)\
             \ during tool use."
+          nullable: true
           type: boolean
         response_format:
           $ref: '#/components/schemas/AssistantsApiResponseFormatOption'
@@ -13103,9 +13064,9 @@ components:
         tool_choice:
           $ref: '#/components/schemas/AssistantsApiToolChoiceOption'
         parallel_tool_calls:
-          default: true
           description: "Whether to enable [parallel function calling](/docs/guides/function-calling/parallel-function-calling)\
             \ during tool use."
+          nullable: true
           type: boolean
         response_format:
           $ref: '#/components/schemas/AssistantsApiResponseFormatOption'
@@ -14114,9 +14075,9 @@ components:
             $ref: '#/components/schemas/ChatCompletionTool'
           type: array
         parallel_tool_calls:
-          default: true
           description: "Whether to enable [parallel function calling](/docs/guides/function-calling/parallel-function-calling)\
             \ during tool use."
+          nullable: true
           type: boolean
         functions:
           deprecated: true
@@ -16025,12 +15986,9 @@ components:
       required:
       - assistant_id
       - attachments
-      - completed_at
       - content
       - created_at
       - id
-      - incomplete_at
-      - incomplete_details
       - metadata
       - object
       - role
@@ -16353,9 +16311,9 @@ components:
       title: Other Chunking Strategy
       type: object
     ParallelToolCalls:
-      default: true
       description: "Whether to enable [parallel function calling](/docs/guides/function-calling/parallel-function-calling)\
         \ during tool use."
+      nullable: true
       type: boolean
     Project:
       description: Represents an individual project.
@@ -18619,21 +18577,16 @@ components:
         tool_choice:
           $ref: '#/components/schemas/AssistantsApiToolChoiceOption'
         parallel_tool_calls:
-          default: true
           description: "Whether to enable [parallel function calling](/docs/guides/function-calling/parallel-function-calling)\
             \ during tool use."
+          nullable: true
           type: boolean
         response_format:
           $ref: '#/components/schemas/AssistantsApiResponseFormatOption'
       required:
       - assistant_id
-      - cancelled_at
-      - completed_at
       - created_at
-      - expires_at
-      - failed_at
       - id
-      - incomplete_details
       - instructions
       - last_error
       - max_completion_tokens
@@ -18644,7 +18597,6 @@ components:
       - parallel_tool_calls
       - required_action
       - response_format
-      - started_at
       - status
       - thread_id
       - tool_choice
@@ -19172,7 +19124,6 @@ components:
       required:
       - assistant_id
       - cancelled_at
-      - completed_at
       - created_at
       - expired_at
       - failed_at
@@ -21209,26 +21160,6 @@ components:
         maxItems: 4
         minItems: 1
         type: array
-    CreateChatCompletionRequest_function_call:
-      deprecated: true
-      description: |
-        Deprecated in favor of `tool_choice`.
-
-        Controls which (if any) function is called by the model.
-        `none` means the model will not call a function and instead generates a message.
-        `auto` means the model can pick between generating a message or calling a function.
-        Specifying a particular function via `{"name": "my_function"}` forces the model to call that function.
-
-        `none` is the default when no functions are present. `auto` is the default if functions are present.
-      oneOf:
-      - description: |
-          `none` means the model will not call a function and instead generates a message. `auto` means the model can pick between generating a message or calling a function.
-        enum:
-        - none
-        - auto
-        type: string
-      - $ref: '#/components/schemas/ChatCompletionFunctionCallOption'
-      x-oaiExpandable: true
     CreateChatCompletionResponse_choices_inner_logprobs:
       description: Log probability information for the choice.
       example:
@@ -21434,7 +21365,6 @@ components:
       required:
       - finish_reason
       - index
-      - logprobs
       - message
       type: object
     CreateChatCompletionStreamResponse_choices_inner:

@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,7 +54,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Represents a message within a [thread](/docs/api-reference/threads).
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T13:08:57.656944544Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MessageObject {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -623,9 +624,20 @@ public class MessageObject {
         Objects.equals(this.additionalProperties, messageObject.additionalProperties);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(id, _object, createdAt, threadId, status, incompleteDetails, completedAt, incompleteAt, role, content, assistantId, runId, attachments, metadata, additionalProperties);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -691,9 +703,6 @@ public class MessageObject {
     openapiRequiredFields.add("created_at");
     openapiRequiredFields.add("thread_id");
     openapiRequiredFields.add("status");
-    openapiRequiredFields.add("incomplete_details");
-    openapiRequiredFields.add("completed_at");
-    openapiRequiredFields.add("incomplete_at");
     openapiRequiredFields.add("role");
     openapiRequiredFields.add("content");
     openapiRequiredFields.add("assistant_id");
@@ -738,8 +747,10 @@ public class MessageObject {
       }
       // validate the required field `status`
       StatusEnum.validateJsonElement(jsonObj.get("status"));
-      // validate the required field `incomplete_details`
-      MessageObjectIncompleteDetails.validateJsonElement(jsonObj.get("incomplete_details"));
+      // validate the optional field `incomplete_details`
+      if (jsonObj.get("incomplete_details") != null && !jsonObj.get("incomplete_details").isJsonNull()) {
+        MessageObjectIncompleteDetails.validateJsonElement(jsonObj.get("incomplete_details"));
+      }
       if (!jsonObj.get("role").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `role` to be a primitive type in the JSON string but got `%s`", jsonObj.get("role").toString()));
       }

@@ -33,8 +33,6 @@
 |**toolChoice** | [**ChatCompletionToolChoiceOption**](ChatCompletionToolChoiceOption.md) |  |  [optional] |
 |**parallelToolCalls** | **Boolean** | Whether to enable [parallel function calling](/docs/guides/function-calling/parallel-function-calling) during tool use. |  [optional] |
 |**user** | **String** | A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids).  |  [optional] |
-|**functionCall** | [**CreateChatCompletionRequestFunctionCall**](CreateChatCompletionRequestFunctionCall.md) |  |  [optional] |
-|**functions** | [**List&lt;ChatCompletionFunctions&gt;**](ChatCompletionFunctions.md) | Deprecated in favor of &#x60;tools&#x60;.  A list of functions the model may generate JSON inputs for.  |  [optional] |
 
 
 

@@ -57,7 +57,7 @@ import com.github.ainoya.client.JSON;
 /**
  * CreateRunRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T13:08:57.656944544Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreateRunRequest {
   public static final String SERIALIZED_NAME_ASSISTANT_ID = "assistant_id";
   @SerializedName(SERIALIZED_NAME_ASSISTANT_ID)
@@ -213,7 +213,7 @@ public class CreateRunRequest {
 
   public static final String SERIALIZED_NAME_PARALLEL_TOOL_CALLS = "parallel_tool_calls";
   @SerializedName(SERIALIZED_NAME_PARALLEL_TOOL_CALLS)
-  private Boolean parallelToolCalls = true;
+  private Boolean parallelToolCalls;
 
   public static final String SERIALIZED_NAME_RESPONSE_FORMAT = "response_format";
   @SerializedName(SERIALIZED_NAME_RESPONSE_FORMAT)

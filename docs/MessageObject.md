@@ -13,9 +13,9 @@ Represents a message within a [thread](/docs/api-reference/threads).
 |**createdAt** | **Integer** | The Unix timestamp (in seconds) for when the message was created. |  |
 |**threadId** | **String** | The [thread](/docs/api-reference/threads) ID that this message belongs to. |  |
 |**status** | [**StatusEnum**](#StatusEnum) | The status of the message, which can be either &#x60;in_progress&#x60;, &#x60;incomplete&#x60;, or &#x60;completed&#x60;. |  |
-|**incompleteDetails** | [**MessageObjectIncompleteDetails**](MessageObjectIncompleteDetails.md) |  |  |
-|**completedAt** | **Integer** | The Unix timestamp (in seconds) for when the message was completed. |  |
-|**incompleteAt** | **Integer** | The Unix timestamp (in seconds) for when the message was marked as incomplete. |  |
+|**incompleteDetails** | [**MessageObjectIncompleteDetails**](MessageObjectIncompleteDetails.md) |  |  [optional] |
+|**completedAt** | **Integer** | The Unix timestamp (in seconds) for when the message was completed. |  [optional] |
+|**incompleteAt** | **Integer** | The Unix timestamp (in seconds) for when the message was marked as incomplete. |  [optional] |
 |**role** | [**RoleEnum**](#RoleEnum) | The entity that produced the message. One of &#x60;user&#x60; or &#x60;assistant&#x60;. |  |
 |**content** | [**List&lt;MessageObjectContentInner&gt;**](MessageObjectContentInner.md) | The content of the message in array of text and/or images. |  |
 |**assistantId** | **String** | If applicable, the ID of the [assistant](/docs/api-reference/assistants) that authored this message. |  |
