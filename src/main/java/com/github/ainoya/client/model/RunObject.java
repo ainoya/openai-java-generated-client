@@ -60,7 +60,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Represents an execution run on a [thread](/docs/api-reference/threads).
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T01:20:46.396706715Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RunObject {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -393,7 +393,7 @@ public class RunObject {
    * The status of the run, which can be either &#x60;queued&#x60;, &#x60;in_progress&#x60;, &#x60;requires_action&#x60;, &#x60;cancelling&#x60;, &#x60;cancelled&#x60;, &#x60;failed&#x60;, &#x60;completed&#x60;, &#x60;incomplete&#x60;, or &#x60;expired&#x60;.
    * @return status
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public StatusEnum getStatus() {
     return status;
   }
@@ -764,7 +764,7 @@ public class RunObject {
    * Get toolChoice
    * @return toolChoice
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public AssistantsApiToolChoiceOption getToolChoice() {
     return toolChoice;
   }
@@ -1001,19 +1001,13 @@ public class RunObject {
     openapiRequiredFields.add("created_at");
     openapiRequiredFields.add("thread_id");
     openapiRequiredFields.add("assistant_id");
-    openapiRequiredFields.add("status");
-    openapiRequiredFields.add("required_action");
-    openapiRequiredFields.add("last_error");
     openapiRequiredFields.add("model");
     openapiRequiredFields.add("instructions");
     openapiRequiredFields.add("tools");
     openapiRequiredFields.add("metadata");
-    openapiRequiredFields.add("usage");
     openapiRequiredFields.add("max_prompt_tokens");
     openapiRequiredFields.add("max_completion_tokens");
     openapiRequiredFields.add("truncation_strategy");
-    openapiRequiredFields.add("tool_choice");
-    openapiRequiredFields.add("parallel_tool_calls");
     openapiRequiredFields.add("response_format");
   }
 
@@ -1051,15 +1045,21 @@ public class RunObject {
       if (!jsonObj.get("assistant_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `assistant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assistant_id").toString()));
       }
-      if (!jsonObj.get("status").isJsonPrimitive()) {
+      if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
-      // validate the required field `status`
-      StatusEnum.validateJsonElement(jsonObj.get("status"));
-      // validate the required field `required_action`
-      RunObjectRequiredAction.validateJsonElement(jsonObj.get("required_action"));
-      // validate the required field `last_error`
-      RunObjectLastError.validateJsonElement(jsonObj.get("last_error"));
+      // validate the optional field `status`
+      if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
+        StatusEnum.validateJsonElement(jsonObj.get("status"));
+      }
+      // validate the optional field `required_action`
+      if (jsonObj.get("required_action") != null && !jsonObj.get("required_action").isJsonNull()) {
+        RunObjectRequiredAction.validateJsonElement(jsonObj.get("required_action"));
+      }
+      // validate the optional field `last_error`
+      if (jsonObj.get("last_error") != null && !jsonObj.get("last_error").isJsonNull()) {
+        RunObjectLastError.validateJsonElement(jsonObj.get("last_error"));
+      }
       // validate the optional field `incomplete_details`
       if (jsonObj.get("incomplete_details") != null && !jsonObj.get("incomplete_details").isJsonNull()) {
         RunObjectIncompleteDetails.validateJsonElement(jsonObj.get("incomplete_details"));
@@ -1080,12 +1080,16 @@ public class RunObject {
       for (int i = 0; i < jsonArraytools.size(); i++) {
         AssistantObjectToolsInner.validateJsonElement(jsonArraytools.get(i));
       };
-      // validate the required field `usage`
-      RunCompletionUsage.validateJsonElement(jsonObj.get("usage"));
+      // validate the optional field `usage`
+      if (jsonObj.get("usage") != null && !jsonObj.get("usage").isJsonNull()) {
+        RunCompletionUsage.validateJsonElement(jsonObj.get("usage"));
+      }
       // validate the required field `truncation_strategy`
       TruncationObject.validateJsonElement(jsonObj.get("truncation_strategy"));
-      // validate the required field `tool_choice`
-      AssistantsApiToolChoiceOption.validateJsonElement(jsonObj.get("tool_choice"));
+      // validate the optional field `tool_choice`
+      if (jsonObj.get("tool_choice") != null && !jsonObj.get("tool_choice").isJsonNull()) {
+        AssistantsApiToolChoiceOption.validateJsonElement(jsonObj.get("tool_choice"));
+      }
       // validate the required field `response_format`
       AssistantsApiResponseFormatOption.validateJsonElement(jsonObj.get("response_format"));
   }

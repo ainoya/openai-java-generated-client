@@ -48,7 +48,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Usage statistics related to the run. This value will be &#x60;null&#x60; if the run is not in a terminal state (i.e. &#x60;in_progress&#x60;, &#x60;queued&#x60;, etc.).
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T01:20:46.396706715Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RunCompletionUsage {
   public static final String SERIALIZED_NAME_COMPLETION_TOKENS = "completion_tokens";
   @SerializedName(SERIALIZED_NAME_COMPLETION_TOKENS)

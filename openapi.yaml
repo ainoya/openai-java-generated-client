@@ -16508,7 +16508,6 @@ components:
         - object
         - created_at
         - thread_id
-        - status
         - role
         - content
         - assistant_id
@@ -19673,18 +19672,13 @@ components:
         - created_at
         - thread_id
         - assistant_id
-        - required_action
-        - last_error
         - model
         - instructions
         - tools
         - metadata
-        - usage
         - max_prompt_tokens
         - max_completion_tokens
         - truncation_strategy
-        - tool_choice
-        - parallel_tool_calls
         - response_format
       x-oaiMeta:
         name: The run object
@@ -20333,7 +20327,6 @@ components:
         - step_details
         - last_error
         - metadata
-        - usage
       x-oaiMeta:
         name: The run step object
         beta: true

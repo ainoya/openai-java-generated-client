@@ -54,7 +54,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Represents a message within a [thread](/docs/api-reference/threads).
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T01:20:46.396706715Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MessageObject {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -356,7 +356,7 @@ public class MessageObject {
    * The status of the message, which can be either &#x60;in_progress&#x60;, &#x60;incomplete&#x60;, or &#x60;completed&#x60;.
    * @return status
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public StatusEnum getStatus() {
     return status;
   }
@@ -702,7 +702,6 @@ public class MessageObject {
     openapiRequiredFields.add("object");
     openapiRequiredFields.add("created_at");
     openapiRequiredFields.add("thread_id");
-    openapiRequiredFields.add("status");
     openapiRequiredFields.add("role");
     openapiRequiredFields.add("content");
     openapiRequiredFields.add("assistant_id");
@@ -742,11 +741,13 @@ public class MessageObject {
       if (!jsonObj.get("thread_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `thread_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("thread_id").toString()));
       }
-      if (!jsonObj.get("status").isJsonPrimitive()) {
+      if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
-      // validate the required field `status`
-      StatusEnum.validateJsonElement(jsonObj.get("status"));
+      // validate the optional field `status`
+      if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
+        StatusEnum.validateJsonElement(jsonObj.get("status"));
+      }
       // validate the optional field `incomplete_details`
       if (jsonObj.get("incomplete_details") != null && !jsonObj.get("incomplete_details").isJsonNull()) {
         MessageObjectIncompleteDetails.validateJsonElement(jsonObj.get("incomplete_details"));

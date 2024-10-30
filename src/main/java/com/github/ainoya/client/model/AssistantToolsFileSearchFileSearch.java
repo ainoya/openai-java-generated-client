@@ -49,7 +49,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Overrides for the file search tool.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T01:20:46.396706715Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AssistantToolsFileSearchFileSearch {
   public static final String SERIALIZED_NAME_MAX_NUM_RESULTS = "max_num_results";
   @SerializedName(SERIALIZED_NAME_MAX_NUM_RESULTS)

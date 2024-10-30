@@ -12,7 +12,7 @@ Represents a message within a [thread](/docs/api-reference/threads).
 |**_object** | [**ObjectEnum**](#ObjectEnum) | The object type, which is always &#x60;thread.message&#x60;. |  |
 |**createdAt** | **Integer** | The Unix timestamp (in seconds) for when the message was created. |  |
 |**threadId** | **String** | The [thread](/docs/api-reference/threads) ID that this message belongs to. |  |
-|**status** | [**StatusEnum**](#StatusEnum) | The status of the message, which can be either &#x60;in_progress&#x60;, &#x60;incomplete&#x60;, or &#x60;completed&#x60;. |  |
+|**status** | [**StatusEnum**](#StatusEnum) | The status of the message, which can be either &#x60;in_progress&#x60;, &#x60;incomplete&#x60;, or &#x60;completed&#x60;. |  [optional] |
 |**incompleteDetails** | [**MessageObjectIncompleteDetails**](MessageObjectIncompleteDetails.md) |  |  [optional] |
 |**completedAt** | **Integer** | The Unix timestamp (in seconds) for when the message was completed. |  [optional] |
 |**incompleteAt** | **Integer** | The Unix timestamp (in seconds) for when the message was marked as incomplete. |  [optional] |

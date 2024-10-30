@@ -48,7 +48,7 @@ import com.github.ainoya.client.JSON;
 /**
  * AssistantToolsFileSearchTypeOnly
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T01:20:46.396706715Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AssistantToolsFileSearchTypeOnly {
   /**
    * The type of tool being defined: &#x60;file_search&#x60;

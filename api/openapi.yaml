@@ -15993,7 +15993,6 @@ components:
       - object
       - role
       - run_id
-      - status
       - thread_id
       title: The message object
       type: object
@@ -18588,21 +18587,15 @@ components:
       - created_at
       - id
       - instructions
-      - last_error
       - max_completion_tokens
       - max_prompt_tokens
       - metadata
       - model
       - object
-      - parallel_tool_calls
-      - required_action
       - response_format
-      - status
       - thread_id
-      - tool_choice
       - tools
       - truncation_strategy
-      - usage
       title: A run on a thread
       type: object
       x-oaiMeta:
@@ -19123,20 +19116,15 @@ components:
           $ref: '#/components/schemas/RunStepCompletionUsage'
       required:
       - assistant_id
-      - cancelled_at
       - created_at
-      - expired_at
-      - failed_at
       - id
       - last_error
       - metadata
       - object
       - run_id
-      - status
       - step_details
       - thread_id
       - type
-      - usage
       title: Run steps
       type: object
       x-oaiMeta:

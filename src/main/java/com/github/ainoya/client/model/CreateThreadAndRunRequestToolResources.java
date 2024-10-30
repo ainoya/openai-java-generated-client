@@ -50,7 +50,7 @@ import com.github.ainoya.client.JSON;
 /**
  * A set of resources that are used by the assistant&#39;s tools. The resources are specific to the type of tool. For example, the &#x60;code_interpreter&#x60; tool requires a list of file IDs, while the &#x60;file_search&#x60; tool requires a list of vector store IDs. 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T01:20:46.396706715Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreateThreadAndRunRequestToolResources {
   public static final String SERIALIZED_NAME_CODE_INTERPRETER = "code_interpreter";
   @SerializedName(SERIALIZED_NAME_CODE_INTERPRETER)

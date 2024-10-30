@@ -48,7 +48,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Details on why the run is incomplete. Will be &#x60;null&#x60; if the run is not incomplete.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T01:20:46.396706715Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RunObjectIncompleteDetails {
   /**
    * The reason why the run is incomplete. This will point to which specific token limit was reached over the course of the run.

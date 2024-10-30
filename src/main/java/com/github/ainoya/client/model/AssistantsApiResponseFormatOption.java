@@ -61,7 +61,7 @@ import com.google.gson.JsonParseException;
 
 import com.github.ainoya.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T01:20:46.396706715Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AssistantsApiResponseFormatOption extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(AssistantsApiResponseFormatOption.class.getName());
 

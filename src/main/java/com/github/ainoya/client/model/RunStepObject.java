@@ -52,7 +52,7 @@ import com.github.ainoya.client.JSON;
 /**
  * Represents a step in execution of a run. 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T01:20:46.396706715Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RunStepObject {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -423,7 +423,7 @@ public class RunStepObject {
    * The status of the run step, which can be either &#x60;in_progress&#x60;, &#x60;cancelled&#x60;, &#x60;failed&#x60;, &#x60;completed&#x60;, or &#x60;expired&#x60;.
    * @return status
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public StatusEnum getStatus() {
     return status;
   }
@@ -743,14 +743,9 @@ public class RunStepObject {
     openapiRequiredFields.add("thread_id");
     openapiRequiredFields.add("run_id");
     openapiRequiredFields.add("type");
-    openapiRequiredFields.add("status");
     openapiRequiredFields.add("step_details");
     openapiRequiredFields.add("last_error");
-    openapiRequiredFields.add("expired_at");
-    openapiRequiredFields.add("cancelled_at");
-    openapiRequiredFields.add("failed_at");
     openapiRequiredFields.add("metadata");
-    openapiRequiredFields.add("usage");
   }
 
   /**
@@ -795,17 +790,21 @@ public class RunStepObject {
       }
       // validate the required field `type`
       TypeEnum.validateJsonElement(jsonObj.get("type"));
-      if (!jsonObj.get("status").isJsonPrimitive()) {
+      if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
-      // validate the required field `status`
-      StatusEnum.validateJsonElement(jsonObj.get("status"));
+      // validate the optional field `status`
+      if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
+        StatusEnum.validateJsonElement(jsonObj.get("status"));
+      }
       // validate the required field `step_details`
       RunStepObjectStepDetails.validateJsonElement(jsonObj.get("step_details"));
       // validate the required field `last_error`
       RunStepObjectLastError.validateJsonElement(jsonObj.get("last_error"));
-      // validate the required field `usage`
-      RunStepCompletionUsage.validateJsonElement(jsonObj.get("usage"));
+      // validate the optional field `usage`
+      if (jsonObj.get("usage") != null && !jsonObj.get("usage").isJsonNull()) {
+        RunStepCompletionUsage.validateJsonElement(jsonObj.get("usage"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

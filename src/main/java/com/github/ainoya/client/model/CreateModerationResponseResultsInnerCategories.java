@@ -48,7 +48,7 @@ import com.github.ainoya.client.JSON;
 /**
  * A list of the categories, and whether they are flagged or not.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T00:41:41.163543671Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-30T01:20:46.396706715Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreateModerationResponseResultsInnerCategories {
   public static final String SERIALIZED_NAME_HATE = "hate";
   @SerializedName(SERIALIZED_NAME_HATE)
