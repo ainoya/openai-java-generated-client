@@ -84,7 +84,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.github.ainoya</groupId>
     <artifactId>openai-java-generated-client</artifactId>
-    <version>0.0.30</version>
+    <version>0.0.31</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -100,7 +100,7 @@ mavenLocal()       // Needed if the 'openai-java-generated-client' jar has been 
 }
 
 dependencies {
-implementation "com.github.ainoya:openai-java-generated-client:0.0.30"
+implementation "com.github.ainoya:openai-java-generated-client:0.0.31"
 }
 ```
 
@@ -114,7 +114,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/openai-java-generated-client-0.0.30.jar`
+- `target/openai-java-generated-client-0.0.31.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
